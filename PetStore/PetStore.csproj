@@ -157,6 +157,11 @@
     <Compile Include="PetMedicine.cs">
       <DependentUpon>PetStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PetStoreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PetStoreDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PetStoreEntitiesDataModel\IPetStoreEntitiesUnitOfWork.cs" />
     <Compile Include="PetStoreEntitiesDataModel\PetStoreEntitiesUnitOfWork.cs" />
     <Compile Include="PetStoreEntitiesDataModel\UnitOfWorkSource.cs" />
@@ -463,6 +468,17 @@
       <LastGenOutput>PetStoreModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="packages.config" />
+    <None Include="PetStoreDataSet.xsc">
+      <DependentUpon>PetStoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PetStoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PetStoreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetStoreDataSet.xss">
+      <DependentUpon>PetStoreDataSet.xsd</DependentUpon>
+    </None>
     <None Include="PetStoreModel.edmx.diagram">
       <DependentUpon>PetStoreModel.edmx</DependentUpon>
     </None>
