@@ -34,6 +34,7 @@
             // 
             // petStoreEntitiesView1
             // 
+            this.petStoreEntitiesView1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.petStoreEntitiesView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.petStoreEntitiesView1.Location = new System.Drawing.Point(0, 0);
             this.petStoreEntitiesView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

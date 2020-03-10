@@ -22,334 +22,412 @@
         /// the contents of this method with the code editor.
         /// </summary>
 		private void InitializeComponent() {
-			this.components = new System.ComponentModel.Container();
-			this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager();
-            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
-			this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
-			this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-			this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetStoreEntitiesView));
+            this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.noDocumentsView1 = new DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView(this.components);
+            this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItemAccountCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemBillCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemBillDetailCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemCommentCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemCommentDetailCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemGiftCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemOriginCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPetCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPetAccessoryCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPetFoodCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPetMedicineCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemPetToyCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemRoleCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemTypeCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemUserCollectionView = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-			this.ribbonPageGroupNavigation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-			this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
-			this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
-			this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.officeNavigationBar = new DevExpress.XtraBars.Navigation.OfficeNavigationBar();
+            this.navigationBarItemAccountCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemBillCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemBillDetailCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemCommentCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemCommentDetailCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemGiftCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemOriginCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemPetCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemPetAccessoryCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemPetFoodCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemPetMedicineCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemPetToyCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemRoleCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemTypeCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
+            this.navigationBarItemUserCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
             this.navigationFrame = new DevExpress.XtraBars.Navigation.NavigationFrame();
-									this.navigationBarItemAccountCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemAccountCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemBillCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemBillCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemBillDetailCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemBillDetailCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemCommentCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemCommentCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemCommentDetailCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemCommentDetailCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemGiftCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemGiftCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemOriginCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemOriginCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemPetCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemPetCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemPetAccessoryCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemPetAccessoryCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemPetFoodCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemPetFoodCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemPetMedicineCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemPetMedicineCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemPetToyCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemPetToyCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemRoleCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemRoleCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemTypeCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemTypeCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						this.navigationBarItemUserCollectionView = new DevExpress.XtraBars.Navigation.NavigationBarItem();
-			this.barButtonItemUserCollectionView = new DevExpress.XtraBars.BarButtonItem();
-						            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
+            this.btnChangePwd = new DevExpress.XtraBars.BarButtonItem();
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noDocumentsView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).BeginInit();
             this.SuspendLayout();
-			// 
-            // ribbonControl
             // 
-            this.ribbonControl.ExpandCollapseItem.Id = 0;
-            this.ribbonControl.MaxItemId = 14;
-            this.ribbonControl.Name = "ribbonControl";
-			this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {this.skinRibbonGalleryBarItem, this.barSubItemNavigation });
-			this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage});
-            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-			this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
-            this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-			this.ribbonControl.StatusBar = this.ribbonStatusBar;
+            // documentManager
             // 
-            // ribbonPage
+            this.documentManager.View = this.noDocumentsView1;
+            this.documentManager.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
+            this.noDocumentsView1});
             // 
-            this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-			this.ribbonPageGroupNavigation,
-            this.ribbonPageGroup});
-			this.ribbonPage.MergeOrder = -1;
-            this.ribbonPage.Name = "ribbonPage";
-            this.ribbonPage.Text = "View";
-			// 
-            // ribbonPageGroupNavigation
-            // 
-            this.ribbonPageGroupNavigation.ItemLinks.Add(this.barSubItemNavigation);
-            this.ribbonPageGroupNavigation.Name = "ribbonPageGroupNavigation";
-            this.ribbonPageGroupNavigation.Text = "Module";
-			 // 
-            // barSubItemNavigation
-            // 
-            this.barSubItemNavigation.Caption = "Navigation";
-            this.barSubItemNavigation.ImageUri.Uri = "NavigationBar";
-            this.barSubItemNavigation.Name = "barSubItemNavigation";
-			            // 
-            // ribbonPageGroup
-            // 
-            this.ribbonPageGroup.AllowTextClipping = false;
-			this.ribbonPageGroup.ItemLinks.Add(this.skinRibbonGalleryBarItem);
-            this.ribbonPageGroup.Name = "ribbonPageGroup";
-            this.ribbonPageGroup.ShowCaptionButton = false;
-            this.ribbonPageGroup.Text = "Appearance";
-			// 
-            // ribbonStatusBar
-            // 
-			this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbonControl;
-			// 
-            // officeNavigationBar
-            //
-			this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom; 
-            this.officeNavigationBar.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
-            			this.navigationBarItemAccountCollectionView,
-						this.navigationBarItemBillCollectionView,
-						this.navigationBarItemBillDetailCollectionView,
-						this.navigationBarItemCommentCollectionView,
-						this.navigationBarItemCommentDetailCollectionView,
-						this.navigationBarItemGiftCollectionView,
-						this.navigationBarItemOriginCollectionView,
-						this.navigationBarItemPetCollectionView,
-						this.navigationBarItemPetAccessoryCollectionView,
-						this.navigationBarItemPetFoodCollectionView,
-						this.navigationBarItemPetMedicineCollectionView,
-						this.navigationBarItemPetToyCollectionView,
-						this.navigationBarItemRoleCollectionView,
-						this.navigationBarItemTypeCollectionView,
-						this.navigationBarItemUserCollectionView,
-									
-			});
-            this.officeNavigationBar.Name = "officeNavigationBar";
-            this.officeNavigationBar.Text = "officeNavigationBar";
-						// 
-            // navigationBarItemAccountCollectionView
-            // 
-			this.navigationBarItemAccountCollectionView.Name = "navigationBarItemAccountCollectionView";
-            this.navigationBarItemAccountCollectionView.Text = "Accounts";
-			// 
-            // barButtonItemAccountCollectionView
-            // 
-			this.barButtonItemAccountCollectionView.Name = "barButtonItemAccountCollectionView";
-            this.barButtonItemAccountCollectionView.Caption = "Accounts";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemAccountCollectionView));
-					
-						// 
-            // navigationBarItemBillCollectionView
-            // 
-			this.navigationBarItemBillCollectionView.Name = "navigationBarItemBillCollectionView";
-            this.navigationBarItemBillCollectionView.Text = "Bills";
-			// 
-            // barButtonItemBillCollectionView
-            // 
-			this.barButtonItemBillCollectionView.Name = "barButtonItemBillCollectionView";
-            this.barButtonItemBillCollectionView.Caption = "Bills";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemBillCollectionView));
-					
-						// 
-            // navigationBarItemBillDetailCollectionView
-            // 
-			this.navigationBarItemBillDetailCollectionView.Name = "navigationBarItemBillDetailCollectionView";
-            this.navigationBarItemBillDetailCollectionView.Text = "Bill Details";
-			// 
-            // barButtonItemBillDetailCollectionView
-            // 
-			this.barButtonItemBillDetailCollectionView.Name = "barButtonItemBillDetailCollectionView";
-            this.barButtonItemBillDetailCollectionView.Caption = "Bill Details";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemBillDetailCollectionView));
-					
-						// 
-            // navigationBarItemCommentCollectionView
-            // 
-			this.navigationBarItemCommentCollectionView.Name = "navigationBarItemCommentCollectionView";
-            this.navigationBarItemCommentCollectionView.Text = "Comments";
-			// 
-            // barButtonItemCommentCollectionView
-            // 
-			this.barButtonItemCommentCollectionView.Name = "barButtonItemCommentCollectionView";
-            this.barButtonItemCommentCollectionView.Caption = "Comments";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemCommentCollectionView));
-					
-						// 
-            // navigationBarItemCommentDetailCollectionView
-            // 
-			this.navigationBarItemCommentDetailCollectionView.Name = "navigationBarItemCommentDetailCollectionView";
-            this.navigationBarItemCommentDetailCollectionView.Text = "Comment Details";
-			// 
-            // barButtonItemCommentDetailCollectionView
-            // 
-			this.barButtonItemCommentDetailCollectionView.Name = "barButtonItemCommentDetailCollectionView";
-            this.barButtonItemCommentDetailCollectionView.Caption = "Comment Details";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemCommentDetailCollectionView));
-					
-						// 
-            // navigationBarItemGiftCollectionView
-            // 
-			this.navigationBarItemGiftCollectionView.Name = "navigationBarItemGiftCollectionView";
-            this.navigationBarItemGiftCollectionView.Text = "Gifts";
-			// 
-            // barButtonItemGiftCollectionView
-            // 
-			this.barButtonItemGiftCollectionView.Name = "barButtonItemGiftCollectionView";
-            this.barButtonItemGiftCollectionView.Caption = "Gifts";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemGiftCollectionView));
-					
-						// 
-            // navigationBarItemOriginCollectionView
-            // 
-			this.navigationBarItemOriginCollectionView.Name = "navigationBarItemOriginCollectionView";
-            this.navigationBarItemOriginCollectionView.Text = "Origins";
-			// 
-            // barButtonItemOriginCollectionView
-            // 
-			this.barButtonItemOriginCollectionView.Name = "barButtonItemOriginCollectionView";
-            this.barButtonItemOriginCollectionView.Caption = "Origins";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemOriginCollectionView));
-					
-						// 
-            // navigationBarItemPetCollectionView
-            // 
-			this.navigationBarItemPetCollectionView.Name = "navigationBarItemPetCollectionView";
-            this.navigationBarItemPetCollectionView.Text = "Pets";
-			// 
-            // barButtonItemPetCollectionView
-            // 
-			this.barButtonItemPetCollectionView.Name = "barButtonItemPetCollectionView";
-            this.barButtonItemPetCollectionView.Caption = "Pets";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetCollectionView));
-					
-						// 
-            // navigationBarItemPetAccessoryCollectionView
-            // 
-			this.navigationBarItemPetAccessoryCollectionView.Name = "navigationBarItemPetAccessoryCollectionView";
-            this.navigationBarItemPetAccessoryCollectionView.Text = "Pet Accessories";
-			// 
-            // barButtonItemPetAccessoryCollectionView
-            // 
-			this.barButtonItemPetAccessoryCollectionView.Name = "barButtonItemPetAccessoryCollectionView";
-            this.barButtonItemPetAccessoryCollectionView.Caption = "Pet Accessories";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetAccessoryCollectionView));
-					
-						// 
-            // navigationBarItemPetFoodCollectionView
-            // 
-			this.navigationBarItemPetFoodCollectionView.Name = "navigationBarItemPetFoodCollectionView";
-            this.navigationBarItemPetFoodCollectionView.Text = "Pet Foods";
-			// 
-            // barButtonItemPetFoodCollectionView
-            // 
-			this.barButtonItemPetFoodCollectionView.Name = "barButtonItemPetFoodCollectionView";
-            this.barButtonItemPetFoodCollectionView.Caption = "Pet Foods";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetFoodCollectionView));
-					
-						// 
-            // navigationBarItemPetMedicineCollectionView
-            // 
-			this.navigationBarItemPetMedicineCollectionView.Name = "navigationBarItemPetMedicineCollectionView";
-            this.navigationBarItemPetMedicineCollectionView.Text = "Pet Medicines";
-			// 
-            // barButtonItemPetMedicineCollectionView
-            // 
-			this.barButtonItemPetMedicineCollectionView.Name = "barButtonItemPetMedicineCollectionView";
-            this.barButtonItemPetMedicineCollectionView.Caption = "Pet Medicines";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetMedicineCollectionView));
-					
-						// 
-            // navigationBarItemPetToyCollectionView
-            // 
-			this.navigationBarItemPetToyCollectionView.Name = "navigationBarItemPetToyCollectionView";
-            this.navigationBarItemPetToyCollectionView.Text = "Pet Toys";
-			// 
-            // barButtonItemPetToyCollectionView
-            // 
-			this.barButtonItemPetToyCollectionView.Name = "barButtonItemPetToyCollectionView";
-            this.barButtonItemPetToyCollectionView.Caption = "Pet Toys";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetToyCollectionView));
-					
-						// 
-            // navigationBarItemRoleCollectionView
-            // 
-			this.navigationBarItemRoleCollectionView.Name = "navigationBarItemRoleCollectionView";
-            this.navigationBarItemRoleCollectionView.Text = "Roles";
-			// 
-            // barButtonItemRoleCollectionView
-            // 
-			this.barButtonItemRoleCollectionView.Name = "barButtonItemRoleCollectionView";
-            this.barButtonItemRoleCollectionView.Caption = "Roles";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemRoleCollectionView));
-					
-						// 
-            // navigationBarItemTypeCollectionView
-            // 
-			this.navigationBarItemTypeCollectionView.Name = "navigationBarItemTypeCollectionView";
-            this.navigationBarItemTypeCollectionView.Text = "Types";
-			// 
-            // barButtonItemTypeCollectionView
-            // 
-			this.barButtonItemTypeCollectionView.Name = "barButtonItemTypeCollectionView";
-            this.barButtonItemTypeCollectionView.Caption = "Types";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemTypeCollectionView));
-					
-						// 
-            // navigationBarItemUserCollectionView
-            // 
-			this.navigationBarItemUserCollectionView.Name = "navigationBarItemUserCollectionView";
-            this.navigationBarItemUserCollectionView.Text = "Users";
-			// 
-            // barButtonItemUserCollectionView
-            // 
-			this.barButtonItemUserCollectionView.Name = "barButtonItemUserCollectionView";
-            this.barButtonItemUserCollectionView.Caption = "Users";
-											this.barSubItemNavigation.LinksPersistInfo.Add(new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemUserCollectionView));
-					
-							
-			// 
             // mvvmContext
             // 
             this.mvvmContext.ContainerControl = this;
             this.mvvmContext.ViewModelType = typeof(PetStore.ViewModels.PetStoreEntitiesViewModel);
-			 // 
+            // 
+            // ribbonControl
+            // 
+            this.ribbonControl.ExpandCollapseItem.Id = 0;
+            this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl.ExpandCollapseItem,
+            this.ribbonControl.SearchEditItem,
+            this.skinRibbonGalleryBarItem,
+            this.barSubItemNavigation,
+            this.barButtonItemAccountCollectionView,
+            this.barButtonItemBillCollectionView,
+            this.barButtonItemBillDetailCollectionView,
+            this.barButtonItemCommentCollectionView,
+            this.barButtonItemCommentDetailCollectionView,
+            this.barButtonItemGiftCollectionView,
+            this.barButtonItemOriginCollectionView,
+            this.barButtonItemPetCollectionView,
+            this.barButtonItemPetAccessoryCollectionView,
+            this.barButtonItemPetFoodCollectionView,
+            this.barButtonItemPetMedicineCollectionView,
+            this.barButtonItemPetToyCollectionView,
+            this.barButtonItemRoleCollectionView,
+            this.barButtonItemTypeCollectionView,
+            this.barButtonItemUserCollectionView,
+            this.btnLogout,
+            this.btnChangePwd});
+            this.ribbonControl.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonControl.MaxItemId = 33;
+            this.ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
+            this.ribbonControl.Name = "ribbonControl";
+            this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage});
+            this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.ribbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.ribbonControl.StatusBar = this.ribbonStatusBar;
+            this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // skinRibbonGalleryBarItem
+            // 
+            this.skinRibbonGalleryBarItem.Id = 14;
+            this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
+            // 
+            // barSubItemNavigation
+            // 
+            this.barSubItemNavigation.Caption = "Navigation";
+            this.barSubItemNavigation.Id = 15;
+            this.barSubItemNavigation.ImageOptions.ImageUri.Uri = "NavigationBar";
+            this.barSubItemNavigation.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemAccountCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemBillCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemBillDetailCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemCommentCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemCommentDetailCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemGiftCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemOriginCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetAccessoryCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetFoodCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetMedicineCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemPetToyCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemRoleCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemTypeCollectionView),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemUserCollectionView)});
+            this.barSubItemNavigation.Name = "barSubItemNavigation";
+            // 
+            // barButtonItemAccountCollectionView
+            // 
+            this.barButtonItemAccountCollectionView.Caption = "Accounts";
+            this.barButtonItemAccountCollectionView.Id = 17;
+            this.barButtonItemAccountCollectionView.Name = "barButtonItemAccountCollectionView";
+            // 
+            // barButtonItemBillCollectionView
+            // 
+            this.barButtonItemBillCollectionView.Caption = "Bills";
+            this.barButtonItemBillCollectionView.Id = 18;
+            this.barButtonItemBillCollectionView.Name = "barButtonItemBillCollectionView";
+            // 
+            // barButtonItemBillDetailCollectionView
+            // 
+            this.barButtonItemBillDetailCollectionView.Caption = "Bill Details";
+            this.barButtonItemBillDetailCollectionView.Id = 19;
+            this.barButtonItemBillDetailCollectionView.Name = "barButtonItemBillDetailCollectionView";
+            // 
+            // barButtonItemCommentCollectionView
+            // 
+            this.barButtonItemCommentCollectionView.Caption = "Comments";
+            this.barButtonItemCommentCollectionView.Id = 20;
+            this.barButtonItemCommentCollectionView.Name = "barButtonItemCommentCollectionView";
+            // 
+            // barButtonItemCommentDetailCollectionView
+            // 
+            this.barButtonItemCommentDetailCollectionView.Caption = "Comment Details";
+            this.barButtonItemCommentDetailCollectionView.Id = 21;
+            this.barButtonItemCommentDetailCollectionView.Name = "barButtonItemCommentDetailCollectionView";
+            // 
+            // barButtonItemGiftCollectionView
+            // 
+            this.barButtonItemGiftCollectionView.Caption = "Gifts";
+            this.barButtonItemGiftCollectionView.Id = 22;
+            this.barButtonItemGiftCollectionView.Name = "barButtonItemGiftCollectionView";
+            // 
+            // barButtonItemOriginCollectionView
+            // 
+            this.barButtonItemOriginCollectionView.Caption = "Origins";
+            this.barButtonItemOriginCollectionView.Id = 23;
+            this.barButtonItemOriginCollectionView.Name = "barButtonItemOriginCollectionView";
+            // 
+            // barButtonItemPetCollectionView
+            // 
+            this.barButtonItemPetCollectionView.Caption = "Pets";
+            this.barButtonItemPetCollectionView.Id = 24;
+            this.barButtonItemPetCollectionView.Name = "barButtonItemPetCollectionView";
+            // 
+            // barButtonItemPetAccessoryCollectionView
+            // 
+            this.barButtonItemPetAccessoryCollectionView.Caption = "Pet Accessories";
+            this.barButtonItemPetAccessoryCollectionView.Id = 25;
+            this.barButtonItemPetAccessoryCollectionView.Name = "barButtonItemPetAccessoryCollectionView";
+            // 
+            // barButtonItemPetFoodCollectionView
+            // 
+            this.barButtonItemPetFoodCollectionView.Caption = "Pet Foods";
+            this.barButtonItemPetFoodCollectionView.Id = 26;
+            this.barButtonItemPetFoodCollectionView.Name = "barButtonItemPetFoodCollectionView";
+            // 
+            // barButtonItemPetMedicineCollectionView
+            // 
+            this.barButtonItemPetMedicineCollectionView.Caption = "Pet Medicines";
+            this.barButtonItemPetMedicineCollectionView.Id = 27;
+            this.barButtonItemPetMedicineCollectionView.Name = "barButtonItemPetMedicineCollectionView";
+            // 
+            // barButtonItemPetToyCollectionView
+            // 
+            this.barButtonItemPetToyCollectionView.Caption = "Pet Toys";
+            this.barButtonItemPetToyCollectionView.Id = 28;
+            this.barButtonItemPetToyCollectionView.Name = "barButtonItemPetToyCollectionView";
+            // 
+            // barButtonItemRoleCollectionView
+            // 
+            this.barButtonItemRoleCollectionView.Caption = "Roles";
+            this.barButtonItemRoleCollectionView.Id = 29;
+            this.barButtonItemRoleCollectionView.Name = "barButtonItemRoleCollectionView";
+            // 
+            // barButtonItemTypeCollectionView
+            // 
+            this.barButtonItemTypeCollectionView.Caption = "Types";
+            this.barButtonItemTypeCollectionView.Id = 30;
+            this.barButtonItemTypeCollectionView.Name = "barButtonItemTypeCollectionView";
+            // 
+            // barButtonItemUserCollectionView
+            // 
+            this.barButtonItemUserCollectionView.Caption = "Users";
+            this.barButtonItemUserCollectionView.Id = 31;
+            this.barButtonItemUserCollectionView.Name = "barButtonItemUserCollectionView";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Caption = "Log out";
+            this.btnLogout.Id = 16;
+            this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.Image")));
+            this.btnLogout.LargeWidth = 55;
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // ribbonPage
+            // 
+            this.ribbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroupNavigation,
+            this.ribbonPageGroup});
+            this.ribbonPage.Name = "ribbonPage";
+            this.ribbonPage.Text = "View";
+            // 
+            // ribbonPageGroupNavigation
+            // 
+            this.ribbonPageGroupNavigation.ItemLinks.Add(this.barSubItemNavigation);
+            this.ribbonPageGroupNavigation.ItemLinks.Add(this.btnLogout);
+            this.ribbonPageGroupNavigation.ItemLinks.Add(this.btnChangePwd);
+            this.ribbonPageGroupNavigation.Name = "ribbonPageGroupNavigation";
+            this.ribbonPageGroupNavigation.Text = "Module";
+            // 
+            // ribbonPageGroup
+            // 
+            this.ribbonPageGroup.AllowTextClipping = false;
+            this.ribbonPageGroup.ItemLinks.Add(this.skinRibbonGalleryBarItem);
+            this.ribbonPageGroup.Name = "ribbonPageGroup";
+            this.ribbonPageGroup.ShowCaptionButton = false;
+            this.ribbonPageGroup.Text = "Appearance";
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 911);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbonControl;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1195, 34);
+            // 
+            // officeNavigationBar
+            // 
+            this.officeNavigationBar.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.officeNavigationBar.Items.AddRange(new DevExpress.XtraBars.Navigation.NavigationBarItem[] {
+            this.navigationBarItemAccountCollectionView,
+            this.navigationBarItemBillCollectionView,
+            this.navigationBarItemBillDetailCollectionView,
+            this.navigationBarItemCommentCollectionView,
+            this.navigationBarItemCommentDetailCollectionView,
+            this.navigationBarItemGiftCollectionView,
+            this.navigationBarItemOriginCollectionView,
+            this.navigationBarItemPetCollectionView,
+            this.navigationBarItemPetAccessoryCollectionView,
+            this.navigationBarItemPetFoodCollectionView,
+            this.navigationBarItemPetMedicineCollectionView,
+            this.navigationBarItemPetToyCollectionView,
+            this.navigationBarItemRoleCollectionView,
+            this.navigationBarItemTypeCollectionView,
+            this.navigationBarItemUserCollectionView});
+            this.officeNavigationBar.Location = new System.Drawing.Point(0, 859);
+            this.officeNavigationBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.officeNavigationBar.Name = "officeNavigationBar";
+            this.officeNavigationBar.Size = new System.Drawing.Size(1195, 52);
+            this.officeNavigationBar.TabIndex = 1;
+            this.officeNavigationBar.Text = "officeNavigationBar";
+            // 
+            // navigationBarItemAccountCollectionView
+            // 
+            this.navigationBarItemAccountCollectionView.Name = "navigationBarItemAccountCollectionView";
+            this.navigationBarItemAccountCollectionView.Text = "Accounts";
+            // 
+            // navigationBarItemBillCollectionView
+            // 
+            this.navigationBarItemBillCollectionView.Name = "navigationBarItemBillCollectionView";
+            this.navigationBarItemBillCollectionView.Text = "Bills";
+            // 
+            // navigationBarItemBillDetailCollectionView
+            // 
+            this.navigationBarItemBillDetailCollectionView.Name = "navigationBarItemBillDetailCollectionView";
+            this.navigationBarItemBillDetailCollectionView.Text = "Bill Details";
+            // 
+            // navigationBarItemCommentCollectionView
+            // 
+            this.navigationBarItemCommentCollectionView.Name = "navigationBarItemCommentCollectionView";
+            this.navigationBarItemCommentCollectionView.Text = "Comments";
+            // 
+            // navigationBarItemCommentDetailCollectionView
+            // 
+            this.navigationBarItemCommentDetailCollectionView.Name = "navigationBarItemCommentDetailCollectionView";
+            this.navigationBarItemCommentDetailCollectionView.Text = "Comment Details";
+            // 
+            // navigationBarItemGiftCollectionView
+            // 
+            this.navigationBarItemGiftCollectionView.Name = "navigationBarItemGiftCollectionView";
+            this.navigationBarItemGiftCollectionView.Text = "Gifts";
+            // 
+            // navigationBarItemOriginCollectionView
+            // 
+            this.navigationBarItemOriginCollectionView.Name = "navigationBarItemOriginCollectionView";
+            this.navigationBarItemOriginCollectionView.Text = "Origins";
+            // 
+            // navigationBarItemPetCollectionView
+            // 
+            this.navigationBarItemPetCollectionView.Name = "navigationBarItemPetCollectionView";
+            this.navigationBarItemPetCollectionView.Text = "Pets";
+            // 
+            // navigationBarItemPetAccessoryCollectionView
+            // 
+            this.navigationBarItemPetAccessoryCollectionView.Name = "navigationBarItemPetAccessoryCollectionView";
+            this.navigationBarItemPetAccessoryCollectionView.Text = "Pet Accessories";
+            // 
+            // navigationBarItemPetFoodCollectionView
+            // 
+            this.navigationBarItemPetFoodCollectionView.Name = "navigationBarItemPetFoodCollectionView";
+            this.navigationBarItemPetFoodCollectionView.Text = "Pet Foods";
+            // 
+            // navigationBarItemPetMedicineCollectionView
+            // 
+            this.navigationBarItemPetMedicineCollectionView.Name = "navigationBarItemPetMedicineCollectionView";
+            this.navigationBarItemPetMedicineCollectionView.Text = "Pet Medicines";
+            // 
+            // navigationBarItemPetToyCollectionView
+            // 
+            this.navigationBarItemPetToyCollectionView.Name = "navigationBarItemPetToyCollectionView";
+            this.navigationBarItemPetToyCollectionView.Text = "Pet Toys";
+            // 
+            // navigationBarItemRoleCollectionView
+            // 
+            this.navigationBarItemRoleCollectionView.Name = "navigationBarItemRoleCollectionView";
+            this.navigationBarItemRoleCollectionView.Text = "Roles";
+            // 
+            // navigationBarItemTypeCollectionView
+            // 
+            this.navigationBarItemTypeCollectionView.Name = "navigationBarItemTypeCollectionView";
+            this.navigationBarItemTypeCollectionView.Text = "Types";
+            // 
+            // navigationBarItemUserCollectionView
+            // 
+            this.navigationBarItemUserCollectionView.Name = "navigationBarItemUserCollectionView";
+            this.navigationBarItemUserCollectionView.Text = "Users";
+            // 
             // navigationFrame
             // 
             this.navigationFrame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationFrame.Location = new System.Drawing.Point(0, 145);
+            this.navigationFrame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navigationFrame.Name = "navigationFrame";
             this.navigationFrame.RibbonAndBarsMergeStyle = DevExpress.XtraBars.Docking2010.Views.RibbonAndBarsMergeStyle.Always;
+            this.navigationFrame.SelectedPage = null;
+            this.navigationFrame.Size = new System.Drawing.Size(1195, 714);
+            this.navigationFrame.TabIndex = 0;
             this.navigationFrame.Text = "navigationFrame";
-			// 
+            // 
+            // btnChangePwd
+            // 
+            this.btnChangePwd.Caption = "Change password";
+            this.btnChangePwd.Id = 32;
+            this.btnChangePwd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePwd.ImageOptions.Image")));
+            this.btnChangePwd.Name = "btnChangePwd";
+            this.btnChangePwd.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // PetStoreEntitiesView
             // 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.navigationFrame);
+            this.Controls.Add(this.navigationFrame);
             this.Controls.Add(this.officeNavigationBar);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
-			this.Size = new System.Drawing.Size(1024, 768);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PetStoreEntitiesView";
+            this.Size = new System.Drawing.Size(1195, 945);
+            ((System.ComponentModel.ISupportInitialize)(this.documentManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.noDocumentsView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.officeNavigationBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navigationFrame)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
 		}
 		
         #endregion
@@ -396,5 +474,8 @@
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemTypeCollectionView;
 				private DevExpress.XtraBars.Navigation.NavigationBarItem navigationBarItemUserCollectionView;
 		private DevExpress.XtraBars.BarButtonItem  barButtonItemUserCollectionView;
-					}
+        private DevExpress.XtraBars.BarButtonItem btnLogout;
+        private DevExpress.XtraBars.Docking2010.Views.NoDocuments.NoDocumentsView noDocumentsView1;
+        private DevExpress.XtraBars.BarButtonItem btnChangePwd;
+    }
 }

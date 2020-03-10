@@ -42,15 +42,16 @@
             this.btnPMed = new DevExpress.XtraBars.BarButtonItem();
             this.btnCmtList = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGiftList = new DevExpress.XtraBars.BarButtonItem();
             this.rbpSales = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgBillSale = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpProduct = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgPet = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpgGift = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpComment = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.TabManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.rbpgGift = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnGiftList = new DevExpress.XtraBars.BarButtonItem();
+            this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabManager)).BeginInit();
             this.SuspendLayout();
@@ -79,10 +80,11 @@
             this.btnPMed,
             this.btnCmtList,
             this.barButtonItem2,
-            this.btnGiftList});
+            this.btnGiftList,
+            this.skinRibbonGalleryBarItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 14;
+            this.ribbon.MaxItemId = 15;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbpSales,
@@ -172,6 +174,15 @@
             this.barButtonItem2.Id = 12;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // btnGiftList
+            // 
+            this.btnGiftList.Caption = "Gift List";
+            this.btnGiftList.Id = 13;
+            this.btnGiftList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiftList.ImageOptions.Image")));
+            this.btnGiftList.LargeWidth = 75;
+            this.btnGiftList.Name = "btnGiftList";
+            this.btnGiftList.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // rbpSales
             // 
             this.rbpSales.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -183,6 +194,7 @@
             // 
             this.rbpgBillSale.ItemLinks.Add(this.btnSellProduct);
             this.rbpgBillSale.ItemLinks.Add(this.btnOnlineOrder);
+            this.rbpgBillSale.ItemLinks.Add(this.skinRibbonGalleryBarItem1);
             this.rbpgBillSale.Name = "rbpgBillSale";
             this.rbpgBillSale.Text = "Bill";
             // 
@@ -205,6 +217,12 @@
             this.rbpgPet.Name = "rbpgPet";
             this.rbpgPet.Text = "View";
             // 
+            // rbpgGift
+            // 
+            this.rbpgGift.ItemLinks.Add(this.btnGiftList);
+            this.rbpgGift.Name = "rbpgGift";
+            this.rbpgGift.Text = "Gift";
+            // 
             // rbpComment
             // 
             this.rbpComment.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -222,20 +240,11 @@
             // 
             this.TabManager.MdiParent = this;
             // 
-            // rbpgGift
+            // skinRibbonGalleryBarItem1
             // 
-            this.rbpgGift.ItemLinks.Add(this.btnGiftList);
-            this.rbpgGift.Name = "rbpgGift";
-            this.rbpgGift.Text = "Gift";
-            // 
-            // btnGiftList
-            // 
-            this.btnGiftList.Caption = "Gift List";
-            this.btnGiftList.Id = 13;
-            this.btnGiftList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiftList.ImageOptions.Image")));
-            this.btnGiftList.LargeWidth = 75;
-            this.btnGiftList.Name = "btnGiftList";
-            this.btnGiftList.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.skinRibbonGalleryBarItem1.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem1.Id = 14;
+            this.skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
             // Staff
             // 
@@ -281,5 +290,6 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager TabManager;
         private DevExpress.XtraBars.BarButtonItem btnGiftList;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpgGift;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
     }
 }
