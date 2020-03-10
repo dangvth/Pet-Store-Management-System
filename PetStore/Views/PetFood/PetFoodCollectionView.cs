@@ -6,9 +6,12 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraBars;
+using PetStore.Model;
+using System.Windows.Forms;
 
 namespace PetStore.Views.PetFoodCollectionView{
     public partial class PetFoodCollectionView : XtraUserControl {
+        private String pfIDSelected = "";
         public PetFoodCollectionView() {
             InitializeComponent();
 			if(!mvvmContext.IsDesignMode)
@@ -43,6 +46,25 @@ namespace PetStore.Views.PetFoodCollectionView{
                     popupMenu.ShowPopup(gridControl.PointToScreen(e.Location), s);
                 }
             };
+        }
+
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (pfIDSelected != "")
+            {
+                PetFoodModel pfm = new PetFoodModel();
+                pfm.DeletePetFood(pfIDSelected);
+                XtraMessageBox.Show("Delete successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else
+            {
+                XtraMessageBox.Show("Please choose a food item to delete !!!", "Warning",  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void gridView_RowClick(object sender, RowClickEventArgs e)
+        {
+            int idx = gridView.FocusedRowHandle;
+            pfIDSelected = gridView.GetRowCellValue(idx, "pf_id").ToString();
         }
     }
 }

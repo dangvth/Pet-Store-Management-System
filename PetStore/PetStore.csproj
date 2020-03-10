@@ -136,6 +136,7 @@
     <Compile Include="Common\EntitiesViewModel.cs" />
     <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
     <Compile Include="Common\SingleObjectViewModel.cs" />
+    <Compile Include="Model\CommentModel.cs" />
     <Compile Include="Model\PetFoodModel.cs" />
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\Comment.cs" />
