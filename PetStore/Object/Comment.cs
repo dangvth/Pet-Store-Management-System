@@ -4,21 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommentForm
+namespace PetStore.Object
 {
-    class CommentObInfor
+    class Comment
     {
         private int cmt_id;
         private String cmt_content;
         private String cmt_published;
-        private int cmt_status;
+        private String cmt_status;
         private int p_id;
         private int u_id;
         private String u_name;
         private String p_name;
 
-        public CommentObInfor(int cmt_id, String cmt_content, String cmt_published, 
-                              int cmt_Status, int p_id, int u_id)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cmt_id"></param>
+        /// <param name="cmt_content"></param>
+        /// <param name="cmt_published"></param>
+        /// <param name="cmt_Status"></param>
+        /// <param name="p_id"></param>
+        /// <param name="u_id"></param>
+        public Comment(int cmt_id, String cmt_content, String cmt_published,
+                              String cmt_Status, int p_id, int u_id)
         {
             this.cmt_id = cmt_id;
             this.cmt_content = cmt_content;
@@ -63,7 +72,7 @@ namespace CommentForm
             }
         }
 
-        public int CommentStatus
+        public String CommentStatus
         {
             set
             {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PetStore
+namespace PetStore.Model
 {
     class PetFoodModel
     {
@@ -34,7 +34,7 @@ namespace PetStore
                     lastID = data.pf_id.ToString();
                 }
             }
-            if (lastID == ""){return "PFD0000";}
+            if (lastID == "") { return "PFD0000"; }
             else { return lastID; }
         }
 
@@ -54,7 +54,8 @@ namespace PetStore
             else if (id >= 100 && id < 1000)
             {
                 return "PFD0" + id;
-            } else
+            }
+            else
             {
                 return "PFD" + id;
             }

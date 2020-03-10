@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PetStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PetStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="ac_id" />
@@ -186,7 +186,7 @@
           <Property Name="u_status" Type="nvarchar" MaxLength="15" />
           <Property Name="ac_id" Type="int" />
         </EntityType>
-        <Association Name="FK__Account__r_id__571DF1D5">
+        <Association Name="FK__Account__r_id__5441852A">
           <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
           <End Role="Account" Type="Self.Account" Multiplicity="*" />
           <ReferentialConstraint>
@@ -198,7 +198,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__g_id__5DCAEF64">
+        <Association Name="FK__Bill__g_id__5535A963">
           <End Role="Gift" Type="Self.Gift" Multiplicity="0..1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -210,7 +210,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Bill__u_id__5CD6CB2B">
+        <Association Name="FK__Bill__u_id__5629CD9C">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="Bill" Type="Self.Bill" Multiplicity="*" />
           <ReferentialConstraint>
@@ -222,7 +222,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BillDetai__pa_id__628FA481">
+        <Association Name="FK__BillDetai__pa_id__571DF1D5">
           <End Role="PetAccessories" Type="Self.PetAccessories" Multiplicity="0..1" />
           <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -234,7 +234,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BillDetai__pf_id__619B8048">
+        <Association Name="FK__BillDetai__pf_id__5812160E">
           <End Role="PetFood" Type="Self.PetFood" Multiplicity="0..1" />
           <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -246,7 +246,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BillDetai__pm_id__6383C8BA">
+        <Association Name="FK__BillDetai__pm_id__59063A47">
           <End Role="PetMedicine" Type="Self.PetMedicine" Multiplicity="0..1" />
           <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -258,7 +258,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BillDetai__pt_id__60A75C0F">
+        <Association Name="FK__BillDetai__pt_id__59FA5E80">
           <End Role="PetToys" Type="Self.PetToys" Multiplicity="0..1" />
           <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -270,7 +270,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BillDetail__b_id__5EBF139D">
+        <Association Name="FK__BillDetail__b_id__5AEE82B9">
           <End Role="Bill" Type="Self.Bill" Multiplicity="0..1" />
           <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -282,7 +282,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BillDetail__p_id__5FB337D6">
+        <Association Name="FK__BillDetail__p_id__5BE2A6F2">
           <End Role="Pet" Type="Self.Pet" Multiplicity="0..1" />
           <End Role="BillDetail" Type="Self.BillDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -294,7 +294,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cart__pa_id__6754599E">
+        <Association Name="FK__Cart__pa_id__5CD6CB2B">
           <End Role="PetAccessories" Type="Self.PetAccessories" Multiplicity="0..1" />
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -306,7 +306,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cart__pf_id__66603565">
+        <Association Name="FK__Cart__pf_id__5DCAEF64">
           <End Role="PetFood" Type="Self.PetFood" Multiplicity="0..1" />
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -318,7 +318,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cart__pm_id__68487DD7">
+        <Association Name="FK__Cart__pm_id__5EBF139D">
           <End Role="PetMedicine" Type="Self.PetMedicine" Multiplicity="0..1" />
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -330,7 +330,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cart__pt_id__656C112C">
+        <Association Name="FK__Cart__pt_id__5FB337D6">
           <End Role="PetToys" Type="Self.PetToys" Multiplicity="0..1" />
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -342,7 +342,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Cart__u_id__6477ECF3">
+        <Association Name="FK__Cart__u_id__60A75C0F">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -354,7 +354,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Comment__p_id__59063A47">
+        <Association Name="FK__Comment__p_id__619B8048">
           <End Role="Pet" Type="Self.Pet" Multiplicity="0..1" />
           <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -366,7 +366,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Comment__u_id__59FA5E80">
+        <Association Name="FK__Comment__u_id__628FA481">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
           <ReferentialConstraint>
@@ -378,7 +378,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CommentDe__cmt_i__5AEE82B9">
+        <Association Name="FK__CommentDe__cmt_i__6383C8BA">
           <End Role="Comment" Type="Self.Comment" Multiplicity="0..1" />
           <End Role="CommentDetail" Type="Self.CommentDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -390,7 +390,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CommentDet__u_id__5BE2A6F2">
+        <Association Name="FK__CommentDet__u_id__6477ECF3">
           <End Role="User" Type="Self.User" Multiplicity="0..1" />
           <End Role="CommentDetail" Type="Self.CommentDetail" Multiplicity="*" />
           <ReferentialConstraint>
@@ -402,7 +402,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Pet__t_id__5441852A">
+        <Association Name="FK__Pet__t_id__656C112C">
           <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
           <End Role="Pet" Type="Self.Pet" Multiplicity="*" />
           <ReferentialConstraint>
@@ -414,7 +414,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__PetFood__t_id__5535A963">
+        <Association Name="FK__PetFood__t_id__66603565">
           <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
           <End Role="PetFood" Type="Self.PetFood" Multiplicity="*" />
           <ReferentialConstraint>
@@ -426,7 +426,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Type__org_id__5629CD9C">
+        <Association Name="FK__Type__org_id__6754599E">
           <End Role="Origin" Type="Self.Origin" Multiplicity="0..1" />
           <End Role="Type" Type="Self.Type" Multiplicity="*" />
           <ReferentialConstraint>
@@ -438,7 +438,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__User__ac_id__5812160E">
+        <Association Name="FK__User__ac_id__68487DD7">
           <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
           <End Role="User" Type="Self.User" Multiplicity="*" />
           <ReferentialConstraint>
@@ -467,97 +467,96 @@
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Account__r_id__571DF1D5" Association="Self.FK__Account__r_id__571DF1D5">
+          <AssociationSet Name="FK__Account__r_id__5441852A" Association="Self.FK__Account__r_id__5441852A">
             <End Role="Role" EntitySet="Role" />
             <End Role="Account" EntitySet="Account" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__g_id__5DCAEF64" Association="Self.FK__Bill__g_id__5DCAEF64">
+          <AssociationSet Name="FK__Bill__g_id__5535A963" Association="Self.FK__Bill__g_id__5535A963">
             <End Role="Gift" EntitySet="Gift" />
             <End Role="Bill" EntitySet="Bill" />
           </AssociationSet>
-          <AssociationSet Name="FK__Bill__u_id__5CD6CB2B" Association="Self.FK__Bill__u_id__5CD6CB2B">
+          <AssociationSet Name="FK__Bill__u_id__5629CD9C" Association="Self.FK__Bill__u_id__5629CD9C">
             <End Role="User" EntitySet="User" />
             <End Role="Bill" EntitySet="Bill" />
           </AssociationSet>
-          <AssociationSet Name="FK__BillDetai__pa_id__628FA481" Association="Self.FK__BillDetai__pa_id__628FA481">
+          <AssociationSet Name="FK__BillDetai__pa_id__571DF1D5" Association="Self.FK__BillDetai__pa_id__571DF1D5">
             <End Role="PetAccessories" EntitySet="PetAccessories" />
             <End Role="BillDetail" EntitySet="BillDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__BillDetai__pf_id__619B8048" Association="Self.FK__BillDetai__pf_id__619B8048">
+          <AssociationSet Name="FK__BillDetai__pf_id__5812160E" Association="Self.FK__BillDetai__pf_id__5812160E">
             <End Role="PetFood" EntitySet="PetFood" />
             <End Role="BillDetail" EntitySet="BillDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__BillDetai__pm_id__6383C8BA" Association="Self.FK__BillDetai__pm_id__6383C8BA">
+          <AssociationSet Name="FK__BillDetai__pm_id__59063A47" Association="Self.FK__BillDetai__pm_id__59063A47">
             <End Role="PetMedicine" EntitySet="PetMedicine" />
             <End Role="BillDetail" EntitySet="BillDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__BillDetai__pt_id__60A75C0F" Association="Self.FK__BillDetai__pt_id__60A75C0F">
+          <AssociationSet Name="FK__BillDetai__pt_id__59FA5E80" Association="Self.FK__BillDetai__pt_id__59FA5E80">
             <End Role="PetToys" EntitySet="PetToys" />
             <End Role="BillDetail" EntitySet="BillDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__BillDetail__b_id__5EBF139D" Association="Self.FK__BillDetail__b_id__5EBF139D">
+          <AssociationSet Name="FK__BillDetail__b_id__5AEE82B9" Association="Self.FK__BillDetail__b_id__5AEE82B9">
             <End Role="Bill" EntitySet="Bill" />
             <End Role="BillDetail" EntitySet="BillDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__BillDetail__p_id__5FB337D6" Association="Self.FK__BillDetail__p_id__5FB337D6">
+          <AssociationSet Name="FK__BillDetail__p_id__5BE2A6F2" Association="Self.FK__BillDetail__p_id__5BE2A6F2">
             <End Role="Pet" EntitySet="Pet" />
             <End Role="BillDetail" EntitySet="BillDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cart__pa_id__6754599E" Association="Self.FK__Cart__pa_id__6754599E">
+          <AssociationSet Name="FK__Cart__pa_id__5CD6CB2B" Association="Self.FK__Cart__pa_id__5CD6CB2B">
             <End Role="PetAccessories" EntitySet="PetAccessories" />
             <End Role="Cart" EntitySet="Cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cart__pf_id__66603565" Association="Self.FK__Cart__pf_id__66603565">
+          <AssociationSet Name="FK__Cart__pf_id__5DCAEF64" Association="Self.FK__Cart__pf_id__5DCAEF64">
             <End Role="PetFood" EntitySet="PetFood" />
             <End Role="Cart" EntitySet="Cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cart__pm_id__68487DD7" Association="Self.FK__Cart__pm_id__68487DD7">
+          <AssociationSet Name="FK__Cart__pm_id__5EBF139D" Association="Self.FK__Cart__pm_id__5EBF139D">
             <End Role="PetMedicine" EntitySet="PetMedicine" />
             <End Role="Cart" EntitySet="Cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cart__pt_id__656C112C" Association="Self.FK__Cart__pt_id__656C112C">
+          <AssociationSet Name="FK__Cart__pt_id__5FB337D6" Association="Self.FK__Cart__pt_id__5FB337D6">
             <End Role="PetToys" EntitySet="PetToys" />
             <End Role="Cart" EntitySet="Cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__Cart__u_id__6477ECF3" Association="Self.FK__Cart__u_id__6477ECF3">
+          <AssociationSet Name="FK__Cart__u_id__60A75C0F" Association="Self.FK__Cart__u_id__60A75C0F">
             <End Role="User" EntitySet="User" />
             <End Role="Cart" EntitySet="Cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__Comment__p_id__59063A47" Association="Self.FK__Comment__p_id__59063A47">
+          <AssociationSet Name="FK__Comment__p_id__619B8048" Association="Self.FK__Comment__p_id__619B8048">
             <End Role="Pet" EntitySet="Pet" />
             <End Role="Comment" EntitySet="Comment" />
           </AssociationSet>
-          <AssociationSet Name="FK__Comment__u_id__59FA5E80" Association="Self.FK__Comment__u_id__59FA5E80">
+          <AssociationSet Name="FK__Comment__u_id__628FA481" Association="Self.FK__Comment__u_id__628FA481">
             <End Role="User" EntitySet="User" />
             <End Role="Comment" EntitySet="Comment" />
           </AssociationSet>
-          <AssociationSet Name="FK__CommentDe__cmt_i__5AEE82B9" Association="Self.FK__CommentDe__cmt_i__5AEE82B9">
+          <AssociationSet Name="FK__CommentDe__cmt_i__6383C8BA" Association="Self.FK__CommentDe__cmt_i__6383C8BA">
             <End Role="Comment" EntitySet="Comment" />
             <End Role="CommentDetail" EntitySet="CommentDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__CommentDet__u_id__5BE2A6F2" Association="Self.FK__CommentDet__u_id__5BE2A6F2">
+          <AssociationSet Name="FK__CommentDet__u_id__6477ECF3" Association="Self.FK__CommentDet__u_id__6477ECF3">
             <End Role="User" EntitySet="User" />
             <End Role="CommentDetail" EntitySet="CommentDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK__Pet__t_id__5441852A" Association="Self.FK__Pet__t_id__5441852A">
+          <AssociationSet Name="FK__Pet__t_id__656C112C" Association="Self.FK__Pet__t_id__656C112C">
             <End Role="Type" EntitySet="Type" />
             <End Role="Pet" EntitySet="Pet" />
           </AssociationSet>
-          <AssociationSet Name="FK__PetFood__t_id__5535A963" Association="Self.FK__PetFood__t_id__5535A963">
+          <AssociationSet Name="FK__PetFood__t_id__66603565" Association="Self.FK__PetFood__t_id__66603565">
             <End Role="Type" EntitySet="Type" />
             <End Role="PetFood" EntitySet="PetFood" />
           </AssociationSet>
-          <AssociationSet Name="FK__Type__org_id__5629CD9C" Association="Self.FK__Type__org_id__5629CD9C">
+          <AssociationSet Name="FK__Type__org_id__6754599E" Association="Self.FK__Type__org_id__6754599E">
             <End Role="Origin" EntitySet="Origin" />
             <End Role="Type" EntitySet="Type" />
           </AssociationSet>
-          <AssociationSet Name="FK__User__ac_id__5812160E" Association="Self.FK__User__ac_id__5812160E">
+          <AssociationSet Name="FK__User__ac_id__68487DD7" Association="Self.FK__User__ac_id__68487DD7">
             <End Role="Account" EntitySet="Account" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PetStoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
