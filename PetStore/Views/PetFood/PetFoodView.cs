@@ -6,6 +6,8 @@ using DevExpress.Utils.MVVM;
 using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
+using PetStore.Model;
+using System.Windows.Forms;
 
 namespace PetStore.Views.PetFoodView{
     public partial class PetFoodView : XtraUserControl {
@@ -41,5 +43,25 @@ namespace PetStore.Views.PetFoodView{
 			 
 			bbiCustomize.ItemClick += (s, e) => { dataLayoutControl1.ShowCustomizationForm(); };
        }
+
+        private void pf_idTextEdit_Click(object sender, EventArgs e)
+        {
+            PetFoodModel pfm = new PetFoodModel();
+            pf_idTextEdit.Text = pfm.getNextID();
+        }
+
+        private void pf_imageTextEdit_Click(object sender, EventArgs e)
+        {
+            openDialog.Filter = "Image files (*.jpg)|*.jpg|Image files (*.png)|*.png|All files (*.*)|*.*";
+            openDialog.ShowDialog();
+            if (openDialog.FileName != "" && (openDialog.FileName.EndsWith(".jpg") || openDialog.FileName.EndsWith(".png")))
+            {
+                PetFoodModel pfm = new PetFoodModel();
+                if (openDialog.FileName.EndsWith(".jpg")) { pf_imageTextEdit.Text = pfm.getNextID() + ".jpg"; }
+                else { pf_imageTextEdit.Text = pfm.getNextID() + ".png"; }
+            } else {
+                XtraMessageBox.Show("Please choose a image with (*.jpg)/(*.png) file !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
