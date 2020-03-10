@@ -13,6 +13,7 @@ namespace PetStore.Views.PetView{
             InitializeComponent();
 			if(!mvvmContext.IsDesignMode)
 				InitBindings();
+            timer1.Start();
 		}
 		void InitBindings() {
 		    var fluentAPI = mvvmContext.OfType<PetStore.ViewModels.PetViewModel>();
@@ -58,5 +59,17 @@ namespace PetStore.Views.PetView{
 			 
 			bbiCustomize.ItemClick += (s, e) => { dataLayoutControl1.ShowCustomizationForm(); };
        }
+
+        private void p_imageTextEdit_Click(object sender, EventArgs e)
+        {
+            opendialog.ShowDialog();
+            String fileName = opendialog.FileName;
+            p_imageTextEdit.Text = fileName;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            p_publishedDateEdit.Text = System.DateTime.Now.ToString();
+        }
     }
 }
