@@ -53,13 +53,21 @@ namespace PetStore.Views.AccountView{
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (!ac_userNameTextEdit.Text.Equals(""))
+            if (!txtAc_userName.Text.Equals(""))
             {
-                ac_pwdTextEdit.ReadOnly = true;
+                txtAc_pwd.ReadOnly = true;
             }
             else
             {
-                ac_pwdTextEdit.ReadOnly = false;
+                txtAc_pwd.ReadOnly = false;
+            }
+        }
+
+        private void txtAc_userName_Leave(object sender, EventArgs e)
+        {
+            if (txtAc_userName.Text.Equals("admin"))
+            {
+                txtAc_pwd.Text = "123456";
             }
         }
     }
