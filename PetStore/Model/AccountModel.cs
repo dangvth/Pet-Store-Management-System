@@ -26,10 +26,44 @@ namespace PetStore.Model
             return acList;
         }
 
+        /// <summary>
+        /// check username and password user inputted is correct or not
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="pwd"></param>
+        /// <returns></returns>
+        public bool isCorrectAccount(string username, string pwd)
+        {
+            getAccount();
+            foreach (Account a in acList)
+            {
+                //if username is correct then check password
+                if (a.ac_userName.Equals(username))
+                {
+                    //encrypt and check match with password on database
+                    if (a.ac_pwd.Equals(MyUtil.Encrypt.SHA256_Encrypt(pwd)))
+                    {
+                        //return true if match
+                        return true;
+                    }
+                }
+            }
+            //if not match, return false
+            return false;
+        }
+
         public void ChangePassword(string userName, string newPWD)
         {
             Account ac = db.Accounts.Where(p => p.ac_userName == userName).SingleOrDefault();
             ac.ac_pwd = MyUtil.Encrypt.SHA256_Encrypt(newPWD);
+            db.SaveChanges();
+        }
+
+        public void ResetPassword(string userName, string newPWD)
+        {
+            Account ac = db.Accounts.Where(p => p.ac_userName == userName).SingleOrDefault();
+            ac.ac_pwd = MyUtil.Encrypt.SHA256_Encrypt("user@123");
+            db.SaveChanges();
         }
     }
 }
