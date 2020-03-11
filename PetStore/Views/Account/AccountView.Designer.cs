@@ -39,8 +39,8 @@
             this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ac_userNameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ac_pwdTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.txtAc_userName = new DevExpress.XtraEditors.TextEdit();
+            this.txtAc_pwd = new DevExpress.XtraEditors.TextEdit();
             this.RoleLookUpEdit = new DevExpress.XtraEditors.GridLookUpEdit();
             this.RoleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RoleLookUpEditView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -71,7 +71,7 @@
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.ac_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtAc_status = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForac_id = new DevExpress.XtraLayout.LayoutControlItem();
@@ -90,8 +90,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ac_idTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ac_userNameTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ac_pwdTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAc_userName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAc_pwd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleLookUpEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleLookUpEditView)).BeginInit();
@@ -100,7 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersBarManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ac_statusTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAc_status.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForac_id)).BeginInit();
@@ -119,23 +119,25 @@
             // 
             this.dataLayoutControl1.AllowCustomization = false;
             this.dataLayoutControl1.Controls.Add(this.ac_idTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.ac_userNameTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.ac_pwdTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.txtAc_userName);
+            this.dataLayoutControl1.Controls.Add(this.txtAc_pwd);
             this.dataLayoutControl1.Controls.Add(this.RoleLookUpEdit);
             this.dataLayoutControl1.Controls.Add(this.UsersXtraUserControl);
-            this.dataLayoutControl1.Controls.Add(this.ac_statusTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.txtAc_status);
             this.dataLayoutControl1.DataSource = this.accountViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
+            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // ac_idTextEdit
             // 
             this.ac_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "ac_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ac_idTextEdit.Location = new System.Drawing.Point(63, 12);
+            this.ac_idTextEdit.Location = new System.Drawing.Point(73, 12);
+            this.ac_idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ac_idTextEdit.MenuManager = this.mainRibbonControl;
             this.ac_idTextEdit.Name = "ac_idTextEdit";
             this.ac_idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -144,7 +146,7 @@
             this.ac_idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.ac_idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.ac_idTextEdit.Properties.ReadOnly = true;
-            this.ac_idTextEdit.Size = new System.Drawing.Size(949, 20);
+            this.ac_idTextEdit.Size = new System.Drawing.Size(1110, 22);
             this.ac_idTextEdit.StyleController = this.dataLayoutControl1;
             this.ac_idTextEdit.TabIndex = 4;
             // 
@@ -168,13 +170,14 @@
             this.bbiSaveLayout,
             this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
+            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -271,31 +274,35 @@
             this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
             this.ribbonPageGroupLayout.Text = "Layout";
             // 
-            // ac_userNameTextEdit
+            // txtAc_userName
             // 
-            this.ac_userNameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "ac_userName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ac_userNameTextEdit.Location = new System.Drawing.Point(63, 36);
-            this.ac_userNameTextEdit.MenuManager = this.mainRibbonControl;
-            this.ac_userNameTextEdit.Name = "ac_userNameTextEdit";
-            this.ac_userNameTextEdit.Size = new System.Drawing.Size(949, 20);
-            this.ac_userNameTextEdit.StyleController = this.dataLayoutControl1;
-            this.ac_userNameTextEdit.TabIndex = 5;
+            this.txtAc_userName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "ac_userName", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtAc_userName.Location = new System.Drawing.Point(73, 38);
+            this.txtAc_userName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAc_userName.MenuManager = this.mainRibbonControl;
+            this.txtAc_userName.Name = "txtAc_userName";
+            this.txtAc_userName.Size = new System.Drawing.Size(1110, 22);
+            this.txtAc_userName.StyleController = this.dataLayoutControl1;
+            this.txtAc_userName.TabIndex = 5;
+            this.txtAc_userName.Leave += new System.EventHandler(this.txtAc_userName_Leave);
             // 
-            // ac_pwdTextEdit
+            // txtAc_pwd
             // 
-            this.ac_pwdTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "ac_pwd", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ac_pwdTextEdit.Location = new System.Drawing.Point(63, 60);
-            this.ac_pwdTextEdit.MenuManager = this.mainRibbonControl;
-            this.ac_pwdTextEdit.Name = "ac_pwdTextEdit";
-            this.ac_pwdTextEdit.Properties.UseSystemPasswordChar = true;
-            this.ac_pwdTextEdit.Size = new System.Drawing.Size(949, 20);
-            this.ac_pwdTextEdit.StyleController = this.dataLayoutControl1;
-            this.ac_pwdTextEdit.TabIndex = 6;
+            this.txtAc_pwd.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "ac_pwd", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtAc_pwd.Location = new System.Drawing.Point(73, 64);
+            this.txtAc_pwd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAc_pwd.MenuManager = this.mainRibbonControl;
+            this.txtAc_pwd.Name = "txtAc_pwd";
+            this.txtAc_pwd.Properties.UseSystemPasswordChar = true;
+            this.txtAc_pwd.Size = new System.Drawing.Size(1110, 22);
+            this.txtAc_pwd.StyleController = this.dataLayoutControl1;
+            this.txtAc_pwd.TabIndex = 6;
             // 
             // RoleLookUpEdit
             // 
             this.RoleLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "r_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.RoleLookUpEdit.Location = new System.Drawing.Point(63, 108);
+            this.RoleLookUpEdit.Location = new System.Drawing.Point(73, 116);
+            this.RoleLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RoleLookUpEdit.MenuManager = this.mainRibbonControl;
             this.RoleLookUpEdit.Name = "RoleLookUpEdit";
             this.RoleLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -304,7 +311,7 @@
             this.RoleLookUpEdit.Properties.DisplayMember = "r_name";
             this.RoleLookUpEdit.Properties.PopupView = this.RoleLookUpEditView;
             this.RoleLookUpEdit.Properties.ValueMember = "r_id";
-            this.RoleLookUpEdit.Size = new System.Drawing.Size(949, 20);
+            this.RoleLookUpEdit.Size = new System.Drawing.Size(1110, 22);
             this.RoleLookUpEdit.StyleController = this.dataLayoutControl1;
             this.RoleLookUpEdit.TabIndex = 8;
             // 
@@ -326,21 +333,24 @@
             this.UsersXtraUserControl.Controls.Add(this.barDockControlRight);
             this.UsersXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.UsersXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.UsersXtraUserControl.Location = new System.Drawing.Point(24, 166);
-            this.UsersXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
+            this.UsersXtraUserControl.Location = new System.Drawing.Point(24, 181);
+            this.UsersXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UsersXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
             this.UsersXtraUserControl.Name = "UsersXtraUserControl";
-            this.UsersXtraUserControl.Size = new System.Drawing.Size(976, 462);
+            this.UsersXtraUserControl.Size = new System.Drawing.Size(1146, 594);
             this.UsersXtraUserControl.TabIndex = 9;
             // 
             // UsersGridControl
             // 
             this.UsersGridControl.DataSource = this.UsersBindingSource;
             this.UsersGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UsersGridControl.Location = new System.Drawing.Point(0, 24);
+            this.UsersGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UsersGridControl.Location = new System.Drawing.Point(0, 30);
             this.UsersGridControl.MainView = this.UsersGridView;
+            this.UsersGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UsersGridControl.MenuManager = this.mainRibbonControl;
             this.UsersGridControl.Name = "UsersGridControl";
-            this.UsersGridControl.Size = new System.Drawing.Size(976, 438);
+            this.UsersGridControl.Size = new System.Drawing.Size(1146, 564);
             this.UsersGridControl.TabIndex = 0;
             this.UsersGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.UsersGridView});
@@ -365,6 +375,7 @@
             this.colCarts,
             this.colComments,
             this.colCommentDetails});
+            this.UsersGridView.DetailHeight = 431;
             this.UsersGridView.GridControl = this.UsersGridControl;
             this.UsersGridView.Name = "UsersGridView";
             this.UsersGridView.OptionsBehavior.Editable = false;
@@ -373,91 +384,118 @@
             // colu_id
             // 
             this.colu_id.FieldName = "u_id";
+            this.colu_id.MinWidth = 23;
             this.colu_id.Name = "colu_id";
             this.colu_id.Visible = true;
             this.colu_id.VisibleIndex = 0;
+            this.colu_id.Width = 87;
             // 
             // colu_name
             // 
             this.colu_name.FieldName = "u_name";
+            this.colu_name.MinWidth = 23;
             this.colu_name.Name = "colu_name";
             this.colu_name.Visible = true;
             this.colu_name.VisibleIndex = 1;
+            this.colu_name.Width = 87;
             // 
             // colu_gender
             // 
             this.colu_gender.FieldName = "u_gender";
+            this.colu_gender.MinWidth = 23;
             this.colu_gender.Name = "colu_gender";
             this.colu_gender.Visible = true;
             this.colu_gender.VisibleIndex = 2;
+            this.colu_gender.Width = 87;
             // 
             // colu_email
             // 
             this.colu_email.FieldName = "u_email";
+            this.colu_email.MinWidth = 23;
             this.colu_email.Name = "colu_email";
             this.colu_email.Visible = true;
             this.colu_email.VisibleIndex = 3;
+            this.colu_email.Width = 87;
             // 
             // colu_phone
             // 
             this.colu_phone.FieldName = "u_phone";
+            this.colu_phone.MinWidth = 23;
             this.colu_phone.Name = "colu_phone";
             this.colu_phone.Visible = true;
             this.colu_phone.VisibleIndex = 4;
+            this.colu_phone.Width = 87;
             // 
             // colu_address
             // 
             this.colu_address.FieldName = "u_address";
+            this.colu_address.MinWidth = 23;
             this.colu_address.Name = "colu_address";
             this.colu_address.Visible = true;
             this.colu_address.VisibleIndex = 5;
+            this.colu_address.Width = 87;
             // 
             // colu_status
             // 
             this.colu_status.FieldName = "u_status";
+            this.colu_status.MinWidth = 23;
             this.colu_status.Name = "colu_status";
             this.colu_status.Visible = true;
             this.colu_status.VisibleIndex = 6;
+            this.colu_status.Width = 87;
             // 
             // colac_id
             // 
             this.colac_id.FieldName = "ac_id";
+            this.colac_id.MinWidth = 23;
             this.colac_id.Name = "colac_id";
             this.colac_id.Visible = true;
             this.colac_id.VisibleIndex = 7;
+            this.colac_id.Width = 87;
             // 
             // colAccount
             // 
             this.colAccount.FieldName = "Account";
+            this.colAccount.MinWidth = 23;
             this.colAccount.Name = "colAccount";
+            this.colAccount.Width = 87;
             // 
             // colBills
             // 
             this.colBills.FieldName = "Bills";
+            this.colBills.MinWidth = 23;
             this.colBills.Name = "colBills";
+            this.colBills.Width = 87;
             // 
             // colCarts
             // 
             this.colCarts.FieldName = "Carts";
+            this.colCarts.MinWidth = 23;
             this.colCarts.Name = "colCarts";
+            this.colCarts.Width = 87;
             // 
             // colComments
             // 
             this.colComments.FieldName = "Comments";
+            this.colComments.MinWidth = 23;
             this.colComments.Name = "colComments";
+            this.colComments.Width = 87;
             // 
             // colCommentDetails
             // 
             this.colCommentDetails.FieldName = "CommentDetails";
+            this.colCommentDetails.MinWidth = 23;
             this.colCommentDetails.Name = "colCommentDetails";
+            this.colCommentDetails.Width = 87;
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.UsersBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 438);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 564);
             // 
             // UsersBarManager
             // 
@@ -530,39 +568,43 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.UsersBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(976, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1146, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 462);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 594);
             this.barDockControlBottom.Manager = this.UsersBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
             this.barDockControlRight.Manager = this.UsersBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 438);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 564);
             // 
-            // ac_statusTextEdit
+            // txtAc_status
             // 
-            this.ac_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "ac_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.ac_statusTextEdit.EditValue = "Active";
-            this.ac_statusTextEdit.Location = new System.Drawing.Point(63, 84);
-            this.ac_statusTextEdit.MenuManager = this.mainRibbonControl;
-            this.ac_statusTextEdit.Name = "ac_statusTextEdit";
-            this.ac_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtAc_status.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "ac_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.txtAc_status.EditValue = "Active";
+            this.txtAc_status.Location = new System.Drawing.Point(73, 90);
+            this.txtAc_status.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAc_status.MenuManager = this.mainRibbonControl;
+            this.txtAc_status.Name = "txtAc_status";
+            this.txtAc_status.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.ac_statusTextEdit.Properties.Items.AddRange(new object[] {
+            this.txtAc_status.Properties.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.ac_statusTextEdit.Size = new System.Drawing.Size(949, 20);
-            this.ac_statusTextEdit.StyleController = this.dataLayoutControl1;
-            this.ac_statusTextEdit.TabIndex = 7;
+            this.txtAc_status.Size = new System.Drawing.Size(1110, 22);
+            this.txtAc_status.StyleController = this.dataLayoutControl1;
+            this.txtAc_status.TabIndex = 7;
             // 
             // layoutControlGroup1
             // 
@@ -571,7 +613,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -587,59 +629,59 @@
             this.tabbedControlGroup1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1004, 632);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1175, 780);
             // 
             // ItemForac_id
             // 
             this.ItemForac_id.Control = this.ac_idTextEdit;
             this.ItemForac_id.Location = new System.Drawing.Point(0, 0);
             this.ItemForac_id.Name = "ItemForac_id";
-            this.ItemForac_id.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForac_id.Size = new System.Drawing.Size(1175, 26);
             this.ItemForac_id.Text = "ID";
-            this.ItemForac_id.TextSize = new System.Drawing.Size(48, 13);
+            this.ItemForac_id.TextSize = new System.Drawing.Size(58, 16);
             // 
             // ItemForac_userName
             // 
-            this.ItemForac_userName.Control = this.ac_userNameTextEdit;
-            this.ItemForac_userName.Location = new System.Drawing.Point(0, 24);
+            this.ItemForac_userName.Control = this.txtAc_userName;
+            this.ItemForac_userName.Location = new System.Drawing.Point(0, 26);
             this.ItemForac_userName.Name = "ItemForac_userName";
-            this.ItemForac_userName.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForac_userName.Size = new System.Drawing.Size(1175, 26);
             this.ItemForac_userName.Text = "Username";
-            this.ItemForac_userName.TextSize = new System.Drawing.Size(48, 13);
+            this.ItemForac_userName.TextSize = new System.Drawing.Size(58, 16);
             // 
             // ItemForac_pwd
             // 
-            this.ItemForac_pwd.Control = this.ac_pwdTextEdit;
-            this.ItemForac_pwd.Location = new System.Drawing.Point(0, 48);
+            this.ItemForac_pwd.Control = this.txtAc_pwd;
+            this.ItemForac_pwd.Location = new System.Drawing.Point(0, 52);
             this.ItemForac_pwd.Name = "ItemForac_pwd";
-            this.ItemForac_pwd.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForac_pwd.Size = new System.Drawing.Size(1175, 26);
             this.ItemForac_pwd.Text = "Password";
-            this.ItemForac_pwd.TextSize = new System.Drawing.Size(48, 13);
+            this.ItemForac_pwd.TextSize = new System.Drawing.Size(58, 16);
             // 
             // ItemForac_status
             // 
-            this.ItemForac_status.Control = this.ac_statusTextEdit;
-            this.ItemForac_status.Location = new System.Drawing.Point(0, 72);
+            this.ItemForac_status.Control = this.txtAc_status;
+            this.ItemForac_status.Location = new System.Drawing.Point(0, 78);
             this.ItemForac_status.Name = "ItemForac_status";
-            this.ItemForac_status.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForac_status.Size = new System.Drawing.Size(1175, 26);
             this.ItemForac_status.Text = "Status";
-            this.ItemForac_status.TextSize = new System.Drawing.Size(48, 13);
+            this.ItemForac_status.TextSize = new System.Drawing.Size(58, 16);
             // 
             // ItemForr_id
             // 
             this.ItemForr_id.Control = this.RoleLookUpEdit;
-            this.ItemForr_id.Location = new System.Drawing.Point(0, 96);
+            this.ItemForr_id.Location = new System.Drawing.Point(0, 104);
             this.ItemForr_id.Name = "ItemForr_id";
-            this.ItemForr_id.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForr_id.Size = new System.Drawing.Size(1175, 26);
             this.ItemForr_id.Text = "Role";
-            this.ItemForr_id.TextSize = new System.Drawing.Size(48, 13);
+            this.ItemForr_id.TextSize = new System.Drawing.Size(58, 16);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 120);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 130);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 512);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 650);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -650,7 +692,7 @@
             this.ItemForUsers});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForUsers";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 466);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 598);
             this.layoutControlGroup3.Text = "Users";
             // 
             // ItemForUsers
@@ -658,7 +700,7 @@
             this.ItemForUsers.Control = this.UsersXtraUserControl;
             this.ItemForUsers.Location = new System.Drawing.Point(0, 0);
             this.ItemForUsers.Name = "ItemForUsers";
-            this.ItemForUsers.Size = new System.Drawing.Size(980, 466);
+            this.ItemForUsers.Size = new System.Drawing.Size(1150, 598);
             this.ItemForUsers.StartNewLine = true;
             this.ItemForUsers.Text = "Users";
             this.ItemForUsers.TextSize = new System.Drawing.Size(0, 0);
@@ -696,20 +738,21 @@
             // 
             // AccountView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AccountView";
-            this.Size = new System.Drawing.Size(1024, 768);
+            this.Size = new System.Drawing.Size(1195, 945);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ac_idTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ac_userNameTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ac_pwdTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAc_userName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAc_pwd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleLookUpEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RoleLookUpEditView)).EndInit();
@@ -719,7 +762,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.UsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UsersBarManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ac_statusTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAc_status.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForac_id)).EndInit();
@@ -769,7 +812,7 @@
         private DevExpress.XtraBars.BarButtonItem bbiClose;
         private DevExpress.XtraBars.BarButtonItem bbiSaveLayout;
         private DevExpress.XtraBars.BarButtonItem bbiResetLayout;
-        private DevExpress.XtraEditors.TextEdit ac_userNameTextEdit;
+        private DevExpress.XtraEditors.TextEdit txtAc_userName;
         private DevExpress.XtraGrid.Views.Grid.GridView RoleLookUpEditView;
         private System.Windows.Forms.BindingSource UsersBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colu_id;
@@ -789,7 +832,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraEditors.ComboBoxEdit ac_statusTextEdit;
+        private DevExpress.XtraEditors.ComboBoxEdit txtAc_status;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem ItemForac_id;
         private DevExpress.XtraLayout.LayoutControlItem ItemForac_userName;
@@ -799,7 +842,7 @@
         private DevExpress.XtraLayout.TabbedControlGroup tabbedControlGroup1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.XtraLayout.LayoutControlItem ItemForUsers;
-        private DevExpress.XtraEditors.TextEdit ac_pwdTextEdit;
+        private DevExpress.XtraEditors.TextEdit txtAc_pwd;
         private System.Windows.Forms.Timer timer1;
     }
 }

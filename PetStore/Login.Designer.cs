@@ -45,18 +45,19 @@
             this.btnLogin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(394, 316);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(83, 39);
+            this.btnLogin.Size = new System.Drawing.Size(111, 39);
             this.btnLogin.TabIndex = 52;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.AutoSize = true;
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(511, 316);
+            this.btnCancel.Location = new System.Drawing.Point(564, 316);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(81, 39);
+            this.btnCancel.Size = new System.Drawing.Size(113, 39);
             this.btnCancel.TabIndex = 53;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -81,7 +82,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(394, 181);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(198, 32);
+            this.txtUsername.Size = new System.Drawing.Size(283, 32);
             this.txtUsername.TabIndex = 55;
             // 
             // txtPwd
@@ -90,7 +91,7 @@
             this.txtPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.Location = new System.Drawing.Point(395, 259);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(198, 32);
+            this.txtPwd.Size = new System.Drawing.Size(282, 32);
             this.txtPwd.TabIndex = 56;
             this.txtPwd.Tag = "";
             // 
@@ -136,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(621, 420);
+            this.ClientSize = new System.Drawing.Size(738, 400);
             this.Controls.Add(this.lblPwd);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.txtPwd);
@@ -147,6 +148,7 @@
             this.Controls.Add(this.pnlLock);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
