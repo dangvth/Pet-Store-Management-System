@@ -13,6 +13,10 @@ namespace PetStore.Model
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cmt_id"></param>
         public void DeleteComment(String cmt_id)
         {
             using (var db = new PetStoreEntities())
@@ -22,6 +26,11 @@ namespace PetStore.Model
                 db.SaveChanges();
             }
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public String getLastID()
         {
             String lastID = "";
@@ -38,6 +47,10 @@ namespace PetStore.Model
             else { return lastID; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public String getNextID()
         {
             String ID = "";

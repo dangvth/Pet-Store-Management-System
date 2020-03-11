@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommentStaff));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.btnAddCmt = new DevExpress.XtraBars.BarButtonItem();
             this.btnDeleteCmt = new DevExpress.XtraBars.BarButtonItem();
             this.btnRefreshCmt = new DevExpress.XtraBars.BarButtonItem();
             this.btnRestore = new DevExpress.XtraBars.BarButtonItem();
@@ -38,6 +38,8 @@
             this.rbPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.gcComment = new DevExpress.XtraGrid.GridControl();
+            this.commentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.petStoreDataSet = new PetStore.PetStoreDataSet();
             this.gvComment = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CmtID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,8 +47,13 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.commentTableAdapter = new PetStore.PetStoreDataSetTableAdapters.CommentTableAdapter();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnDetail = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcComment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvComment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,27 +63,17 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
-            this.btnAddCmt,
             this.btnDeleteCmt,
             this.btnRefreshCmt,
-            this.btnRestore});
+            this.btnRestore,
+            this.btnDetail});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 5;
+            this.ribbon.MaxItemId = 7;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbon.Size = new System.Drawing.Size(1235, 178);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            // 
-            // btnAddCmt
-            // 
-            this.btnAddCmt.Caption = "Add Comment";
-            this.btnAddCmt.Id = 1;
-            this.btnAddCmt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCmt.ImageOptions.Image")));
-            this.btnAddCmt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddCmt.ImageOptions.LargeImage")));
-            this.btnAddCmt.LargeWidth = 60;
-            this.btnAddCmt.Name = "btnAddCmt";
-            this.btnAddCmt.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnDeleteCmt
             // 
@@ -108,16 +105,16 @@
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.rbPageGroup});
+            this.rbPageGroup,
+            this.ribbonPageGroup1});
             this.ribbonPage1.Name = "ribbonPage1";
             this.ribbonPage1.Text = "Tool";
             // 
             // rbPageGroup
             // 
-            this.rbPageGroup.ItemLinks.Add(this.btnAddCmt);
             this.rbPageGroup.ItemLinks.Add(this.btnDeleteCmt);
-            this.rbPageGroup.ItemLinks.Add(this.btnRefreshCmt);
             this.rbPageGroup.ItemLinks.Add(this.btnRestore);
+            this.rbPageGroup.ItemLinks.Add(this.btnRefreshCmt);
             this.rbPageGroup.Name = "rbPageGroup";
             this.rbPageGroup.Text = "Comment Management";
             // 
@@ -130,6 +127,7 @@
             // 
             // gcComment
             // 
+            this.gcComment.DataSource = this.commentBindingSource;
             this.gcComment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcComment.Location = new System.Drawing.Point(0, 178);
             this.gcComment.MainView = this.gvComment;
@@ -139,6 +137,16 @@
             this.gcComment.TabIndex = 3;
             this.gcComment.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvComment});
+            // 
+            // commentBindingSource
+            // 
+            this.commentBindingSource.DataMember = "Comment";
+            this.commentBindingSource.DataSource = this.petStoreDataSet;
+            // 
+            // petStoreDataSet
+            // 
+            this.petStoreDataSet.DataSetName = "PetStoreDataSet";
+            this.petStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gvComment
             // 
@@ -212,6 +220,24 @@
             this.gridColumn5.VisibleIndex = 5;
             this.gridColumn5.Width = 119;
             // 
+            // commentTableAdapter
+            // 
+            this.commentTableAdapter.ClearBeforeFill = true;
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnDetail);
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "Comment Detail";
+            // 
+            // btnDetail
+            // 
+            this.btnDetail.Caption = "View comment detail";
+            this.btnDetail.Id = 6;
+            this.btnDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.ImageOptions.Image")));
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // CommentStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -224,8 +250,11 @@
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "CommentStaff";
+            this.Load += new System.EventHandler(this.CommentStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcComment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvComment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -238,7 +267,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbPageGroup;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.BarButtonItem btnAddCmt;
         private DevExpress.XtraBars.BarButtonItem btnDeleteCmt;
         private DevExpress.XtraBars.BarButtonItem btnRefreshCmt;
         private DevExpress.XtraGrid.GridControl gcComment;
@@ -250,5 +278,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private PetStoreDataSet petStoreDataSet;
+        private System.Windows.Forms.BindingSource commentBindingSource;
+        private PetStoreDataSetTableAdapters.CommentTableAdapter commentTableAdapter;
+        private DevExpress.XtraBars.BarButtonItem btnDetail;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
     }
 }

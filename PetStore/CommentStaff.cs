@@ -17,5 +17,11 @@ namespace PetStore
         {
             InitializeComponent();
         }
+
+        private void CommentStaff_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'petStoreDataSet.Comment' table. You can move, or remove it, as needed.
+            this.commentTableAdapter.Fill(this.petStoreDataSet.Comment);
+        }
     }
 }

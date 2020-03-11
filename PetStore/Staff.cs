@@ -17,5 +17,11 @@ namespace PetStore
         {
             InitializeComponent();
         }
+
+        private void btnCmtList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            CommentStaff cmtStaff = new CommentStaff();
+            cmtStaff.ShowDialog();
+        }
     }
 }
