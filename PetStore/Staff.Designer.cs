@@ -42,15 +42,19 @@
             this.btnPMed = new DevExpress.XtraBars.BarButtonItem();
             this.btnCmtList = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnGiftList = new DevExpress.XtraBars.BarButtonItem();
             this.rbpSales = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgBillSale = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpProduct = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgPet = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbpgGift = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpComment = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.TabManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.rbpgGift = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnGiftList = new DevExpress.XtraBars.BarButtonItem();
+            this.rbAccount = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.btnResetPassword = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabManager)).BeginInit();
             this.SuspendLayout();
@@ -79,15 +83,18 @@
             this.btnPMed,
             this.btnCmtList,
             this.barButtonItem2,
-            this.btnGiftList});
+            this.btnGiftList,
+            this.btnLogout,
+            this.btnResetPassword});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 14;
+            this.ribbon.MaxItemId = 16;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbpSales,
             this.rbpProduct,
-            this.rbpComment});
+            this.rbpComment,
+            this.rbAccount});
             this.ribbon.Size = new System.Drawing.Size(1158, 176);
             this.ribbon.StatusBar = this.ribbonStatusBar1;
             // 
@@ -172,6 +179,15 @@
             this.barButtonItem2.Id = 12;
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // btnGiftList
+            // 
+            this.btnGiftList.Caption = "Gift List";
+            this.btnGiftList.Id = 13;
+            this.btnGiftList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiftList.ImageOptions.Image")));
+            this.btnGiftList.LargeWidth = 75;
+            this.btnGiftList.Name = "btnGiftList";
+            this.btnGiftList.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
             // rbpSales
             // 
             this.rbpSales.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -205,6 +221,12 @@
             this.rbpgPet.Name = "rbpgPet";
             this.rbpgPet.Text = "View";
             // 
+            // rbpgGift
+            // 
+            this.rbpgGift.ItemLinks.Add(this.btnGiftList);
+            this.rbpgGift.Name = "rbpgGift";
+            this.rbpgGift.Text = "Gift";
+            // 
             // rbpComment
             // 
             this.rbpComment.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -222,20 +244,37 @@
             // 
             this.TabManager.MdiParent = this;
             // 
-            // rbpgGift
+            // rbAccount
             // 
-            this.rbpgGift.ItemLinks.Add(this.btnGiftList);
-            this.rbpgGift.Name = "rbpgGift";
-            this.rbpgGift.Text = "Gift";
+            this.rbAccount.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup2});
+            this.rbAccount.Name = "rbAccount";
+            this.rbAccount.Text = "Account";
             // 
-            // btnGiftList
+            // ribbonPageGroup2
             // 
-            this.btnGiftList.Caption = "Gift List";
-            this.btnGiftList.Id = 13;
-            this.btnGiftList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGiftList.ImageOptions.Image")));
-            this.btnGiftList.LargeWidth = 75;
-            this.btnGiftList.Name = "btnGiftList";
-            this.btnGiftList.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnLogout);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnResetPassword);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Caption = "Log out";
+            this.btnLogout.Id = 14;
+            this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.Image")));
+            this.btnLogout.LargeWidth = 60;
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btnResetPassword
+            // 
+            this.btnResetPassword.Caption = "Change password";
+            this.btnResetPassword.Id = 15;
+            this.btnResetPassword.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnResetPassword.ImageOptions.Image")));
+            this.btnResetPassword.LargeWidth = 100;
+            this.btnResetPassword.Name = "btnResetPassword";
+            this.btnResetPassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // Staff
             // 
@@ -281,5 +320,9 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager TabManager;
         private DevExpress.XtraBars.BarButtonItem btnGiftList;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpgGift;
+        private DevExpress.XtraBars.BarButtonItem btnLogout;
+        private DevExpress.XtraBars.BarButtonItem btnResetPassword;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rbAccount;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }
