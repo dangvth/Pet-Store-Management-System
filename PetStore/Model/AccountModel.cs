@@ -14,6 +14,7 @@ namespace PetStore.Model
         //declare variables
         PetStoreEntities db;
         List<PetStore.Account> acList;
+
         public AccountModel()
         {
             db = new PetStoreEntities();
@@ -64,6 +65,24 @@ namespace PetStore.Model
             Account ac = db.Accounts.Where(p => p.ac_userName == userName).SingleOrDefault();
             ac.ac_pwd = MyUtil.Encrypt.SHA256_Encrypt("user@123");
             db.SaveChanges();
+        }
+
+        /// <summary>
+        /// check role of account
+        /// </summary>
+        /// <param name="userInput"></param>
+        /// <returns></returns>
+        public int checkRole(string userInput)
+        {
+            getAccount();
+            foreach (Account a in acList)
+            {
+                if (a.ac_userName.Equals(userInput))
+                {
+                    return Convert.ToInt32(a.r_id);
+                }
+            }
+            return -1;
         }
     }
 }
