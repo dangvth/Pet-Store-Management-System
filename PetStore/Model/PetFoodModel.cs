@@ -13,6 +13,10 @@ namespace PetStore.Model
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pf_id"></param>
         public void DeletePetFood(String pf_id)
         {
             using (var db = new PetStoreEntities())
@@ -22,6 +26,17 @@ namespace PetStore.Model
                 db.SaveChanges();
             }
         }
+
+        public void RestorePetFood(String pf_id)
+        {
+            using (var db = new PetStoreEntities())
+            {
+                var Petfood = db.PetFoods.Find(pf_id);
+                Petfood.pf_status = "Active";
+                db.SaveChanges();
+            }
+        }
+
         public String getLastID()
         {
             String lastID = "";

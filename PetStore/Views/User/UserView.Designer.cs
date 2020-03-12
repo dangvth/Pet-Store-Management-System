@@ -108,16 +108,9 @@
             this.barDockControl5 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl6 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl8 = new DevExpress.XtraBars.BarDockControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.u_genderTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.u_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ItemForu_id = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForu_name = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForu_gender = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForu_email = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForu_phone = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForu_address = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForu_status = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForBills = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -125,13 +118,20 @@
             this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForCommentDetails = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForCarts = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForu_name = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForu_gender = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForu_email = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForu_phone = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForu_address = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemForu_status = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForac_id = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.BillsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.CommentsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.CommentDetailsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.u_genderTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.u_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.u_idTextEdit.Properties)).BeginInit();
@@ -161,16 +161,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsBarManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.u_genderTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.u_statusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForu_id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_name)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_gender)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_email)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_phone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_address)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_status)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
@@ -178,13 +171,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCommentDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_name)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_gender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_email)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_phone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_address)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_status)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForac_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillsPopUpMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentsPopUpMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsPopUpMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.u_genderTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.u_statusTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -204,6 +204,13 @@
             this.dataLayoutControl1.Controls.Add(this.u_statusTextEdit);
             this.dataLayoutControl1.DataSource = this.userViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataLayoutControl1.HiddenItems.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForu_id,
+            this.layoutControlGroup3,
+            this.layoutControlGroup4,
+            this.layoutControlGroup5,
+            this.ItemForCarts,
+            this.tabbedControlGroup1});
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
@@ -352,7 +359,7 @@
             // u_nameTextEdit
             // 
             this.u_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.u_nameTextEdit.Location = new System.Drawing.Point(85, 36);
+            this.u_nameTextEdit.Location = new System.Drawing.Point(85, 12);
             this.u_nameTextEdit.MenuManager = this.mainRibbonControl;
             this.u_nameTextEdit.Name = "u_nameTextEdit";
             this.u_nameTextEdit.Size = new System.Drawing.Size(927, 20);
@@ -362,9 +369,11 @@
             // u_emailTextEdit
             // 
             this.u_emailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_email", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.u_emailTextEdit.Location = new System.Drawing.Point(85, 84);
+            this.u_emailTextEdit.Location = new System.Drawing.Point(85, 60);
             this.u_emailTextEdit.MenuManager = this.mainRibbonControl;
             this.u_emailTextEdit.Name = "u_emailTextEdit";
+            this.u_emailTextEdit.Properties.Mask.EditMask = "[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\\.+.[A-Za-z]{2,4}";
+            this.u_emailTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.u_emailTextEdit.Size = new System.Drawing.Size(927, 20);
             this.u_emailTextEdit.StyleController = this.dataLayoutControl1;
             this.u_emailTextEdit.TabIndex = 7;
@@ -372,9 +381,12 @@
             // u_phoneTextEdit
             // 
             this.u_phoneTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_phone", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.u_phoneTextEdit.Location = new System.Drawing.Point(85, 108);
+            this.u_phoneTextEdit.Location = new System.Drawing.Point(85, 84);
             this.u_phoneTextEdit.MenuManager = this.mainRibbonControl;
             this.u_phoneTextEdit.Name = "u_phoneTextEdit";
+            this.u_phoneTextEdit.Properties.Mask.EditMask = "(05[5|8|9]|08[1|2|3|4|5|86|9]|03[2|3|4|5|6|7|8|9]|07[0|9|7|6|8]|09[0|2|1|4|3|6|7|" +
+    "8|9]|01[2|9])+([0-9]{7,8})";
+            this.u_phoneTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.u_phoneTextEdit.Size = new System.Drawing.Size(927, 20);
             this.u_phoneTextEdit.StyleController = this.dataLayoutControl1;
             this.u_phoneTextEdit.TabIndex = 8;
@@ -382,7 +394,7 @@
             // u_addressTextEdit
             // 
             this.u_addressTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_address", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.u_addressTextEdit.Location = new System.Drawing.Point(85, 132);
+            this.u_addressTextEdit.Location = new System.Drawing.Point(85, 108);
             this.u_addressTextEdit.MenuManager = this.mainRibbonControl;
             this.u_addressTextEdit.Name = "u_addressTextEdit";
             this.u_addressTextEdit.Size = new System.Drawing.Size(927, 20);
@@ -392,7 +404,7 @@
             // AccountLookUpEdit
             // 
             this.AccountLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "ac_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.AccountLookUpEdit.Location = new System.Drawing.Point(85, 156);
+            this.AccountLookUpEdit.Location = new System.Drawing.Point(85, 132);
             this.AccountLookUpEdit.MenuManager = this.mainRibbonControl;
             this.AccountLookUpEdit.Name = "AccountLookUpEdit";
             this.AccountLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -423,10 +435,10 @@
             this.BillsXtraUserControl.Controls.Add(this.barDockControlRight);
             this.BillsXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.BillsXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.BillsXtraUserControl.Location = new System.Drawing.Point(24, 238);
+            this.BillsXtraUserControl.Location = new System.Drawing.Point(24, 214);
             this.BillsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.BillsXtraUserControl.Name = "BillsXtraUserControl";
-            this.BillsXtraUserControl.Size = new System.Drawing.Size(976, 181);
+            this.BillsXtraUserControl.Size = new System.Drawing.Size(976, 194);
             this.BillsXtraUserControl.TabIndex = 12;
             // 
             // BillsGridControl
@@ -437,7 +449,7 @@
             this.BillsGridControl.MainView = this.BillsGridView;
             this.BillsGridControl.MenuManager = this.mainRibbonControl;
             this.BillsGridControl.Name = "BillsGridControl";
-            this.BillsGridControl.Size = new System.Drawing.Size(976, 157);
+            this.BillsGridControl.Size = new System.Drawing.Size(976, 170);
             this.BillsGridControl.TabIndex = 0;
             this.BillsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BillsGridView});
@@ -534,7 +546,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.BillsBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 157);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 170);
             // 
             // BillsBarManager
             // 
@@ -583,7 +595,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 181);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 194);
             this.barDockControlBottom.Manager = this.BillsBarManager;
             this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
             // 
@@ -593,16 +605,16 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
             this.barDockControlRight.Manager = this.BillsBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 157);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 170);
             // 
             // CartsGridControl
             // 
             this.CartsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.userViewBindingSource, "Carts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CartsGridControl.Location = new System.Drawing.Point(12, 435);
+            this.CartsGridControl.Location = new System.Drawing.Point(12, 424);
             this.CartsGridControl.MainView = this.gridView1;
             this.CartsGridControl.MenuManager = this.mainRibbonControl;
             this.CartsGridControl.Name = "CartsGridControl";
-            this.CartsGridControl.Size = new System.Drawing.Size(1000, 205);
+            this.CartsGridControl.Size = new System.Drawing.Size(1000, 216);
             this.CartsGridControl.TabIndex = 13;
             this.CartsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -616,13 +628,13 @@
             // 
             this.CommentsXtraUserControl.Controls.Add(this.CommentsGridControl);
             this.CommentsXtraUserControl.Controls.Add(this.barDockControl3);
-            this.CommentsXtraUserControl.Controls.Add(this.barDockControl2);
             this.CommentsXtraUserControl.Controls.Add(this.barDockControl4);
+            this.CommentsXtraUserControl.Controls.Add(this.barDockControl2);
             this.CommentsXtraUserControl.Controls.Add(this.barDockControl1);
-            this.CommentsXtraUserControl.Location = new System.Drawing.Point(24, 238);
+            this.CommentsXtraUserControl.Location = new System.Drawing.Point(24, 214);
             this.CommentsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.CommentsXtraUserControl.Name = "CommentsXtraUserControl";
-            this.CommentsXtraUserControl.Size = new System.Drawing.Size(976, 181);
+            this.CommentsXtraUserControl.Size = new System.Drawing.Size(976, 194);
             this.CommentsXtraUserControl.TabIndex = 14;
             // 
             // CommentsGridControl
@@ -633,7 +645,7 @@
             this.CommentsGridControl.MainView = this.CommentsGridView;
             this.CommentsGridControl.MenuManager = this.mainRibbonControl;
             this.CommentsGridControl.Name = "CommentsGridControl";
-            this.CommentsGridControl.Size = new System.Drawing.Size(976, 157);
+            this.CommentsGridControl.Size = new System.Drawing.Size(976, 170);
             this.CommentsGridControl.TabIndex = 0;
             this.CommentsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CommentsGridView});
@@ -722,7 +734,7 @@
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl3.Location = new System.Drawing.Point(0, 24);
             this.barDockControl3.Manager = this.CommentsBarManager;
-            this.barDockControl3.Size = new System.Drawing.Size(0, 157);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 170);
             // 
             // CommentsBarManager
             // 
@@ -771,7 +783,7 @@
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 181);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 194);
             this.barDockControl2.Manager = this.CommentsBarManager;
             this.barDockControl2.Size = new System.Drawing.Size(976, 0);
             // 
@@ -781,19 +793,19 @@
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl4.Location = new System.Drawing.Point(976, 24);
             this.barDockControl4.Manager = this.CommentsBarManager;
-            this.barDockControl4.Size = new System.Drawing.Size(0, 157);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 170);
             // 
             // CommentDetailsXtraUserControl
             // 
             this.CommentDetailsXtraUserControl.Controls.Add(this.CommentDetailsGridControl);
             this.CommentDetailsXtraUserControl.Controls.Add(this.barDockControl7);
-            this.CommentDetailsXtraUserControl.Controls.Add(this.barDockControl6);
             this.CommentDetailsXtraUserControl.Controls.Add(this.barDockControl8);
+            this.CommentDetailsXtraUserControl.Controls.Add(this.barDockControl6);
             this.CommentDetailsXtraUserControl.Controls.Add(this.barDockControl5);
-            this.CommentDetailsXtraUserControl.Location = new System.Drawing.Point(24, 238);
+            this.CommentDetailsXtraUserControl.Location = new System.Drawing.Point(24, 214);
             this.CommentDetailsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.CommentDetailsXtraUserControl.Name = "CommentDetailsXtraUserControl";
-            this.CommentDetailsXtraUserControl.Size = new System.Drawing.Size(976, 181);
+            this.CommentDetailsXtraUserControl.Size = new System.Drawing.Size(976, 194);
             this.CommentDetailsXtraUserControl.TabIndex = 15;
             // 
             // CommentDetailsGridControl
@@ -804,7 +816,7 @@
             this.CommentDetailsGridControl.MainView = this.CommentDetailsGridView;
             this.CommentDetailsGridControl.MenuManager = this.mainRibbonControl;
             this.CommentDetailsGridControl.Name = "CommentDetailsGridControl";
-            this.CommentDetailsGridControl.Size = new System.Drawing.Size(976, 157);
+            this.CommentDetailsGridControl.Size = new System.Drawing.Size(976, 170);
             this.CommentDetailsGridControl.TabIndex = 0;
             this.CommentDetailsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CommentDetailsGridView});
@@ -887,7 +899,7 @@
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl7.Location = new System.Drawing.Point(0, 24);
             this.barDockControl7.Manager = this.CommentDetailsBarManager;
-            this.barDockControl7.Size = new System.Drawing.Size(0, 157);
+            this.barDockControl7.Size = new System.Drawing.Size(0, 170);
             // 
             // CommentDetailsBarManager
             // 
@@ -936,7 +948,7 @@
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 181);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 194);
             this.barDockControl6.Manager = this.CommentDetailsBarManager;
             this.barDockControl6.Size = new System.Drawing.Size(976, 0);
             // 
@@ -946,7 +958,129 @@
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl8.Location = new System.Drawing.Point(976, 24);
             this.barDockControl8.Manager = this.CommentDetailsBarManager;
-            this.barDockControl8.Size = new System.Drawing.Size(0, 157);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 170);
+            // 
+            // u_genderTextEdit
+            // 
+            this.u_genderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.u_genderTextEdit.EditValue = "Male";
+            this.u_genderTextEdit.Location = new System.Drawing.Point(85, 36);
+            this.u_genderTextEdit.MenuManager = this.mainRibbonControl;
+            this.u_genderTextEdit.Name = "u_genderTextEdit";
+            this.u_genderTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.u_genderTextEdit.Properties.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.u_genderTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.u_genderTextEdit.Size = new System.Drawing.Size(927, 20);
+            this.u_genderTextEdit.StyleController = this.dataLayoutControl1;
+            this.u_genderTextEdit.TabIndex = 6;
+            // 
+            // u_statusTextEdit
+            // 
+            this.u_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.u_statusTextEdit.EditValue = "Active";
+            this.u_statusTextEdit.Location = new System.Drawing.Point(85, 156);
+            this.u_statusTextEdit.MenuManager = this.mainRibbonControl;
+            this.u_statusTextEdit.Name = "u_statusTextEdit";
+            this.u_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.u_statusTextEdit.Properties.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.u_statusTextEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.u_statusTextEdit.Size = new System.Drawing.Size(927, 20);
+            this.u_statusTextEdit.StyleController = this.dataLayoutControl1;
+            this.u_statusTextEdit.TabIndex = 10;
+            // 
+            // ItemForu_id
+            // 
+            this.ItemForu_id.Control = this.u_idTextEdit;
+            this.ItemForu_id.Location = new System.Drawing.Point(0, 0);
+            this.ItemForu_id.Name = "ItemForu_id";
+            this.ItemForu_id.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForu_id.Text = "ID";
+            this.ItemForu_id.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForBills});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "autoGroupForBills";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 198);
+            this.layoutControlGroup3.Text = "Bills";
+            // 
+            // ItemForBills
+            // 
+            this.ItemForBills.Control = this.BillsXtraUserControl;
+            this.ItemForBills.Location = new System.Drawing.Point(0, 0);
+            this.ItemForBills.Name = "ItemForBills";
+            this.ItemForBills.Size = new System.Drawing.Size(980, 198);
+            this.ItemForBills.StartNewLine = true;
+            this.ItemForBills.Text = "Bills";
+            this.ItemForBills.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForBills.TextVisible = false;
+            // 
+            // layoutControlGroup4
+            // 
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForComments});
+            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup4.Name = "autoGroupForComments";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(980, 198);
+            this.layoutControlGroup4.Text = "Comments";
+            // 
+            // ItemForComments
+            // 
+            this.ItemForComments.Control = this.CommentsXtraUserControl;
+            this.ItemForComments.Location = new System.Drawing.Point(0, 0);
+            this.ItemForComments.Name = "ItemForComments";
+            this.ItemForComments.Size = new System.Drawing.Size(980, 198);
+            this.ItemForComments.StartNewLine = true;
+            this.ItemForComments.Text = "Comments";
+            this.ItemForComments.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForComments.TextVisible = false;
+            // 
+            // layoutControlGroup5
+            // 
+            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForCommentDetails});
+            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup5.Name = "autoGroupForCommentDetails";
+            this.layoutControlGroup5.Size = new System.Drawing.Size(980, 198);
+            this.layoutControlGroup5.Text = "CommentDetails";
+            // 
+            // ItemForCommentDetails
+            // 
+            this.ItemForCommentDetails.Control = this.CommentDetailsXtraUserControl;
+            this.ItemForCommentDetails.Location = new System.Drawing.Point(0, 0);
+            this.ItemForCommentDetails.Name = "ItemForCommentDetails";
+            this.ItemForCommentDetails.Size = new System.Drawing.Size(980, 198);
+            this.ItemForCommentDetails.StartNewLine = true;
+            this.ItemForCommentDetails.Text = "Comment Details";
+            this.ItemForCommentDetails.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForCommentDetails.TextVisible = false;
+            // 
+            // ItemForCarts
+            // 
+            this.ItemForCarts.Control = this.CartsGridControl;
+            this.ItemForCarts.Location = new System.Drawing.Point(0, 412);
+            this.ItemForCarts.Name = "ItemForCarts";
+            this.ItemForCarts.Size = new System.Drawing.Size(1004, 220);
+            this.ItemForCarts.StartNewLine = true;
+            this.ItemForCarts.Text = "Carts";
+            this.ItemForCarts.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForCarts.TextVisible = false;
+            // 
+            // tabbedControlGroup1
+            // 
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 168);
+            this.tabbedControlGroup1.Name = "autoGroupForTabs";
+            this.tabbedControlGroup1.SelectedTabPage = null;
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 464);
+            this.tabbedControlGroup1.Text = "Tabs";
             // 
             // layoutControlGroup1
             // 
@@ -963,33 +1097,21 @@
             this.layoutControlGroup2.AllowDrawBackground = false;
             this.layoutControlGroup2.GroupBordersVisible = false;
             this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForu_id,
             this.ItemForu_name,
             this.ItemForu_gender,
             this.ItemForu_email,
             this.ItemForu_phone,
             this.ItemForu_address,
             this.ItemForu_status,
-            this.tabbedControlGroup1,
-            this.ItemForCarts,
             this.ItemForac_id});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(1004, 632);
             // 
-            // ItemForu_id
-            // 
-            this.ItemForu_id.Control = this.u_idTextEdit;
-            this.ItemForu_id.Location = new System.Drawing.Point(0, 0);
-            this.ItemForu_id.Name = "ItemForu_id";
-            this.ItemForu_id.Size = new System.Drawing.Size(1004, 24);
-            this.ItemForu_id.Text = "ID";
-            this.ItemForu_id.TextSize = new System.Drawing.Size(70, 13);
-            // 
             // ItemForu_name
             // 
             this.ItemForu_name.Control = this.u_nameTextEdit;
-            this.ItemForu_name.Location = new System.Drawing.Point(0, 24);
+            this.ItemForu_name.Location = new System.Drawing.Point(0, 0);
             this.ItemForu_name.Name = "ItemForu_name";
             this.ItemForu_name.Size = new System.Drawing.Size(1004, 24);
             this.ItemForu_name.Text = "Name";
@@ -998,7 +1120,7 @@
             // ItemForu_gender
             // 
             this.ItemForu_gender.Control = this.u_genderTextEdit;
-            this.ItemForu_gender.Location = new System.Drawing.Point(0, 48);
+            this.ItemForu_gender.Location = new System.Drawing.Point(0, 24);
             this.ItemForu_gender.Name = "ItemForu_gender";
             this.ItemForu_gender.Size = new System.Drawing.Size(1004, 24);
             this.ItemForu_gender.Text = "Gender";
@@ -1007,7 +1129,7 @@
             // ItemForu_email
             // 
             this.ItemForu_email.Control = this.u_emailTextEdit;
-            this.ItemForu_email.Location = new System.Drawing.Point(0, 72);
+            this.ItemForu_email.Location = new System.Drawing.Point(0, 48);
             this.ItemForu_email.Name = "ItemForu_email";
             this.ItemForu_email.Size = new System.Drawing.Size(1004, 24);
             this.ItemForu_email.Text = "Email";
@@ -1016,7 +1138,7 @@
             // ItemForu_phone
             // 
             this.ItemForu_phone.Control = this.u_phoneTextEdit;
-            this.ItemForu_phone.Location = new System.Drawing.Point(0, 96);
+            this.ItemForu_phone.Location = new System.Drawing.Point(0, 72);
             this.ItemForu_phone.Name = "ItemForu_phone";
             this.ItemForu_phone.Size = new System.Drawing.Size(1004, 24);
             this.ItemForu_phone.Text = "Phone Number";
@@ -1025,7 +1147,7 @@
             // ItemForu_address
             // 
             this.ItemForu_address.Control = this.u_addressTextEdit;
-            this.ItemForu_address.Location = new System.Drawing.Point(0, 120);
+            this.ItemForu_address.Location = new System.Drawing.Point(0, 96);
             this.ItemForu_address.Name = "ItemForu_address";
             this.ItemForu_address.Size = new System.Drawing.Size(1004, 24);
             this.ItemForu_address.Text = "Address";
@@ -1034,99 +1156,16 @@
             // ItemForu_status
             // 
             this.ItemForu_status.Control = this.u_statusTextEdit;
-            this.ItemForu_status.Location = new System.Drawing.Point(0, 168);
+            this.ItemForu_status.Location = new System.Drawing.Point(0, 144);
             this.ItemForu_status.Name = "ItemForu_status";
-            this.ItemForu_status.Size = new System.Drawing.Size(1004, 24);
+            this.ItemForu_status.Size = new System.Drawing.Size(1004, 488);
             this.ItemForu_status.Text = "Status";
             this.ItemForu_status.TextSize = new System.Drawing.Size(70, 13);
-            // 
-            // tabbedControlGroup1
-            // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 192);
-            this.tabbedControlGroup1.Name = "autoGroupForTabs";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 231);
-            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup3,
-            this.layoutControlGroup4,
-            this.layoutControlGroup5});
-            this.tabbedControlGroup1.Text = "Tabs";
-            // 
-            // layoutControlGroup3
-            // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForBills});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "autoGroupForBills";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 185);
-            this.layoutControlGroup3.Text = "Bills";
-            // 
-            // ItemForBills
-            // 
-            this.ItemForBills.Control = this.BillsXtraUserControl;
-            this.ItemForBills.Location = new System.Drawing.Point(0, 0);
-            this.ItemForBills.Name = "ItemForBills";
-            this.ItemForBills.Size = new System.Drawing.Size(980, 185);
-            this.ItemForBills.StartNewLine = true;
-            this.ItemForBills.Text = "Bills";
-            this.ItemForBills.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForBills.TextVisible = false;
-            // 
-            // layoutControlGroup4
-            // 
-            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForComments});
-            this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup4.Name = "autoGroupForComments";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(980, 185);
-            this.layoutControlGroup4.Text = "Comments";
-            // 
-            // ItemForComments
-            // 
-            this.ItemForComments.Control = this.CommentsXtraUserControl;
-            this.ItemForComments.Location = new System.Drawing.Point(0, 0);
-            this.ItemForComments.Name = "ItemForComments";
-            this.ItemForComments.Size = new System.Drawing.Size(980, 185);
-            this.ItemForComments.StartNewLine = true;
-            this.ItemForComments.Text = "Comments";
-            this.ItemForComments.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForComments.TextVisible = false;
-            // 
-            // layoutControlGroup5
-            // 
-            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForCommentDetails});
-            this.layoutControlGroup5.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup5.Name = "autoGroupForCommentDetails";
-            this.layoutControlGroup5.Size = new System.Drawing.Size(980, 185);
-            this.layoutControlGroup5.Text = "CommentDetails";
-            // 
-            // ItemForCommentDetails
-            // 
-            this.ItemForCommentDetails.Control = this.CommentDetailsXtraUserControl;
-            this.ItemForCommentDetails.Location = new System.Drawing.Point(0, 0);
-            this.ItemForCommentDetails.Name = "ItemForCommentDetails";
-            this.ItemForCommentDetails.Size = new System.Drawing.Size(980, 185);
-            this.ItemForCommentDetails.StartNewLine = true;
-            this.ItemForCommentDetails.Text = "Comment Details";
-            this.ItemForCommentDetails.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForCommentDetails.TextVisible = false;
-            // 
-            // ItemForCarts
-            // 
-            this.ItemForCarts.Control = this.CartsGridControl;
-            this.ItemForCarts.Location = new System.Drawing.Point(0, 423);
-            this.ItemForCarts.Name = "ItemForCarts";
-            this.ItemForCarts.Size = new System.Drawing.Size(1004, 209);
-            this.ItemForCarts.StartNewLine = true;
-            this.ItemForCarts.Text = "Carts";
-            this.ItemForCarts.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForCarts.TextVisible = false;
             // 
             // ItemForac_id
             // 
             this.ItemForac_id.Control = this.AccountLookUpEdit;
-            this.ItemForac_id.Location = new System.Drawing.Point(0, 144);
+            this.ItemForac_id.Location = new System.Drawing.Point(0, 120);
             this.ItemForac_id.Name = "ItemForac_id";
             this.ItemForac_id.Size = new System.Drawing.Size(1004, 24);
             this.ItemForac_id.Text = "Username";
@@ -1169,38 +1208,6 @@
             this.CommentDetailsPopUpMenu.Manager = this.CommentDetailsBarManager;
             this.CommentDetailsPopUpMenu.Name = "CommentDetailsPopUpMenu";
             // 
-            // u_genderTextEdit
-            // 
-            this.u_genderTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_gender", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.u_genderTextEdit.EditValue = "Male";
-            this.u_genderTextEdit.Location = new System.Drawing.Point(85, 60);
-            this.u_genderTextEdit.MenuManager = this.mainRibbonControl;
-            this.u_genderTextEdit.Name = "u_genderTextEdit";
-            this.u_genderTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.u_genderTextEdit.Properties.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.u_genderTextEdit.Size = new System.Drawing.Size(927, 20);
-            this.u_genderTextEdit.StyleController = this.dataLayoutControl1;
-            this.u_genderTextEdit.TabIndex = 6;
-            // 
-            // u_statusTextEdit
-            // 
-            this.u_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.userViewBindingSource, "u_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.u_statusTextEdit.EditValue = "Active";
-            this.u_statusTextEdit.Location = new System.Drawing.Point(85, 180);
-            this.u_statusTextEdit.MenuManager = this.mainRibbonControl;
-            this.u_statusTextEdit.Name = "u_statusTextEdit";
-            this.u_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.u_statusTextEdit.Properties.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.u_statusTextEdit.Size = new System.Drawing.Size(927, 20);
-            this.u_statusTextEdit.StyleController = this.dataLayoutControl1;
-            this.u_statusTextEdit.TabIndex = 10;
-            // 
             // UserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1242,16 +1249,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsBarManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.u_genderTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.u_statusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForu_id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_name)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_gender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_email)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_phone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_address)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_status)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForBills)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
@@ -1259,13 +1259,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCommentDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_gender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_email)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_phone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_address)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForu_status)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForac_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillsPopUpMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentsPopUpMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentDetailsPopUpMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.u_genderTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.u_statusTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
