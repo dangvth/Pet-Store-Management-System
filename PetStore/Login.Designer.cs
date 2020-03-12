@@ -70,7 +70,7 @@
             this.lblLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblLogin.Location = new System.Drawing.Point(406, 93);
+            this.lblLogin.Location = new System.Drawing.Point(452, 101);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(167, 58);
             this.lblLogin.TabIndex = 60;
@@ -94,6 +94,7 @@
             this.txtPwd.Size = new System.Drawing.Size(282, 32);
             this.txtPwd.TabIndex = 56;
             this.txtPwd.Tag = "";
+            this.txtPwd.UseSystemPasswordChar = true;
             // 
             // lblUserName
             // 
@@ -137,7 +138,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(738, 400);
+            this.ClientSize = new System.Drawing.Size(725, 387);
             this.Controls.Add(this.lblPwd);
             this.Controls.Add(this.lblUserName);
             this.Controls.Add(this.txtPwd);

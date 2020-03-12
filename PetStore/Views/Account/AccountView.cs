@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.MVVM;
 using DevExpress.Utils.MVVM.Services;
@@ -9,6 +10,9 @@ using DevExpress.XtraGrid.Views.Base;
 
 namespace PetStore.Views.AccountView{
     public partial class AccountView : XtraUserControl {
+        //declare variables
+        Model.AccountModel am = new Model.AccountModel();
+
         public AccountView() {
             InitializeComponent();
             timer1.Start();
@@ -63,11 +67,28 @@ namespace PetStore.Views.AccountView{
             }
         }
 
+        private void txtAc_userName_TextChanged(object sender, EventArgs e)
+        {
+            if (!txtAc_userName.Text.Equals(""))
+            {
+                txtAc_pwd.Text = "user@123";                
+            } else
+            {
+                txtAc_pwd.Text = "";
+            }
+        }
+
+        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            txtAc_pwd.Text = MyUtil.Encrypt.SHA256_Encrypt("user@123");
+        }
+
         private void txtAc_userName_Leave(object sender, EventArgs e)
         {
-            if (txtAc_userName.Text.Equals("admin"))
+            if (am.checkConcideUsername(txtAc_userName.Text))
             {
-                txtAc_pwd.Text = "123456";
+                MessageBox.Show("This username has already exist!", "ERROR", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
             }
         }
     }
