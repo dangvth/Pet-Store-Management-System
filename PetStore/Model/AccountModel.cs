@@ -60,11 +60,56 @@ namespace PetStore.Model
             db.SaveChanges();
         }
 
-        public void ResetPassword(string userName, string newPWD)
+        /// <summary>
+        /// Reset password of account has been chosen
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="newPWD"></param>
+        public void ResetPassword(int id)
         {
-            Account ac = db.Accounts.Where(p => p.ac_userName == userName).SingleOrDefault();
+            Account ac = db.Accounts.Where(p => p.ac_id == id).SingleOrDefault();
             ac.ac_pwd = MyUtil.Encrypt.SHA256_Encrypt("user@123");
             db.SaveChanges();
+        }
+
+        /// <summary>
+        /// Ban or Delete account
+        /// </summary>
+        /// <param name="id"></param>
+        public void Ban_DeleteAccount(int id)
+        {
+            Account ac = db.Accounts.Where(p => p.ac_id == id).SingleOrDefault();
+            ac.ac_status = "Baned/ Deleted";
+            db.SaveChanges();
+        }
+
+        /// <summary>
+        /// Restore or active account
+        /// </summary>
+        /// <param name="id"></param>
+        public void RestoreAccount(int id)
+        {
+            Account ac = db.Accounts.Where(p => p.ac_id == id).SingleOrDefault();
+            ac.ac_status = "Active";
+            db.SaveChanges();
+        }
+
+        /// <summary>
+        /// Check userName has already exist or not
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public bool checkConcideUsername(string userName)
+        {
+            getAccount();
+            foreach (Account a in acList)
+            {
+                if (a.ac_userName.Equals(userName))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         /// <summary>
