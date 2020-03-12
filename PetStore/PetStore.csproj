@@ -163,6 +163,11 @@
     <Compile Include="Object\Pet.cs" />
     <Compile Include="Object\Role.cs" />
     <Compile Include="Object\Type.cs" />
+    <Compile Include="PetStoreDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PetStoreDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Views\Administrator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -456,6 +461,12 @@
     <EmbeddedResource Include="Views\Account\AccountView.resx">
       <DependentUpon>AccountView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CommentDetail\CommentDetailCollectionView.resx">
+      <DependentUpon>CommentDetailCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Comment\CommentCollectionView.resx">
+      <DependentUpon>CommentCollectionView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Gift\GiftCollectionView.resx">
       <DependentUpon>GiftCollectionView.cs</DependentUpon>
     </EmbeddedResource>
@@ -535,6 +546,17 @@
     </None>
     <None Include="PetStoreDataSet.xss">
       <DependentUpon>PetStoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PetStoreDataSet1.xsc">
+      <DependentUpon>PetStoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PetStoreDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PetStoreDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PetStoreDataSet1.xss">
+      <DependentUpon>PetStoreDataSet1.xsd</DependentUpon>
     </None>
     <None Include="PetStoreModel.edmx.diagram">
       <DependentUpon>PetStoreModel.edmx</DependentUpon>

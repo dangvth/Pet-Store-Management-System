@@ -20,6 +20,8 @@ namespace PetStore
 
         private void CommentDetailStaff_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'petStoreDataSet1.CommentDetail' table. You can move, or remove it, as needed.
+            this.commentDetailTableAdapter1.Fill(this.petStoreDataSet1.CommentDetail);
             // TODO: This line of code loads data into the 'petStoreDataSet.CommentDetail' table. You can move, or remove it, as needed.
             this.commentDetailTableAdapter.Fill(this.petStoreDataSet.CommentDetail);
 

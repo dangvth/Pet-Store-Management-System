@@ -275,6 +275,7 @@
             this.bbiRestore.Id = 21;
             this.bbiRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiRestore.ImageOptions.LargeImage")));
             this.bbiRestore.Name = "bbiRestore";
+            this.bbiRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRestore_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -344,6 +345,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PetFoodCollectionView";
             this.Size = new System.Drawing.Size(1195, 945);
+            this.Load += new System.EventHandler(this.PetFoodCollectionView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petFoodCollectionViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();

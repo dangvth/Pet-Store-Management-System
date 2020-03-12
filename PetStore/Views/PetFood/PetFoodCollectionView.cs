@@ -14,7 +14,7 @@ namespace PetStore.Views.PetFoodCollectionView{
         private String pfIDSelected = "";
         public PetFoodCollectionView() {
             InitializeComponent();
-			if(!mvvmContext.IsDesignMode)
+            if (!mvvmContext.IsDesignMode)
                 InitBindings();
         }
         void InitBindings() {
@@ -65,6 +65,25 @@ namespace PetStore.Views.PetFoodCollectionView{
         {
             int idx = gridView.FocusedRowHandle;
             pfIDSelected = gridView.GetRowCellValue(idx, "pf_id").ToString();
+        }
+
+        private void bbiRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (pfIDSelected != "")
+            {
+                PetFoodModel pfm = new PetFoodModel();
+                pfm.RestorePetFood(pfIDSelected);
+                XtraMessageBox.Show("Restore successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                XtraMessageBox.Show("Please choose a food item to restore !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void PetFoodCollectionView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
