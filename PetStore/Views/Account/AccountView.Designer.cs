@@ -193,6 +193,7 @@
             this.bbiSave.Id = 2;
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
             this.bbiSave.Name = "bbiSave";
+            this.bbiSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSave_ItemClick);
             // 
             // bbiSaveAndClose
             // 
@@ -284,6 +285,7 @@
             this.txtAc_userName.Size = new System.Drawing.Size(1110, 22);
             this.txtAc_userName.StyleController = this.dataLayoutControl1;
             this.txtAc_userName.TabIndex = 5;
+            this.txtAc_userName.TextChanged += new System.EventHandler(this.txtAc_userName_TextChanged);
             this.txtAc_userName.Leave += new System.EventHandler(this.txtAc_userName_Leave);
             // 
             // txtAc_pwd
