@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +11,7 @@ namespace PetStore.Model
 {
     class CommentModel
     {
+        ArrayList cmtList;
         public CommentModel()
         {
 
@@ -41,51 +45,30 @@ namespace PetStore.Model
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
-        //public String getLastID()
-        //{
-        //    String lastID = "";
-        //    using (var db = new PetStoreEntities())
-        //    {
-        //        var select = from s in db.Comments orderby s.cmt_id descending select s;
-        //        var selectOne = select.Take(1);
-        //        foreach (var data in selectOne)
-        //        {
-        //            lastID = data.cmt_id.ToString();
-        //        }
-        //    }
-        //    if (lastID == "") { return "CMT0000"; }
-        //    else { return lastID; }
-        //}
+        public ArrayList LoadTableData()
+        {
+            cmtList = new ArrayList();
+            using (var db = new PetStoreEntities())
+            {
+                var selectStr = (from cmt in db.Comments
+                              join u in db.Users on cmt.u_id equals u.u_id
+                              join p in db.Pets on cmt.p_id equals p.p_id
+                              select new
+                              {
+                                  cmt.cmt_id,
+                                  cmt.cmt_content,
+                                  cmt.cmt_published,
+                                  cmt.cmt_status,
+                                  p.p_name,
+                                  u.u_name
+                              }).OrderBy(x=>x.cmt_published);
 
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <returns></returns>
-        //public String getNextID()
-        //{
-        //    String ID = "";
-        //    ID = getLastID().Remove(0, 3);
-        //    int id = Convert.ToInt32(ID) + 1;
-        //    if (id < 10)
-        //    {
-        //        return "CMT000" + id;
-        //    }
-        //    else if (id >= 10 && id < 100)
-        //    {
-        //        return "CMT00" + id;
-        //    }
-        //    else if (id >= 100 && id < 1000)
-        //    {
-        //        return "CMT0" + id;
-        //    }
-        //    else
-        //    {
-        //        return "CMT" + id;
-        //    }
-        //}
+                foreach (var data in selectStr)
+                {
+                    cmtList.Add(new Object.Comment(data.cmt_id, data.cmt_content, data.cmt_published.ToString(), data.p_name, data.u_name, data.cmt_status));
+                }
+            }
+            return cmtList;
+        }
     }
 }

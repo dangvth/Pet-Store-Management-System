@@ -40,27 +40,18 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.gcComment = new DevExpress.XtraGrid.GridControl();
-            this.commentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.petStoreDataSet = new PetStore.PetStoreDataSet();
             this.gvComment = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CmtID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.commentTableAdapter = new PetStore.PetStoreDataSetTableAdapters.CommentTableAdapter();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.petStoreDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.commentBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmt_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmt_content = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcmt_published = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colcmt_status = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colp_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colu_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bindingSourceComment = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcComment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvComment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComment)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -151,7 +142,7 @@
             // 
             // gcComment
             // 
-            this.gcComment.DataSource = this.commentBindingSource;
+            this.gcComment.DataSource = this.bindingSourceComment;
             this.gcComment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gcComment.Location = new System.Drawing.Point(0, 178);
             this.gcComment.MainView = this.gvComment;
@@ -162,103 +153,81 @@
             this.gcComment.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvComment});
             // 
-            // commentBindingSource
-            // 
-            this.commentBindingSource.DataMember = "Comment";
-            this.commentBindingSource.DataSource = this.petStoreDataSet;
-            // 
-            // petStoreDataSet
-            // 
-            this.petStoreDataSet.DataSetName = "PetStoreDataSet";
-            this.petStoreDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // gvComment
             // 
             this.gvComment.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CmtID,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn1,
-            this.gridColumn5});
+            this.cmt_id,
+            this.cmt_content,
+            this.colcmt_published,
+            this.colcmt_status,
+            this.colp_name,
+            this.colu_name});
             this.gvComment.GridControl = this.gcComment;
             this.gvComment.Name = "gvComment";
+            this.gvComment.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
+            this.gvComment.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
             this.gvComment.OptionsBehavior.Editable = false;
             this.gvComment.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvComment_RowClick);
             // 
-            // CmtID
+            // cmt_id
             // 
-            this.CmtID.Caption = "ID";
-            this.CmtID.FieldName = "cmt_id";
-            this.CmtID.MinWidth = 25;
-            this.CmtID.Name = "CmtID";
-            this.CmtID.Visible = true;
-            this.CmtID.VisibleIndex = 0;
-            this.CmtID.Width = 178;
+            this.cmt_id.Caption = "ID";
+            this.cmt_id.FieldName = "cmt_id";
+            this.cmt_id.MinWidth = 25;
+            this.cmt_id.Name = "cmt_id";
+            this.cmt_id.Visible = true;
+            this.cmt_id.VisibleIndex = 0;
+            this.cmt_id.Width = 94;
             // 
-            // gridColumn2
+            // cmt_content
             // 
-            this.gridColumn2.Caption = "Content";
-            this.gridColumn2.FieldName = "cmt_content";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 423;
+            this.cmt_content.Caption = "Content";
+            this.cmt_content.FieldName = "cmt_content";
+            this.cmt_content.MinWidth = 25;
+            this.cmt_content.Name = "cmt_content";
+            this.cmt_content.Visible = true;
+            this.cmt_content.VisibleIndex = 1;
+            this.cmt_content.Width = 94;
             // 
-            // gridColumn3
+            // colcmt_published
             // 
-            this.gridColumn3.Caption = "Published";
-            this.gridColumn3.FieldName = "cmt_published";
-            this.gridColumn3.MinWidth = 25;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 116;
+            this.colcmt_published.Caption = "Published";
+            this.colcmt_published.FieldName = "cmt_published";
+            this.colcmt_published.MinWidth = 25;
+            this.colcmt_published.Name = "colcmt_published";
+            this.colcmt_published.Visible = true;
+            this.colcmt_published.VisibleIndex = 2;
+            this.colcmt_published.Width = 94;
             // 
-            // gridColumn4
+            // colcmt_status
             // 
-            this.gridColumn4.Caption = "Pet\'s Comment";
-            this.gridColumn4.FieldName = "p_id";
-            this.gridColumn4.MinWidth = 25;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 116;
+            this.colcmt_status.Caption = "Status";
+            this.colcmt_status.FieldName = "cmt_status";
+            this.colcmt_status.MinWidth = 25;
+            this.colcmt_status.Name = "colcmt_status";
+            this.colcmt_status.Visible = true;
+            this.colcmt_status.VisibleIndex = 5;
+            this.colcmt_status.Width = 94;
             // 
-            // gridColumn1
+            // colp_name
             // 
-            this.gridColumn1.Caption = "User\'s comment";
-            this.gridColumn1.FieldName = "u_id";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
-            this.gridColumn1.Width = 116;
+            this.colp_name.Caption = "Pet\'s name";
+            this.colp_name.FieldName = "p_name";
+            this.colp_name.MinWidth = 25;
+            this.colp_name.Name = "colp_name";
+            this.colp_name.Visible = true;
+            this.colp_name.VisibleIndex = 3;
+            this.colp_name.Width = 94;
             // 
-            // gridColumn5
+            // colu_name
             // 
-            this.gridColumn5.Caption = "Status";
-            this.gridColumn5.FieldName = "cmt_status";
-            this.gridColumn5.MinWidth = 25;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
-            this.gridColumn5.Width = 119;
-            // 
-            // commentTableAdapter
-            // 
-            this.commentTableAdapter.ClearBeforeFill = true;
-            // 
-            // petStoreDataSetBindingSource
-            // 
-            this.petStoreDataSetBindingSource.DataSource = this.petStoreDataSet;
-            this.petStoreDataSetBindingSource.Position = 0;
-            // 
-            // commentBindingSource1
-            // 
-            this.commentBindingSource1.DataMember = "Comment";
-            this.commentBindingSource1.DataSource = this.petStoreDataSetBindingSource;
+            this.colu_name.Caption = "Name of user";
+            this.colu_name.FieldName = "u_name";
+            this.colu_name.MinWidth = 25;
+            this.colu_name.Name = "colu_name";
+            this.colu_name.Visible = true;
+            this.colu_name.VisibleIndex = 4;
+            this.colu_name.Width = 94;
             // 
             // CommentStaff
             // 
@@ -276,12 +245,8 @@
             this.Load += new System.EventHandler(this.CommentStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcComment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvComment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.commentBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceComment)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,19 +263,14 @@
         private DevExpress.XtraGrid.GridControl gcComment;
         private DevExpress.XtraGrid.Views.Grid.GridView gvComment;
         private DevExpress.XtraBars.BarButtonItem btnRestore;
-        private DevExpress.XtraGrid.Columns.GridColumn CmtID;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private PetStoreDataSet petStoreDataSet;
-        private System.Windows.Forms.BindingSource commentBindingSource;
-        private PetStoreDataSetTableAdapters.CommentTableAdapter commentTableAdapter;
         private DevExpress.XtraBars.BarButtonItem btnDetail;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private System.Windows.Forms.BindingSource petStoreDataSetBindingSource;
-        private System.Windows.Forms.BindingSource commentBindingSource1;
+        private DevExpress.XtraGrid.Columns.GridColumn cmt_id;
+        private DevExpress.XtraGrid.Columns.GridColumn cmt_content;
+        private DevExpress.XtraGrid.Columns.GridColumn colcmt_published;
+        private DevExpress.XtraGrid.Columns.GridColumn colcmt_status;
+        private DevExpress.XtraGrid.Columns.GridColumn colp_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colu_name;
+        private System.Windows.Forms.BindingSource bindingSourceComment;
     }
 }

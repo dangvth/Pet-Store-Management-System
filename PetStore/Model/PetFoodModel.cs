@@ -37,6 +37,10 @@ namespace PetStore.Model
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public String getLastID()
         {
             String lastID = "";
@@ -53,6 +57,10 @@ namespace PetStore.Model
             else { return lastID; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public String getNextID()
         {
             String dID = "";

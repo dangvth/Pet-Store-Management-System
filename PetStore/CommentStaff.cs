@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using PetStore.Model;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
+using System.Collections;
 
 namespace PetStore
 {
@@ -23,8 +25,9 @@ namespace PetStore
 
         private void CommentStaff_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'petStoreDataSet.Comment' table. You can move, or remove it, as needed.
-            this.commentTableAdapter.Fill(this.petStoreDataSet.Comment);
+            CommentModel cm = new CommentModel();
+            bindingSourceComment.DataSource = cm.LoadTableData();
+            gcComment.DataSource = bindingSourceComment;
         }
 
         private void btnDetail_ItemClick(object sender, ItemClickEventArgs e)
@@ -36,7 +39,10 @@ namespace PetStore
         private void gvComment_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             int idx = gvComment.FocusedRowHandle;
-            cmtIDSelected = gvComment.GetRowCellValue(idx, "cmt_id").ToString();
+            if (gvComment.GetRowCellValue(idx, "cmt_id") != null)
+            {
+                cmtIDSelected = gvComment.GetRowCellValue(idx, "cmt_id").ToString();
+            }
         }
 
         private void btnDeleteCmt_ItemClick(object sender, ItemClickEventArgs e)
@@ -69,8 +75,7 @@ namespace PetStore
 
         private void btnRefreshCmt_ItemClick(object sender, ItemClickEventArgs e)
         {
-            gcComment.RefreshDataSource();
-            gvComment.RefreshData();
+            
         }
     }
 }

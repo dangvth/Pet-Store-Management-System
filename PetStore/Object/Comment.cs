@@ -27,15 +27,21 @@ namespace PetStore.Object
         /// <param name="p_id"></param>
         /// <param name="u_id"></param>
         public Comment(int cmt_id, String cmt_content, String cmt_published,
-                              String cmt_Status, int p_id, int u_id)
+                       String p_name, String u_name, String cmt_Status)
         {
             this.cmt_id = cmt_id;
             this.cmt_content = cmt_content;
             this.cmt_published = cmt_published;
             this.cmt_status = cmt_Status;
-            this.p_id = p_id;
-            this.u_id = u_id;
+            this.p_name = p_name;
+            this.u_name = u_name;
         }
+
+        public Comment()
+        {
+
+        }
+
         public int CommentID
         {
             set
