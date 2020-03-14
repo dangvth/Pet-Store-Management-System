@@ -42,10 +42,10 @@
             this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
             this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRestore = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -211,13 +211,13 @@
             this.bbiPrintPreview,
             this.bsiRecordsCount,
             this.bbiNew,
-            this.bbiEdit,
             this.bbiRefresh,
             this.bbiDelete,
-            this.bbiRestore});
+            this.bbiRestore,
+            this.bbiEdit});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 22;
+            this.ribbonControl.MaxItemId = 23;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -247,13 +247,6 @@
             this.bbiNew.ImageOptions.ImageUri.Uri = "Add";
             this.bbiNew.Name = "bbiNew";
             // 
-            // bbiEdit
-            // 
-            this.bbiEdit.Caption = "Edit";
-            this.bbiEdit.Id = 17;
-            this.bbiEdit.ImageOptions.ImageUri.Uri = "Edit";
-            this.bbiEdit.Name = "bbiEdit";
-            // 
             // bbiRefresh
             // 
             this.bbiRefresh.Caption = "Refresh";
@@ -276,6 +269,16 @@
             this.bbiRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiRestore.ImageOptions.LargeImage")));
             this.bbiRestore.Name = "bbiRestore";
             this.bbiRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRestore_ItemClick);
+            // 
+            // bbiEdit
+            // 
+            this.bbiEdit.Caption = "Edit";
+            this.bbiEdit.Id = 22;
+            this.bbiEdit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbiEdit.ImageOptions.Image")));
+            this.bbiEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiEdit.ImageOptions.LargeImage")));
+            this.bbiEdit.Name = "bbiEdit";
+            this.bbiEdit.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.bbiEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiEdit_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -319,7 +322,6 @@
             // 
             this.mvvmContext.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.PetFoodCollectionViewModel), "New", this.bbiNew),
-            DevExpress.Utils.MVVM.BindingExpression.CreateParameterizedCommandBinding(typeof(PetStore.ViewModels.PetFoodCollectionViewModel), "Edit", "SelectedEntity", this.bbiEdit),
             DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.PetFoodCollectionViewModel), "Refresh", this.bbiRefresh)});
             this.mvvmContext.ContainerControl = this;
             this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
@@ -330,7 +332,6 @@
             // popupMenu
             // 
             this.popupMenu.ItemLinks.Add(this.bbiNew);
-            this.popupMenu.ItemLinks.Add(this.bbiEdit);
             this.popupMenu.ItemLinks.Add(this.bbiRefresh);
             this.popupMenu.Name = "popupMenu";
             this.popupMenu.Ribbon = this.ribbonControl;
@@ -345,7 +346,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PetFoodCollectionView";
             this.Size = new System.Drawing.Size(1195, 945);
-            this.Load += new System.EventHandler(this.PetFoodCollectionView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petFoodCollectionViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
@@ -383,9 +383,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraBars.BarButtonItem bbiNew;
-        private DevExpress.XtraBars.BarButtonItem bbiEdit;
         private DevExpress.XtraBars.BarButtonItem bbiRefresh;
         private DevExpress.XtraBars.BarButtonItem bbiDelete;
         private DevExpress.XtraBars.BarButtonItem bbiRestore;
+        private DevExpress.XtraBars.BarButtonItem bbiEdit;
     }
 }

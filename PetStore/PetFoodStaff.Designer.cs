@@ -151,6 +151,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.MinimizeBox = false;
             this.Name = "PetFoodStaff";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;

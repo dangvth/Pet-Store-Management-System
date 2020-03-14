@@ -71,7 +71,7 @@
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1222, 178);
+            this.ribbon.Size = new System.Drawing.Size(1144, 178);
             // 
             // btnRemove
             // 
@@ -136,7 +136,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 178);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1222, 527);
+            this.layoutControl1.Size = new System.Drawing.Size(1144, 527);
             this.layoutControl1.TabIndex = 4;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -146,7 +146,7 @@
             this.gcCmtDetail.MainView = this.gvCommentDetail;
             this.gcCmtDetail.MenuManager = this.ribbon;
             this.gcCmtDetail.Name = "gcCmtDetail";
-            this.gcCmtDetail.Size = new System.Drawing.Size(1198, 503);
+            this.gcCmtDetail.Size = new System.Drawing.Size(1120, 503);
             this.gcCmtDetail.TabIndex = 4;
             this.gcCmtDetail.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvCommentDetail});
@@ -165,7 +165,7 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1222, 527);
+            this.Root.Size = new System.Drawing.Size(1144, 527);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -173,7 +173,7 @@
             this.layoutControlItem1.Control = this.gcCmtDetail;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1202, 507);
+            this.layoutControlItem1.Size = new System.Drawing.Size(1124, 507);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -211,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 706);
+            this.ClientSize = new System.Drawing.Size(1144, 706);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbon);
             this.Name = "CommentDetailStaff";

@@ -19,17 +19,32 @@ namespace PetStore
             InitializeComponent();
         }
 
+        /// <summary>
+        /// clear children form
+        /// </summary>
+        private void resetFormChildren()
+        {
+            foreach (Form c in this.MdiChildren)
+            {
+                c.Close();
+            }
+        }
+
         private void btnPFood_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            resetFormChildren();
             PetFoodStaff pfs = new PetFoodStaff();
             pfs.MdiParent = this;
+            pfs.Dock = DockStyle.Fill;
             pfs.Show();
         }
 
         private void btnCmtList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            resetFormChildren();
             CommentStaff cs = new CommentStaff();
             cs.MdiParent = this;
+            cs.Dock = DockStyle.Fill;
             cs.Show();
         }
     }

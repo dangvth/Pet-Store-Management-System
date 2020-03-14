@@ -8,6 +8,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Base;
 using PetStore.Model;
 using System.Windows.Forms;
+using System.IO;
 
 namespace PetStore.Views.PetFoodView{
     public partial class PetFoodView : XtraUserControl {
@@ -44,12 +45,6 @@ namespace PetStore.Views.PetFoodView{
 			bbiCustomize.ItemClick += (s, e) => { dataLayoutControl1.ShowCustomizationForm(); };
        }
 
-        private void pf_idTextEdit_Click(object sender, EventArgs e)
-        {
-            PetFoodModel pfm = new PetFoodModel();
-            pf_idTextEdit.Text = pfm.getNextID();
-        }
-
         private void pf_imageTextEdit_Click(object sender, EventArgs e)
         {
             openDialog.Filter = "Image files (*.jpg)|*.jpg|Image files (*.png)|*.png|All files (*.*)|*.*";
@@ -62,6 +57,46 @@ namespace PetStore.Views.PetFoodView{
             } else {
                 XtraMessageBox.Show("Please choose a image with (*.jpg)/(*.png) file !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void bbiSave_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            String oldPath = openDialog.FileName;
+            String oldFilePath = @"../../img/" + pf_imageTextEdit.Text;
+            File.Delete(oldFilePath);
+            File.Copy(oldPath, @"../../img/" + pf_imageTextEdit.Text);
+            MessageBox.Show("Save food Successful !", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void bbiSaveAndClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            String oldPath = openDialog.FileName;
+            String oldFilePath = @"../../img/" + pf_imageTextEdit.Text;
+            File.Delete(oldFilePath);
+            File.Copy(oldPath, @"../../img/" + pf_imageTextEdit.Text);
+            MessageBox.Show("Save food Successful !", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void bbiSaveAndNew_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            String oldPath = openDialog.FileName;
+            String oldFilePath = @"../../img/" + pf_imageTextEdit.Text;
+            File.Delete(oldFilePath);
+            File.Copy(oldPath, @"../../img/" + pf_imageTextEdit.Text);
+            MessageBox.Show("Save food Successful !", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void PetFoodView_Load(object sender, EventArgs e)
+        {
+            PetFoodModel pfm = new PetFoodModel();
+            pf_idTextEdit.Text = pfm.getNextID();
+            pf_statusTextEdit.SelectedItem = "Active";
+        }
+
+        private void pf_idTextEdit_Click(object sender, EventArgs e)
+        {
+            PetFoodModel pfm = new PetFoodModel();
+            pf_idTextEdit.Text = pfm.getNextID();
         }
     }
 }

@@ -81,9 +81,26 @@ namespace PetStore.Views.PetFoodCollectionView{
             }
         }
 
-        private void PetFoodCollectionView_Load(object sender, EventArgs e)
+        private void bbiEdit_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            if (pfIDSelected != "")
+            {
+                EditPetFood epf = new EditPetFood();
+                var db = new PetStoreEntities();
+                var pf = db.PetFoods.Find(pfIDSelected);
+                epf.te_FoodID.Text = pf.pf_id;
+                epf.te_FoodName.Text = pf.pf_name;
+                //epf.te_FoodImage.Text = pf.pf_image;
+                epf.te_FoodPrice.Text = pf.pf_prices + "";
+                epf.te_FoodSalePrice.Text = pf.pf_salePrice + "";
+                epf.te_FoodStatus.SelectedItem = pf.pf_status;
+                epf.te_FoodAmount.Text = pf.pf_amount + "";
+                epf.ShowDialog();
+            }
+            else
+            {
+                XtraMessageBox.Show("Please choose a food item to restore !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
