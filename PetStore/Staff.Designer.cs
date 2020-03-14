@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff));
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnOnlineOrder = new DevExpress.XtraBars.BarButtonItem();
@@ -40,11 +39,13 @@
             this.btnPAccessories = new DevExpress.XtraBars.BarButtonItem();
             this.btnPToy = new DevExpress.XtraBars.BarButtonItem();
             this.btnPMed = new DevExpress.XtraBars.BarButtonItem();
-            this.btnCmtList = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.btnGiftList = new DevExpress.XtraBars.BarButtonItem();
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.btnResetPassword = new DevExpress.XtraBars.BarButtonItem();
+            this.btnRestoreCmt = new DevExpress.XtraBars.BarButtonItem();
+            this.btnViewCmtd = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCmtList = new DevExpress.XtraBars.BarButtonItem();
             this.rbpSales = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbpgBillSale = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbpProduct = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -54,18 +55,10 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbAccount = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.TabManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TabManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 668);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.ribbon;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1158, 34);
             // 
             // ribbon
             // 
@@ -81,22 +74,23 @@
             this.btnPAccessories,
             this.btnPToy,
             this.btnPMed,
-            this.btnCmtList,
             this.barButtonItem2,
             this.btnGiftList,
             this.btnLogout,
-            this.btnResetPassword});
+            this.btnResetPassword,
+            this.btnRestoreCmt,
+            this.btnViewCmtd,
+            this.btnCmtList});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbon.MaxItemId = 16;
+            this.ribbon.MaxItemId = 21;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbpSales,
             this.rbpProduct,
             this.rbpComment,
             this.rbAccount});
-            this.ribbon.Size = new System.Drawing.Size(1158, 176);
-            this.ribbon.StatusBar = this.ribbonStatusBar1;
+            this.ribbon.Size = new System.Drawing.Size(1125, 176);
             // 
             // barButtonItem1
             // 
@@ -138,6 +132,7 @@
             this.btnPFood.LargeWidth = 65;
             this.btnPFood.Name = "btnPFood";
             this.btnPFood.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnPFood.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPFood_ItemClick);
             // 
             // btnPAccessories
             // 
@@ -163,16 +158,6 @@
             this.btnPMed.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPMed.ImageOptions.Image")));
             this.btnPMed.Name = "btnPMed";
             this.btnPMed.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // btnCmtList
-            // 
-            this.btnCmtList.Caption = "Comment List";
-            this.btnCmtList.Id = 11;
-            this.btnCmtList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCmtList.ImageOptions.Image")));
-            this.btnCmtList.LargeWidth = 75;
-            this.btnCmtList.Name = "btnCmtList";
-            this.btnCmtList.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnCmtList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCmtList_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -206,6 +191,34 @@
             this.btnResetPassword.LargeWidth = 100;
             this.btnResetPassword.Name = "btnResetPassword";
             this.btnResetPassword.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btnRestoreCmt
+            // 
+            this.btnRestoreCmt.Caption = "Restore comment";
+            this.btnRestoreCmt.Id = 16;
+            this.btnRestoreCmt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRestoreCmt.ImageOptions.Image")));
+            this.btnRestoreCmt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRestoreCmt.ImageOptions.LargeImage")));
+            this.btnRestoreCmt.LargeWidth = 60;
+            this.btnRestoreCmt.Name = "btnRestoreCmt";
+            // 
+            // btnViewCmtd
+            // 
+            this.btnViewCmtd.Caption = "View comment detail";
+            this.btnViewCmtd.Id = 19;
+            this.btnViewCmtd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnViewCmtd.ImageOptions.Image")));
+            this.btnViewCmtd.LargeWidth = 105;
+            this.btnViewCmtd.Name = "btnViewCmtd";
+            this.btnViewCmtd.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // btnCmtList
+            // 
+            this.btnCmtList.Caption = "Comment List";
+            this.btnCmtList.Id = 20;
+            this.btnCmtList.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCmtList.ImageOptions.Image")));
+            this.btnCmtList.LargeWidth = 70;
+            this.btnCmtList.Name = "btnCmtList";
+            this.btnCmtList.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnCmtList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCmtList_ItemClick);
             // 
             // rbpSales
             // 
@@ -273,34 +286,28 @@
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
-            // TabManager
-            // 
-            this.TabManager.MdiParent = this;
-            // 
             // Staff
             // 
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 702);
-            this.Controls.Add(this.ribbonStatusBar1);
+            this.ClientSize = new System.Drawing.Size(1125, 933);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Staff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TabManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem btnOnlineOrder;
@@ -310,7 +317,6 @@
         private DevExpress.XtraBars.BarButtonItem btnPAccessories;
         private DevExpress.XtraBars.BarButtonItem btnPToy;
         private DevExpress.XtraBars.BarButtonItem btnPMed;
-        private DevExpress.XtraBars.BarButtonItem btnCmtList;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbpSales;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpgBillSale;
@@ -318,12 +324,15 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpgPet;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbpComment;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager TabManager;
         private DevExpress.XtraBars.BarButtonItem btnGiftList;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbpgGift;
         private DevExpress.XtraBars.BarButtonItem btnLogout;
         private DevExpress.XtraBars.BarButtonItem btnResetPassword;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbAccount;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem btnRestoreCmt;
+        private DevExpress.XtraBars.BarButtonItem btnViewCmtd;
+        private System.Windows.Forms.BindingSource bindingSource;
+        private DevExpress.XtraBars.BarButtonItem btnCmtList;
     }
 }

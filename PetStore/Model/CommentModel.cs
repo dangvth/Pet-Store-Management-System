@@ -21,12 +21,12 @@ namespace PetStore.Model
         /// 
         /// </summary>
         /// <param name="cmt_id"></param>
-        public void DeleteComment(String cmt_id)
+        public void DeleteComment(int cmt_id)
         {
             using (var db = new PetStoreEntities())
             {
-                var Petfood = db.Comments.Find(cmt_id);
-                Petfood.cmt_status = "Inactive";
+                var cmt = db.Comments.Find(cmt_id);
+                cmt.cmt_status = "Inactive";
                 db.SaveChanges();
             }
         }
@@ -35,17 +35,21 @@ namespace PetStore.Model
         /// 
         /// </summary>
         /// <param name="cmt_id"></param>
-        public void RestoreComment(String cmt_id)
+        public void RestoreComment(int cmt_id)
         {
             using (var db = new PetStoreEntities())
             {
-                var Petfood = db.Comments.Find(cmt_id);
-                Petfood.cmt_status = "Active";
+                var cmt = db.Comments.Find(cmt_id);
+                cmt.cmt_status = "Active";
                 db.SaveChanges();
             }
         }
 
-        public ArrayList LoadTableData()
+        /// <summary>
+        /// get all data comment
+        /// </summary>
+        /// <returns></returns>
+        public ArrayList GetAllDataToArrayList()
         {
             cmtList = new ArrayList();
             using (var db = new PetStoreEntities())
@@ -61,7 +65,7 @@ namespace PetStore.Model
                                   cmt.cmt_status,
                                   p.p_name,
                                   u.u_name
-                              }).OrderBy(x=>x.cmt_published);
+                              });
 
                 foreach (var data in selectStr)
                 {

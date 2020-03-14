@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace PetStore.Model
 {
     class PetFoodModel
     {
+        ArrayList pfList;
         public PetFoodModel()
         {
 
@@ -82,6 +84,43 @@ namespace PetStore.Model
             {
                 return "PFD" + id;
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ArrayList GetAllPetFoodToArrayList()
+        {
+            pfList = new ArrayList();
+            using (var db = new PetStoreEntities())
+            {
+                var selectStr = (from f in db.PetFoods
+                                 join t in db.Types on f.t_id equals t.t_id
+                                 select new
+                                 {
+                                     f.pf_id,
+                                     f.pf_name,
+                                     f.pf_salePrice,
+                                     f.pf_amount,
+                                     t.t_name,
+                                     f.pf_status
+                                 });
+
+                foreach (var data in selectStr)
+                {
+                    if (data.pf_amount > 0)
+                    {
+                        pfList.Add(new Object.Food(data.pf_id, data.pf_name, Convert.ToInt32(data.pf_salePrice), Convert.ToInt32(data.pf_amount), data.t_name, "Active"));
+                    }
+                    else
+                    {
+                        pfList.Add(new Object.Food(data.pf_id, data.pf_name, Convert.ToInt32(data.pf_salePrice), Convert.ToInt32(data.pf_amount), data.t_name, "Inactive"));
+                    }
+                    
+                }
+            }
+            return pfList;
         }
     }
 }

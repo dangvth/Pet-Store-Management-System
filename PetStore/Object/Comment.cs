@@ -12,8 +12,6 @@ namespace PetStore.Object
         private String cmt_content;
         private String cmt_published;
         private String cmt_status;
-        private int p_id;
-        private int u_id;
         private String u_name;
         private String p_name;
 
@@ -78,41 +76,6 @@ namespace PetStore.Object
             }
         }
 
-        public String CommentStatus
-        {
-            set
-            {
-                this.cmt_status = value;
-            }
-            get
-            {
-                return cmt_status;
-            }
-        }
-        public int UserID
-        {
-            set
-            {
-                this.u_id = value;
-            }
-            get
-            {
-                return u_id;
-            }
-        }
-
-        public int PetID
-        {
-            set
-            {
-                this.p_id = value;
-            }
-            get
-            {
-                return p_id;
-            }
-        }
-
         public String UserName
         {
             set
@@ -134,6 +97,18 @@ namespace PetStore.Object
             get
             {
                 return p_name;
+            }
+        }
+
+        public String CommentStatus
+        {
+            set
+            {
+                this.cmt_status = value;
+            }
+            get
+            {
+                return cmt_status;
             }
         }
     }

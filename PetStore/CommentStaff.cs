@@ -10,62 +10,56 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using PetStore.Model;
 using DevExpress.XtraEditors;
-using DevExpress.XtraGrid;
-using System.Collections;
 
 namespace PetStore
 {
     public partial class CommentStaff : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        private String cmtIDSelected = "";
+        String IDSelected = "";
+
         public CommentStaff()
         {
             InitializeComponent();
         }
 
-        private void CommentStaff_Load(object sender, EventArgs e)
-        {
-            CommentModel cm = new CommentModel();
-            bindingSourceComment.DataSource = cm.LoadTableData();
-            gcComment.DataSource = bindingSourceComment;
-        }
-
-        private void btnDetail_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            CommentDetailStaff cmds = new CommentDetailStaff();
-            cmds.ShowDialog();
-        }
-
         private void gvComment_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             int idx = gvComment.FocusedRowHandle;
-            if (gvComment.GetRowCellValue(idx, "cmt_id") != null)
+            if (gvComment.GetRowCellValue(idx, gvComment.Columns[0]) != null)
             {
-                cmtIDSelected = gvComment.GetRowCellValue(idx, "cmt_id").ToString();
+                IDSelected = gvComment.GetRowCellValue(idx, gvComment.Columns[0]).ToString();
             }
+        }
+
+        private void btnViewCmtd_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            CommentDetailStaff cds = new CommentDetailStaff();
+            cds.ShowDialog();
         }
 
         private void btnDeleteCmt_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (cmtIDSelected != "")
+            if (IDSelected != "")
             {
                 CommentModel cm = new CommentModel();
-                cm.DeleteComment(cmtIDSelected);
+                cm.DeleteComment(Convert.ToInt32(IDSelected));
                 XtraMessageBox.Show("Delete successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CommentStaff_Load(sender, e);
             }
             else
             {
-                XtraMessageBox.Show("Please choose a food item to 'delete' !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Please choose a food item to 'Delete' !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void btnRestore_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnRestoreCmt_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (cmtIDSelected != "")
+            if (IDSelected != "")
             {
                 CommentModel cm = new CommentModel();
-                cm.RestoreComment(cmtIDSelected);
+                cm.RestoreComment(Convert.ToInt32(IDSelected));
                 XtraMessageBox.Show("Restore successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CommentStaff_Load(sender, e);
             }
             else
             {
@@ -75,7 +69,14 @@ namespace PetStore
 
         private void btnRefreshCmt_ItemClick(object sender, ItemClickEventArgs e)
         {
-            
+            CommentStaff_Load(sender, e);
+        }
+
+        private void CommentStaff_Load(object sender, EventArgs e)
+        {
+            CommentModel cm = new CommentModel();
+            bindingSourceComment.DataSource = cm.GetAllDataToArrayList();
+            gcComment.DataSource = bindingSourceComment;
         }
     }
 }
