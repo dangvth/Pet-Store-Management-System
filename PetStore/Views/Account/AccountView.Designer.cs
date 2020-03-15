@@ -303,6 +303,7 @@
             // RoleLookUpEdit
             // 
             this.RoleLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountViewBindingSource, "r_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.RoleLookUpEdit.EditValue = "";
             this.RoleLookUpEdit.Location = new System.Drawing.Point(73, 116);
             this.RoleLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RoleLookUpEdit.MenuManager = this.mainRibbonControl;

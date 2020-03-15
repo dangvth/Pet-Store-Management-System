@@ -83,7 +83,6 @@
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
-            this.gridControl.Load += new System.EventHandler(this.gridControl_Load);
             // 
             // petCollectionViewBindingSource
             // 
@@ -248,7 +247,6 @@
             this.ribbonControl.Size = new System.Drawing.Size(1195, 145);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
-            this.ribbonControl.Click += new System.EventHandler(this.ribbonControl_Click);
             // 
             // bbiPrintPreview
             // 
@@ -269,6 +267,7 @@
             this.bbiNew.Id = 16;
             this.bbiNew.ImageOptions.ImageUri.Uri = "Add";
             this.bbiNew.Name = "bbiNew";
+            this.bbiNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiNew_ItemClick);
             // 
             // bbiEdit
             // 

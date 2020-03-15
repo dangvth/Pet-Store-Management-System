@@ -92,6 +92,7 @@
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
             this.p_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.p_imageTextEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.p_publishedDateEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForp_id = new DevExpress.XtraLayout.LayoutControlItem();
@@ -113,7 +114,6 @@
             this.CommentsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.opendialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.p_publishedDateEdit = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p_idTextEdit.Properties)).BeginInit();
@@ -138,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CommentsBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_statusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_imageTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForp_id)).BeginInit();
@@ -157,7 +158,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentsPopUpMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -375,6 +375,7 @@
             // TypeLookUpEdit
             // 
             this.TypeLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "t_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.TypeLookUpEdit.EditValue = "";
             this.TypeLookUpEdit.Location = new System.Drawing.Point(99, 220);
             this.TypeLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TypeLookUpEdit.MenuManager = this.mainRibbonControl;
@@ -384,6 +385,7 @@
             this.TypeLookUpEdit.Properties.DataSource = this.TypeBindingSource;
             this.TypeLookUpEdit.Properties.DisplayMember = "t_name";
             this.TypeLookUpEdit.Properties.PopupView = this.TypeLookUpEditView;
+            this.TypeLookUpEdit.Properties.ReadOnly = true;
             this.TypeLookUpEdit.Properties.ValueMember = "t_id";
             this.TypeLookUpEdit.Size = new System.Drawing.Size(1084, 22);
             this.TypeLookUpEdit.StyleController = this.dataLayoutControl1;
@@ -840,6 +842,7 @@
             this.p_statusTextEdit.Properties.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
+            this.p_statusTextEdit.Properties.ReadOnly = true;
             this.p_statusTextEdit.Size = new System.Drawing.Size(1084, 22);
             this.p_statusTextEdit.StyleController = this.dataLayoutControl1;
             this.p_statusTextEdit.TabIndex = 11;
@@ -857,6 +860,24 @@
             this.p_imageTextEdit.StyleController = this.dataLayoutControl1;
             this.p_imageTextEdit.TabIndex = 8;
             this.p_imageTextEdit.Click += new System.EventHandler(this.p_imageTextEdit_Click);
+            // 
+            // p_publishedDateEdit
+            // 
+            this.p_publishedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_published", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.p_publishedDateEdit.Location = new System.Drawing.Point(99, 168);
+            this.p_publishedDateEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_publishedDateEdit.MenuManager = this.mainRibbonControl;
+            this.p_publishedDateEdit.Name = "p_publishedDateEdit";
+            this.p_publishedDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.p_publishedDateEdit.Properties.DisplayFormat.FormatString = "d";
+            this.p_publishedDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.p_publishedDateEdit.Properties.EditFormat.FormatString = "d";
+            this.p_publishedDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.p_publishedDateEdit.Properties.Mask.EditMask = "d";
+            this.p_publishedDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+            this.p_publishedDateEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_publishedDateEdit.StyleController = this.dataLayoutControl1;
+            this.p_publishedDateEdit.TabIndex = 10;
             // 
             // layoutControlGroup1
             // 
@@ -1057,24 +1078,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // p_publishedDateEdit
-            // 
-            this.p_publishedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_published", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.p_publishedDateEdit.Location = new System.Drawing.Point(99, 168);
-            this.p_publishedDateEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.p_publishedDateEdit.MenuManager = this.mainRibbonControl;
-            this.p_publishedDateEdit.Name = "p_publishedDateEdit";
-            this.p_publishedDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.p_publishedDateEdit.Properties.DisplayFormat.FormatString = "d";
-            this.p_publishedDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.p_publishedDateEdit.Properties.EditFormat.FormatString = "d";
-            this.p_publishedDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.p_publishedDateEdit.Properties.Mask.EditMask = "d";
-            this.p_publishedDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.p_publishedDateEdit.Size = new System.Drawing.Size(1084, 22);
-            this.p_publishedDateEdit.StyleController = this.dataLayoutControl1;
-            this.p_publishedDateEdit.TabIndex = 10;
-            // 
             // PetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1111,6 +1114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CommentsBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_statusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_imageTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForp_id)).EndInit();
@@ -1130,7 +1134,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentsPopUpMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -24,10 +24,25 @@
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.org_idTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.originViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.bbiCustomize = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
+            this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.org_nameTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.TypesXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.TypesGridControl = new DevExpress.XtraGrid.GridControl();
+            this.TypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TypesGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colt_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colt_name = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -36,64 +51,49 @@
             this.colOrigin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPets = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPetFoods = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.bbiCustomize = new DevExpress.XtraBars.BarButtonItem();
-            this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroupLayout = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiSaveLayout = new DevExpress.XtraBars.BarButtonItem();
-            this.bbiResetLayout = new DevExpress.XtraBars.BarButtonItem();
-            this.TypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.org_idTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemFororg_id = new DevExpress.XtraLayout.LayoutControlItem();
-            this.org_nameTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.ItemFororg_name = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemFororg_status = new DevExpress.XtraLayout.LayoutControlItem();
-            this.ItemForTypes = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.TypesBarManager = new DevExpress.XtraBars.BarManager(this.components);
+            this.TypesBar = new DevExpress.XtraBars.Bar();
             this.bbiTypesNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiTypesEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiTypesDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiTypesRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.TypesBar = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.TypesPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.org_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemFororg_id = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemFororg_name = new DevExpress.XtraLayout.LayoutControlItem();
+            this.ItemFororg_status = new DevExpress.XtraLayout.LayoutControlItem();
+            this.tabbedControlGroup1 = new DevExpress.XtraLayout.TabbedControlGroup();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.ItemForTypes = new DevExpress.XtraLayout.LayoutControlItem();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.TypesPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.org_idTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.originViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.org_nameTextEdit.Properties)).BeginInit();
             this.TypesXtraUserControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TypesGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypesGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesBarManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.org_statusTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.org_idTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororg_id)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.org_nameTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororg_name)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororg_status)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTypes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTypes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypesBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TypesPopUpMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.org_statusTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -105,115 +105,40 @@
             this.dataLayoutControl1.Controls.Add(this.org_statusTextEdit);
             this.dataLayoutControl1.DataSource = this.originViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
+            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
             this.dataLayoutControl1.TabIndex = 0;
             // 
-            // layoutControlGroup1
+            // org_idTextEdit
             // 
-            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.layoutControlGroup1.GroupBordersVisible = false;
-            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup2});
-            this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
-            this.layoutControlGroup1.TextVisible = false;
+            this.org_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.originViewBindingSource, "org_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.org_idTextEdit.Location = new System.Drawing.Point(53, 14);
+            this.org_idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.org_idTextEdit.MenuManager = this.mainRibbonControl;
+            this.org_idTextEdit.Name = "org_idTextEdit";
+            this.org_idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
+            this.org_idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.org_idTextEdit.Properties.Mask.EditMask = "N0";
+            this.org_idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.org_idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.org_idTextEdit.Properties.ReadOnly = true;
+            this.org_idTextEdit.Size = new System.Drawing.Size(1128, 22);
+            this.org_idTextEdit.StyleController = this.dataLayoutControl1;
+            this.org_idTextEdit.TabIndex = 4;
             // 
             // originViewBindingSource
             // 
             this.originViewBindingSource.DataSource = typeof(PetStore.Origin);
-            // 
-            // TypesXtraUserControl
-            // 
-            this.TypesXtraUserControl.Controls.Add(this.TypesGridControl);
-            this.TypesXtraUserControl.Controls.Add(this.barDockControlLeft);
-            this.TypesXtraUserControl.Controls.Add(this.barDockControlRight);
-            this.TypesXtraUserControl.Controls.Add(this.barDockControlBottom);
-            this.TypesXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.TypesXtraUserControl.Location = new System.Drawing.Point(24, 118);
-            this.TypesXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
-            this.TypesXtraUserControl.Name = "TypesXtraUserControl";
-            this.TypesXtraUserControl.Size = new System.Drawing.Size(976, 510);
-            this.TypesXtraUserControl.TabIndex = 7;
-            // 
-            // TypesGridControl
-            // 
-            this.TypesGridControl.DataSource = this.TypesBindingSource;
-            this.TypesGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TypesGridControl.Location = new System.Drawing.Point(0, 24);
-            this.TypesGridControl.MainView = this.TypesGridView;
-            this.TypesGridControl.MenuManager = this.mainRibbonControl;
-            this.TypesGridControl.Name = "TypesGridControl";
-            this.TypesGridControl.Size = new System.Drawing.Size(976, 486);
-            this.TypesGridControl.TabIndex = 0;
-            this.TypesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.TypesGridView});
-            // 
-            // TypesGridView
-            // 
-            this.TypesGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colt_id,
-            this.colt_name,
-            this.colt_status,
-            this.colorg_id,
-            this.colOrigin,
-            this.colPets,
-            this.colPetFoods});
-            this.TypesGridView.GridControl = this.TypesGridControl;
-            this.TypesGridView.Name = "TypesGridView";
-            this.TypesGridView.OptionsBehavior.Editable = false;
-            this.TypesGridView.OptionsBehavior.ReadOnly = true;
-            // 
-            // colt_id
-            // 
-            this.colt_id.FieldName = "t_id";
-            this.colt_id.Name = "colt_id";
-            this.colt_id.Visible = true;
-            this.colt_id.VisibleIndex = 0;
-            // 
-            // colt_name
-            // 
-            this.colt_name.FieldName = "t_name";
-            this.colt_name.Name = "colt_name";
-            this.colt_name.Visible = true;
-            this.colt_name.VisibleIndex = 1;
-            // 
-            // colt_status
-            // 
-            this.colt_status.FieldName = "t_status";
-            this.colt_status.Name = "colt_status";
-            this.colt_status.Visible = true;
-            this.colt_status.VisibleIndex = 2;
-            // 
-            // colorg_id
-            // 
-            this.colorg_id.FieldName = "org_id";
-            this.colorg_id.Name = "colorg_id";
-            this.colorg_id.Visible = true;
-            this.colorg_id.VisibleIndex = 3;
-            // 
-            // colOrigin
-            // 
-            this.colOrigin.FieldName = "Origin";
-            this.colOrigin.Name = "colOrigin";
-            // 
-            // colPets
-            // 
-            this.colPets.FieldName = "Pets";
-            this.colPets.Name = "colPets";
-            // 
-            // colPetFoods
-            // 
-            this.colPetFoods.FieldName = "PetFoods";
-            this.colPetFoods.Name = "colPetFoods";
             // 
             // mainRibbonControl
             // 
             this.mainRibbonControl.ExpandCollapseItem.Id = 0;
             this.mainRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.mainRibbonControl.ExpandCollapseItem,
+            this.mainRibbonControl.SearchEditItem,
             this.bbiCustomize,
             this.bbiSave,
             this.bbiSaveAndClose,
@@ -222,16 +147,16 @@
             this.bbiDelete,
             this.bbiClose,
             this.bbiSaveLayout,
-            this.bbiResetLayout,
-            this.mainRibbonControl.SearchEditItem});
+            this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
+            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -240,28 +165,6 @@
             this.bbiCustomize.Id = 1;
             this.bbiCustomize.ImageOptions.ImageUri.Uri = "Customization";
             this.bbiCustomize.Name = "bbiCustomize";
-            // 
-            // mainRibbonPage
-            // 
-            this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.mainRibbonPageGroup,
-            this.ribbonPageGroupLayout});
-            this.mainRibbonPage.MergeOrder = 0;
-            this.mainRibbonPage.Name = "mainRibbonPage";
-            this.mainRibbonPage.Text = "Home";
-            // 
-            // mainRibbonPageGroup
-            // 
-            this.mainRibbonPageGroup.AllowTextClipping = false;
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
-            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
-            this.mainRibbonPageGroup.ShowCaptionButton = false;
-            this.mainRibbonPageGroup.Text = "Origin Tasks";
             // 
             // bbiSave
             // 
@@ -305,15 +208,6 @@
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
             this.bbiClose.Name = "bbiClose";
             // 
-            // ribbonPageGroupLayout
-            // 
-            this.ribbonPageGroupLayout.AllowTextClipping = false;
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiCustomize);
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
-            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiResetLayout);
-            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
-            this.ribbonPageGroupLayout.Text = "Layout";
-            // 
             // bbiSaveLayout
             // 
             this.bbiSaveLayout.Caption = "Save Layout";
@@ -328,121 +222,162 @@
             this.bbiResetLayout.ImageOptions.ImageUri.Uri = "Reset";
             this.bbiResetLayout.Name = "bbiResetLayout";
             // 
-            // TypesBindingSource
+            // mainRibbonPage
             // 
-            this.TypesBindingSource.DataSource = typeof(PetStore.Type);
+            this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.mainRibbonPageGroup,
+            this.ribbonPageGroupLayout});
+            this.mainRibbonPage.MergeOrder = 0;
+            this.mainRibbonPage.Name = "mainRibbonPage";
+            this.mainRibbonPage.Text = "Home";
             // 
-            // layoutControlGroup2
+            // mainRibbonPageGroup
             // 
-            this.layoutControlGroup2.AllowDrawBackground = false;
-            this.layoutControlGroup2.GroupBordersVisible = false;
-            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemFororg_id,
-            this.ItemFororg_name,
-            this.ItemFororg_status,
-            this.tabbedControlGroup1});
-            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1004, 632);
+            this.mainRibbonPageGroup.AllowTextClipping = false;
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
+            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
+            this.mainRibbonPageGroup.ShowCaptionButton = false;
+            this.mainRibbonPageGroup.Text = "Origin Tasks";
             // 
-            // org_idTextEdit
+            // ribbonPageGroupLayout
             // 
-            this.org_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.originViewBindingSource, "org_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.org_idTextEdit.Location = new System.Drawing.Point(46, 12);
-            this.org_idTextEdit.MenuManager = this.mainRibbonControl;
-            this.org_idTextEdit.Name = "org_idTextEdit";
-            this.org_idTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.org_idTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.org_idTextEdit.Properties.Mask.EditMask = "N0";
-            this.org_idTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.org_idTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.org_idTextEdit.Properties.ReadOnly = true;
-            this.org_idTextEdit.Size = new System.Drawing.Size(966, 20);
-            this.org_idTextEdit.StyleController = this.dataLayoutControl1;
-            this.org_idTextEdit.TabIndex = 4;
-            // 
-            // ItemFororg_id
-            // 
-            this.ItemFororg_id.Control = this.org_idTextEdit;
-            this.ItemFororg_id.Location = new System.Drawing.Point(0, 0);
-            this.ItemFororg_id.Name = "ItemFororg_id";
-            this.ItemFororg_id.Size = new System.Drawing.Size(1004, 24);
-            this.ItemFororg_id.Text = "ID";
-            this.ItemFororg_id.TextSize = new System.Drawing.Size(31, 13);
+            this.ribbonPageGroupLayout.AllowTextClipping = false;
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiCustomize);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiSaveLayout);
+            this.ribbonPageGroupLayout.ItemLinks.Add(this.bbiResetLayout);
+            this.ribbonPageGroupLayout.Name = "ribbonPageGroupLayout";
+            this.ribbonPageGroupLayout.Text = "Layout";
             // 
             // org_nameTextEdit
             // 
             this.org_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.originViewBindingSource, "org_name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.org_nameTextEdit.Location = new System.Drawing.Point(46, 36);
+            this.org_nameTextEdit.Location = new System.Drawing.Point(53, 40);
+            this.org_nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.org_nameTextEdit.MenuManager = this.mainRibbonControl;
             this.org_nameTextEdit.Name = "org_nameTextEdit";
-            this.org_nameTextEdit.Size = new System.Drawing.Size(966, 20);
+            this.org_nameTextEdit.Size = new System.Drawing.Size(1128, 22);
             this.org_nameTextEdit.StyleController = this.dataLayoutControl1;
             this.org_nameTextEdit.TabIndex = 5;
             // 
-            // ItemFororg_name
+            // TypesXtraUserControl
             // 
-            this.ItemFororg_name.Control = this.org_nameTextEdit;
-            this.ItemFororg_name.Location = new System.Drawing.Point(0, 24);
-            this.ItemFororg_name.Name = "ItemFororg_name";
-            this.ItemFororg_name.Size = new System.Drawing.Size(1004, 24);
-            this.ItemFororg_name.Text = "Name";
-            this.ItemFororg_name.TextSize = new System.Drawing.Size(31, 13);
+            this.TypesXtraUserControl.Controls.Add(this.TypesGridControl);
+            this.TypesXtraUserControl.Controls.Add(this.barDockControlLeft);
+            this.TypesXtraUserControl.Controls.Add(this.barDockControlRight);
+            this.TypesXtraUserControl.Controls.Add(this.barDockControlBottom);
+            this.TypesXtraUserControl.Controls.Add(this.barDockControlTop);
+            this.TypesXtraUserControl.Location = new System.Drawing.Point(27, 133);
+            this.TypesXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TypesXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.TypesXtraUserControl.Name = "TypesXtraUserControl";
+            this.TypesXtraUserControl.Size = new System.Drawing.Size(1140, 638);
+            this.TypesXtraUserControl.TabIndex = 7;
             // 
-            // ItemFororg_status
+            // TypesGridControl
             // 
-            this.ItemFororg_status.Control = this.org_statusTextEdit;
-            this.ItemFororg_status.Location = new System.Drawing.Point(0, 48);
-            this.ItemFororg_status.Name = "ItemFororg_status";
-            this.ItemFororg_status.Size = new System.Drawing.Size(1004, 24);
-            this.ItemFororg_status.Text = "Status";
-            this.ItemFororg_status.TextSize = new System.Drawing.Size(31, 13);
+            this.TypesGridControl.DataSource = this.TypesBindingSource;
+            this.TypesGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TypesGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TypesGridControl.Location = new System.Drawing.Point(0, 30);
+            this.TypesGridControl.MainView = this.TypesGridView;
+            this.TypesGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TypesGridControl.MenuManager = this.mainRibbonControl;
+            this.TypesGridControl.Name = "TypesGridControl";
+            this.TypesGridControl.Size = new System.Drawing.Size(1140, 608);
+            this.TypesGridControl.TabIndex = 0;
+            this.TypesGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.TypesGridView});
             // 
-            // ItemForTypes
+            // TypesBindingSource
             // 
-            this.ItemForTypes.Control = this.TypesXtraUserControl;
-            this.ItemForTypes.Location = new System.Drawing.Point(0, 0);
-            this.ItemForTypes.Name = "ItemForTypes";
-            this.ItemForTypes.Size = new System.Drawing.Size(980, 514);
-            this.ItemForTypes.StartNewLine = true;
-            this.ItemForTypes.Text = "Types";
-            this.ItemForTypes.TextSize = new System.Drawing.Size(0, 0);
-            this.ItemForTypes.TextVisible = false;
+            this.TypesBindingSource.DataSource = typeof(PetStore.Type);
             // 
-            // tabbedControlGroup1
+            // TypesGridView
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 72);
-            this.tabbedControlGroup1.Name = "autoGroupForTabs";
-            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 560);
-            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlGroup3});
-            this.tabbedControlGroup1.Text = "Tabs";
+            this.TypesGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colt_id,
+            this.colt_name,
+            this.colt_status,
+            this.colorg_id,
+            this.colOrigin,
+            this.colPets,
+            this.colPetFoods});
+            this.TypesGridView.DetailHeight = 431;
+            this.TypesGridView.GridControl = this.TypesGridControl;
+            this.TypesGridView.Name = "TypesGridView";
+            this.TypesGridView.OptionsBehavior.Editable = false;
+            this.TypesGridView.OptionsBehavior.ReadOnly = true;
             // 
-            // layoutControlGroup3
+            // colt_id
             // 
-            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.ItemForTypes});
-            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlGroup3.Name = "autoGroupForTypes";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 514);
-            this.layoutControlGroup3.Text = "Types";
+            this.colt_id.FieldName = "t_id";
+            this.colt_id.MinWidth = 23;
+            this.colt_id.Name = "colt_id";
+            this.colt_id.Visible = true;
+            this.colt_id.VisibleIndex = 0;
+            this.colt_id.Width = 87;
             // 
-            // mvvmContext
+            // colt_name
             // 
-            this.mvvmContext.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Save", this.bbiSave),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "SaveAndClose", this.bbiSaveAndClose),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "SaveAndNew", this.bbiSaveAndNew),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Reset", this.bbiReset),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Delete", this.bbiDelete),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Close", this.bbiClose),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "SaveLayout", this.bbiSaveLayout),
-            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "ResetLayout", this.bbiResetLayout)});
-            this.mvvmContext.ContainerControl = this;
-            this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
-            DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
-            this.mvvmContext.ViewModelType = typeof(PetStore.ViewModels.OriginViewModel);
+            this.colt_name.FieldName = "t_name";
+            this.colt_name.MinWidth = 23;
+            this.colt_name.Name = "colt_name";
+            this.colt_name.Visible = true;
+            this.colt_name.VisibleIndex = 1;
+            this.colt_name.Width = 87;
+            // 
+            // colt_status
+            // 
+            this.colt_status.FieldName = "t_status";
+            this.colt_status.MinWidth = 23;
+            this.colt_status.Name = "colt_status";
+            this.colt_status.Visible = true;
+            this.colt_status.VisibleIndex = 2;
+            this.colt_status.Width = 87;
+            // 
+            // colorg_id
+            // 
+            this.colorg_id.FieldName = "org_id";
+            this.colorg_id.MinWidth = 23;
+            this.colorg_id.Name = "colorg_id";
+            this.colorg_id.Visible = true;
+            this.colorg_id.VisibleIndex = 3;
+            this.colorg_id.Width = 87;
+            // 
+            // colOrigin
+            // 
+            this.colOrigin.FieldName = "Origin";
+            this.colOrigin.MinWidth = 23;
+            this.colOrigin.Name = "colOrigin";
+            this.colOrigin.Width = 87;
+            // 
+            // colPets
+            // 
+            this.colPets.FieldName = "Pets";
+            this.colPets.MinWidth = 23;
+            this.colPets.Name = "colPets";
+            this.colPets.Width = 87;
+            // 
+            // colPetFoods
+            // 
+            this.colPetFoods.FieldName = "PetFoods";
+            this.colPetFoods.MinWidth = 23;
+            this.colPetFoods.Name = "colPetFoods";
+            this.colPetFoods.Width = 87;
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Manager = this.TypesBarManager;
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 608);
             // 
             // TypesBarManager
             // 
@@ -461,6 +396,21 @@
             this.bbiTypesRefresh});
             this.TypesBarManager.MainMenu = this.TypesBar;
             this.TypesBarManager.MaxItemId = 4;
+            // 
+            // TypesBar
+            // 
+            this.TypesBar.BarName = "Types";
+            this.TypesBar.DockCol = 0;
+            this.TypesBar.DockRow = 0;
+            this.TypesBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.TypesBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesNew),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesEdit),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesDelete),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesRefresh)});
+            this.TypesBar.OptionsBar.AllowQuickCustomization = false;
+            this.TypesBar.OptionsBar.DrawDragBorder = false;
+            this.TypesBar.Text = "Types";
             // 
             // bbiTypesNew
             // 
@@ -494,52 +444,146 @@
             this.bbiTypesRefresh.Name = "bbiTypesRefresh";
             this.bbiTypesRefresh.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
-            // TypesBar
-            // 
-            this.TypesBar.BarName = "Types";
-            this.TypesBar.DockCol = 0;
-            this.TypesBar.DockRow = 0;
-            this.TypesBar.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.TypesBar.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesNew),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesEdit),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesDelete),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bbiTypesRefresh)});
-            this.TypesBar.OptionsBar.AllowQuickCustomization = false;
-            this.TypesBar.OptionsBar.DrawDragBorder = false;
-            this.TypesBar.Text = "Types";
-            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.TypesBarManager;
-            this.barDockControlTop.Size = new System.Drawing.Size(976, 24);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1140, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 510);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 638);
             this.barDockControlBottom.Manager = this.TypesBarManager;
-            this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
-            this.barDockControlLeft.Manager = this.TypesBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1140, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
+            this.barDockControlRight.Location = new System.Drawing.Point(1140, 30);
             this.barDockControlRight.Manager = this.TypesBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 486);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 608);
+            // 
+            // org_statusTextEdit
+            // 
+            this.org_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.originViewBindingSource, "org_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.org_statusTextEdit.EditValue = "Active";
+            this.org_statusTextEdit.Location = new System.Drawing.Point(53, 66);
+            this.org_statusTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.org_statusTextEdit.MenuManager = this.mainRibbonControl;
+            this.org_statusTextEdit.Name = "org_statusTextEdit";
+            this.org_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.org_statusTextEdit.Properties.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.org_statusTextEdit.Properties.ReadOnly = true;
+            this.org_statusTextEdit.Size = new System.Drawing.Size(1128, 22);
+            this.org_statusTextEdit.StyleController = this.dataLayoutControl1;
+            this.org_statusTextEdit.TabIndex = 6;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup2});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.AllowDrawBackground = false;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemFororg_id,
+            this.ItemFororg_name,
+            this.ItemFororg_status,
+            this.tabbedControlGroup1});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "autoGeneratedGroup0";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1171, 776);
+            // 
+            // ItemFororg_id
+            // 
+            this.ItemFororg_id.Control = this.org_idTextEdit;
+            this.ItemFororg_id.Location = new System.Drawing.Point(0, 0);
+            this.ItemFororg_id.Name = "ItemFororg_id";
+            this.ItemFororg_id.Size = new System.Drawing.Size(1171, 26);
+            this.ItemFororg_id.Text = "ID";
+            this.ItemFororg_id.TextSize = new System.Drawing.Size(36, 16);
+            // 
+            // ItemFororg_name
+            // 
+            this.ItemFororg_name.Control = this.org_nameTextEdit;
+            this.ItemFororg_name.Location = new System.Drawing.Point(0, 26);
+            this.ItemFororg_name.Name = "ItemFororg_name";
+            this.ItemFororg_name.Size = new System.Drawing.Size(1171, 26);
+            this.ItemFororg_name.Text = "Name";
+            this.ItemFororg_name.TextSize = new System.Drawing.Size(36, 16);
+            // 
+            // ItemFororg_status
+            // 
+            this.ItemFororg_status.Control = this.org_statusTextEdit;
+            this.ItemFororg_status.Location = new System.Drawing.Point(0, 52);
+            this.ItemFororg_status.Name = "ItemFororg_status";
+            this.ItemFororg_status.Size = new System.Drawing.Size(1171, 26);
+            this.ItemFororg_status.Text = "Status";
+            this.ItemFororg_status.TextSize = new System.Drawing.Size(36, 16);
+            // 
+            // tabbedControlGroup1
+            // 
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 78);
+            this.tabbedControlGroup1.Name = "autoGroupForTabs";
+            this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1171, 698);
+            this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlGroup3});
+            this.tabbedControlGroup1.Text = "Tabs";
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.ItemForTypes});
+            this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup3.Name = "autoGroupForTypes";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1144, 642);
+            this.layoutControlGroup3.Text = "Types";
+            // 
+            // ItemForTypes
+            // 
+            this.ItemForTypes.Control = this.TypesXtraUserControl;
+            this.ItemForTypes.Location = new System.Drawing.Point(0, 0);
+            this.ItemForTypes.Name = "ItemForTypes";
+            this.ItemForTypes.Size = new System.Drawing.Size(1144, 642);
+            this.ItemForTypes.StartNewLine = true;
+            this.ItemForTypes.Text = "Types";
+            this.ItemForTypes.TextSize = new System.Drawing.Size(0, 0);
+            this.ItemForTypes.TextVisible = false;
+            // 
+            // mvvmContext
+            // 
+            this.mvvmContext.BindingExpressions.AddRange(new DevExpress.Utils.MVVM.BindingExpression[] {
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Save", this.bbiSave),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "SaveAndClose", this.bbiSaveAndClose),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "SaveAndNew", this.bbiSaveAndNew),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Reset", this.bbiReset),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Delete", this.bbiDelete),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "Close", this.bbiClose),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "SaveLayout", this.bbiSaveLayout),
+            DevExpress.Utils.MVVM.BindingExpression.CreateCommandBinding(typeof(PetStore.ViewModels.OriginViewModel), "ResetLayout", this.bbiResetLayout)});
+            this.mvvmContext.ContainerControl = this;
+            this.mvvmContext.RegistrationExpressions.AddRange(new DevExpress.Utils.MVVM.RegistrationExpression[] {
+            DevExpress.Utils.MVVM.RegistrationExpression.RegisterLayoutSerializationService(null, false, DevExpress.Utils.DefaultBoolean.True, this.dataLayoutControl1)});
+            this.mvvmContext.ViewModelType = typeof(PetStore.ViewModels.OriginViewModel);
             // 
             // TypesPopUpMenu
             // 
@@ -551,54 +595,39 @@
             this.TypesPopUpMenu.Manager = this.TypesBarManager;
             this.TypesPopUpMenu.Name = "TypesPopUpMenu";
             // 
-            // org_statusTextEdit
-            // 
-            this.org_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.originViewBindingSource, "org_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.org_statusTextEdit.EditValue = "Active";
-            this.org_statusTextEdit.Location = new System.Drawing.Point(46, 60);
-            this.org_statusTextEdit.MenuManager = this.mainRibbonControl;
-            this.org_statusTextEdit.Name = "org_statusTextEdit";
-            this.org_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.org_statusTextEdit.Properties.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.org_statusTextEdit.Size = new System.Drawing.Size(966, 20);
-            this.org_statusTextEdit.StyleController = this.dataLayoutControl1;
-            this.org_statusTextEdit.TabIndex = 6;
-            // 
             // OriginView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OriginView";
-            this.Size = new System.Drawing.Size(1024, 768);
+            this.Size = new System.Drawing.Size(1195, 945);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.org_idTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.originViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.org_nameTextEdit.Properties)).EndInit();
             this.TypesXtraUserControl.ResumeLayout(false);
             this.TypesXtraUserControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TypesGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypesGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TypesBarManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.org_statusTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.org_idTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororg_id)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.org_nameTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororg_name)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFororg_status)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForTypes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForTypes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TypesBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TypesPopUpMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.org_statusTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
