@@ -21,6 +21,7 @@ namespace PetStore
 
             BonusSkins.Register();
             Application.Run(new frmAdmin());
+            //Application.Run(new Staff());
         }
     }
 }

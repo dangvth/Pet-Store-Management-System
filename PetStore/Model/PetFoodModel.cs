@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace PetStore.Model
 {
     class PetFoodModel
     {
+        ArrayList pfList;
+
         public PetFoodModel()
         {
 
@@ -37,6 +40,10 @@ namespace PetStore.Model
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public String getLastID()
         {
             String lastID = "";
@@ -53,6 +60,46 @@ namespace PetStore.Model
             else { return lastID; }
         }
 
+        /// <summary>
+        /// update food by food id
+        /// </summary>
+        /// <param name="pfID"></param>
+        /// <param name="pfName"></param>
+        /// <param name="pfPrice"></param>
+        /// <param name="pfPriceSell"></param>
+        /// <param name="pfAmount"></param>
+        /// <param name="typeID"></param>
+        public void UpdateFood(String pfID, String pfName, int pfPrice, int pfPriceSell, int pfAmount, int typeID, String pfStatus, String pfImage)
+        {
+            using (var db = new PetStoreEntities())
+            {
+                var Petfood = db.PetFoods.Find(pfID);
+                Petfood.pf_name = pfName;
+                Petfood.pf_prices = pfPrice;
+                Petfood.pf_image = pfImage;
+                Petfood.pf_salePrice = pfPriceSell;
+                Petfood.pf_amount = pfAmount;
+                Petfood.t_id = typeID;
+                Petfood.pf_status = pfStatus;
+                db.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="pfId"></param>
+        /// <returns></returns>
+        public PetFood getPetFood(String pfId)
+        {
+            var db = new PetStoreEntities();
+            var Petfood = db.PetFoods.Find(pfId);
+            return Petfood;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public String getNextID()
         {
             String dID = "";
@@ -74,6 +121,44 @@ namespace PetStore.Model
             {
                 return "PFD" + id;
             }
+        }
+
+        /// <summary>
+        /// get all food to arraylist
+        /// </summary>
+        /// <returns></returns>
+        public ArrayList GetAllPetFoodToArrayList()
+        {
+            pfList = new ArrayList();
+            using (var db = new PetStoreEntities())
+            {
+                var selectStr = (from f in db.PetFoods
+                                 join t in db.Types on f.t_id equals t.t_id
+                                 select new
+                                 {
+                                     f.pf_id,
+                                     f.pf_name,
+                                     f.pf_salePrice,
+                                     f.pf_amount,
+                                     t.t_name,
+                                     f.pf_status
+                                 });
+
+                foreach (var data in selectStr)
+                {
+                    if (data.pf_amount > 0)
+                    {
+                        pfList.Add(new Object.Food(data.pf_id, data.pf_name, Convert.ToInt32(data.pf_salePrice),
+                                                   Convert.ToInt32(data.pf_amount), data.t_name, "Active"));
+                    }
+                    else
+                    {
+                        pfList.Add(new Object.Food(data.pf_id, data.pf_name, Convert.ToInt32(data.pf_salePrice), 
+                                                   Convert.ToInt32(data.pf_amount), data.t_name, "Inactive"));
+                    }
+                }
+            }
+            return pfList;
         }
     }
 }
