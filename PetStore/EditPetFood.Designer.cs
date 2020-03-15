@@ -125,6 +125,7 @@
             this.btnCloseEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCloseEdit.ImageOptions.LargeImage")));
             this.btnCloseEdit.LargeWidth = 60;
             this.btnCloseEdit.Name = "btnCloseEdit";
+            this.btnCloseEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCloseEdit_ItemClick);
             // 
             // Tool
             // 

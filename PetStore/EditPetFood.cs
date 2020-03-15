@@ -33,26 +33,23 @@ namespace PetStore
                 {
                     if (openDialog.FileName.EndsWith(".jpg")) { image = te_FoodID.Text + ".jpg"; }
                     else { image = te_FoodID.Text + ".png"; }
-                    String oldFilePath = @"../../img/" + oldImageName;
+                    String projectPath = Path.GetFullPath(Path.Combine(Application.StartupPath, "..\\..")); 
+                    String oldFilePath = projectPath + "\\img\\" + oldImageName;
                     FileInfo f = new FileInfo(oldFilePath);
                     if (f.Exists)
                     {
-                        MessageBox.Show("Exist");
-                    } else
-                    {
-                        MessageBox.Show("Not exist");
+                        File.Delete(oldFilePath);
                     }
-                    //File.Delete(oldFilePath);
-                    //String oldPath = openDialog.FileName;
-                    //File.Copy(oldPath, @"../img/" + image);
+                    String newFilepath = Path.GetFullPath(projectPath + "\\img\\" + image);
+                    File.Copy(te_FoodImage.Text, newFilepath);
                 }
                 else
                 {
                     image = oldImageName;
                 }
-                //pfm.UpdateFood(te_FoodID.Text, te_FoodName.Text, Convert.ToInt32(te_FoodPrice.Text), 
-                //         Convert.ToInt32(te_FoodSalePrice.Text), Convert.ToInt32(te_FoodAmount.Text), 2, te_FoodStatus.Text, image);
-                //XtraMessageBox.Show("Edit successful !!!", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                pfm.UpdateFood(te_FoodID.Text, te_FoodName.Text, Convert.ToInt32(te_FoodPrice.Text),
+                         Convert.ToInt32(te_FoodSalePrice.Text), Convert.ToInt32(te_FoodAmount.Text), 2, te_FoodStatus.Text, image);
+                XtraMessageBox.Show("Edit successful !!!", "Congratulation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             } else
             {
@@ -84,6 +81,11 @@ namespace PetStore
             te_FoodSalePrice.Text = pf.pf_salePrice + "";
             te_FoodStatus.SelectedItem = pf.pf_status;
             te_FoodAmount.Text = pf.pf_amount + "";
+        }
+
+        private void btnCloseEdit_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Close();
         }
     }
 }

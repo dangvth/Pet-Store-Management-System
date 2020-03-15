@@ -63,7 +63,11 @@ namespace PetStore.Views.PetFoodView{
         {
             String oldPath = openDialog.FileName;
             String oldFilePath = @"../../img/" + pf_imageTextEdit.Text;
-            File.Delete(oldFilePath);
+            FileInfo f = new FileInfo(oldFilePath);
+            if (f.Exists)
+            {
+                File.Delete(oldFilePath);
+            }
             File.Copy(oldPath, @"../../img/" + pf_imageTextEdit.Text);
             MessageBox.Show("Save food Successful !", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -72,7 +76,11 @@ namespace PetStore.Views.PetFoodView{
         {
             String oldPath = openDialog.FileName;
             String oldFilePath = @"../../img/" + pf_imageTextEdit.Text;
-            File.Delete(oldFilePath);
+            FileInfo f = new FileInfo(oldFilePath);
+            if (f.Exists)
+            {
+                File.Delete(oldFilePath);
+            }
             File.Copy(oldPath, @"../../img/" + pf_imageTextEdit.Text);
             MessageBox.Show("Save food Successful !", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -81,7 +89,11 @@ namespace PetStore.Views.PetFoodView{
         {
             String oldPath = openDialog.FileName;
             String oldFilePath = @"../../img/" + pf_imageTextEdit.Text;
-            File.Delete(oldFilePath);
+            FileInfo f = new FileInfo(oldFilePath);
+            if (f.Exists)
+            {
+                File.Delete(oldFilePath);
+            }
             File.Copy(oldPath, @"../../img/" + pf_imageTextEdit.Text);
             MessageBox.Show("Save food Successful !", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
