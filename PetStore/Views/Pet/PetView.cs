@@ -9,10 +9,20 @@ using DevExpress.XtraGrid.Views.Base;
 
 namespace PetStore.Views.PetView{
     public partial class PetView : XtraUserControl {
+
+        //Declare variables
+        private string petID = "";
+
+        #region Generate Component and Code
         public PetView() {
             InitializeComponent();
 			if(!mvvmContext.IsDesignMode)
 				InitBindings();
+            //Call PetCollectionViews Model
+            PetCollectionView.PetCollectionView pcv = new PetCollectionView.PetCollectionView();
+            //get data has been pass from PetCollectionViews
+            pcv.trans = new PetCollectionView.PetCollectionView.delPassData(getID);
+            //Run Timer
             timer1.Start();
 		}
 		void InitBindings() {
@@ -59,7 +69,13 @@ namespace PetStore.Views.PetView{
 			 
 			bbiCustomize.ItemClick += (s, e) => { dataLayoutControl1.ShowCustomizationForm(); };
        }
+        #endregion
 
+        /// <summary>
+        /// Open dialog and allow user choose image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void p_imageTextEdit_Click(object sender, EventArgs e)
         {
             opendialog.ShowDialog();
@@ -67,6 +83,17 @@ namespace PetStore.Views.PetView{
             p_imageTextEdit.Text = fileName;
         }
 
+        /// <summary>
+        /// Get Pet ID from Pet List in Pet Collection View Form
+        /// </summary>
+        /// <param name="text"></param>
+        public void getID(string text) { petID = text; }
+
+        /// <summary>
+        /// Get current system time and set to PublishedDate EditText
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             p_publishedDateEdit.Text = System.DateTime.Now.ToString();

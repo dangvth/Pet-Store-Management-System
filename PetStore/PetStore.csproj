@@ -169,6 +169,7 @@
     <Compile Include="Model\CommentDetailModel.cs" />
     <Compile Include="Model\CommentModel.cs" />
     <Compile Include="Model\PetFoodModel.cs" />
+    <Compile Include="Model\PetModel.cs" />
     <Compile Include="MyUtil\Encrypt.cs" />
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\Comment.cs" />
