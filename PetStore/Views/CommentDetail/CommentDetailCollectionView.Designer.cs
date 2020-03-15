@@ -23,6 +23,8 @@
         /// </summary>
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.commentDetailCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -207,6 +209,9 @@
             this.bbiRefresh.Id = 16;
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
+            toolTipItem1.Text = "Refresh comment reply of user";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.bbiRefresh.SuperTip = superToolTip1;
             // 
             // ribbonPage1
             // 

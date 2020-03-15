@@ -153,6 +153,12 @@
     <Compile Include="Common\EntitiesViewModel.cs" />
     <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
     <Compile Include="Common\SingleObjectViewModel.cs" />
+    <Compile Include="DetailPetFoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailPetFoodForm.Designer.cs">
+      <DependentUpon>DetailPetFoodForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditPetFood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -450,6 +456,9 @@
     <EmbeddedResource Include="CommentStaff.resx">
       <DependentUpon>CommentStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetailPetFoodForm.resx">
+      <DependentUpon>DetailPetFoodForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditPetFood.resx">
       <DependentUpon>EditPetFood.cs</DependentUpon>
     </EmbeddedResource>
@@ -471,6 +480,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
@@ -593,6 +603,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="img\error-image.png" />
     <Content Include="PetStoreModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PetStoreModel.Context.cs</LastGenOutput>
@@ -619,9 +630,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="img\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

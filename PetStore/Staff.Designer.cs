@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Staff));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.btnOnlineOrder = new DevExpress.XtraBars.BarButtonItem();
@@ -132,6 +136,9 @@
             this.btnPFood.LargeWidth = 65;
             this.btnPFood.Name = "btnPFood";
             this.btnPFood.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipItem1.Text = "Show Pet\'s food list";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnPFood.SuperTip = superToolTip1;
             this.btnPFood.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPFood_ItemClick);
             // 
             // btnPAccessories
@@ -218,6 +225,9 @@
             this.btnCmtList.LargeWidth = 70;
             this.btnCmtList.Name = "btnCmtList";
             this.btnCmtList.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipItem2.Text = "Show comment list of user";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnCmtList.SuperTip = superToolTip2;
             this.btnCmtList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCmtList_ItemClick);
             // 
             // rbpSales

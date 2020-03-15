@@ -23,7 +23,19 @@
         /// </summary>
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetFoodCollectionView));
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.petFoodCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -46,6 +58,7 @@
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRestore = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDetail = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -214,10 +227,11 @@
             this.bbiRefresh,
             this.bbiDelete,
             this.bbiRestore,
-            this.bbiEdit});
+            this.bbiEdit,
+            this.btnDetail});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ribbonControl.MaxItemId = 23;
+            this.ribbonControl.MaxItemId = 24;
             this.ribbonControl.Name = "ribbonControl";
             this.ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -246,6 +260,9 @@
             this.bbiNew.Id = 16;
             this.bbiNew.ImageOptions.ImageUri.Uri = "Add";
             this.bbiNew.Name = "bbiNew";
+            toolTipItem1.Text = "Insert new Pet\'s food";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.bbiNew.SuperTip = superToolTip1;
             // 
             // bbiRefresh
             // 
@@ -253,6 +270,9 @@
             this.bbiRefresh.Id = 19;
             this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
             this.bbiRefresh.Name = "bbiRefresh";
+            toolTipItem2.Text = "Refresh Pet\'s food list";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.bbiRefresh.SuperTip = superToolTip2;
             // 
             // bbiDelete
             // 
@@ -260,6 +280,9 @@
             this.bbiDelete.Id = 20;
             this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
             this.bbiDelete.Name = "bbiDelete";
+            toolTipItem3.Text = "Remove Pet\'s food in selected";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.bbiDelete.SuperTip = superToolTip3;
             this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
             // 
             // bbiRestore
@@ -268,6 +291,9 @@
             this.bbiRestore.Id = 21;
             this.bbiRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiRestore.ImageOptions.LargeImage")));
             this.bbiRestore.Name = "bbiRestore";
+            toolTipItem4.Text = "Restore Pet\'s food in selected";
+            superToolTip4.Items.Add(toolTipItem4);
+            this.bbiRestore.SuperTip = superToolTip4;
             this.bbiRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRestore_ItemClick);
             // 
             // bbiEdit
@@ -278,7 +304,23 @@
             this.bbiEdit.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiEdit.ImageOptions.LargeImage")));
             this.bbiEdit.Name = "bbiEdit";
             this.bbiEdit.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipItem5.Text = "Edit Pet\'s food in selected";
+            superToolTip5.Items.Add(toolTipItem5);
+            this.bbiEdit.SuperTip = superToolTip5;
             this.bbiEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiEdit_ItemClick);
+            // 
+            // btnDetail
+            // 
+            this.btnDetail.Caption = "Detail";
+            this.btnDetail.Id = 23;
+            this.btnDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.ImageOptions.Image")));
+            this.btnDetail.LargeWidth = 50;
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipItem6.Text = "View detail of Pet\'s food in selected";
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnDetail.SuperTip = superToolTip6;
+            this.btnDetail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDetail_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -295,6 +337,7 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiNew);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiEdit);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiDelete);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnDetail);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiRefresh);
             this.ribbonPageGroup1.ItemLinks.Add(this.bbiRestore);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
@@ -387,5 +430,6 @@
         private DevExpress.XtraBars.BarButtonItem bbiDelete;
         private DevExpress.XtraBars.BarButtonItem bbiRestore;
         private DevExpress.XtraBars.BarButtonItem bbiEdit;
+        private DevExpress.XtraBars.BarButtonItem btnDetail;
     }
 }
