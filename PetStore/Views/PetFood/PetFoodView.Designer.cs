@@ -23,6 +23,16 @@
         /// </summary>
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.pf_idTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.petFoodViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -208,6 +218,9 @@
             this.bbiSave.Id = 2;
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
             this.bbiSave.Name = "bbiSave";
+            toolTipItem1.Text = "Accept insert new Pet\'s food";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.bbiSave.SuperTip = superToolTip1;
             this.bbiSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSave_ItemClick);
             // 
             // bbiSaveAndClose
@@ -216,6 +229,9 @@
             this.bbiSaveAndClose.Id = 3;
             this.bbiSaveAndClose.ImageOptions.ImageUri.Uri = "SaveAndClose";
             this.bbiSaveAndClose.Name = "bbiSaveAndClose";
+            toolTipItem2.Text = "Accept insert new Pet\'s food and close Add Form";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.bbiSaveAndClose.SuperTip = superToolTip2;
             this.bbiSaveAndClose.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSaveAndClose_ItemClick);
             // 
             // bbiSaveAndNew
@@ -224,6 +240,9 @@
             this.bbiSaveAndNew.Id = 4;
             this.bbiSaveAndNew.ImageOptions.ImageUri.Uri = "SaveAndNew";
             this.bbiSaveAndNew.Name = "bbiSaveAndNew";
+            toolTipItem3.Text = "Accept insert new Pet\'s food and Open new Add Form";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.bbiSaveAndNew.SuperTip = superToolTip3;
             this.bbiSaveAndNew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiSaveAndNew_ItemClick);
             // 
             // bbiReset
@@ -232,6 +251,9 @@
             this.bbiReset.Id = 5;
             this.bbiReset.ImageOptions.ImageUri.Uri = "Reset";
             this.bbiReset.Name = "bbiReset";
+            toolTipItem4.Text = "Reset Add form ";
+            superToolTip4.Items.Add(toolTipItem4);
+            this.bbiReset.SuperTip = superToolTip4;
             // 
             // bbiDelete
             // 
@@ -246,6 +268,9 @@
             this.bbiClose.Id = 7;
             this.bbiClose.ImageOptions.ImageUri.Uri = "Close";
             this.bbiClose.Name = "bbiClose";
+            toolTipItem5.Text = "Close Add new Pet\'s food Form";
+            superToolTip5.Items.Add(toolTipItem5);
+            this.bbiClose.SuperTip = superToolTip5;
             // 
             // bbiSaveLayout
             // 

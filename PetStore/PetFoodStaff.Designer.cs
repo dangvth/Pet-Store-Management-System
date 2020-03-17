@@ -41,6 +41,7 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceFood = new System.Windows.Forms.BindingSource(this.components);
+            this.btnViewDetail = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -57,9 +58,10 @@
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
             this.ribbon.SearchEditItem,
-            this.btnRefreshFood});
+            this.btnRefreshFood,
+            this.btnViewDetail});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 2;
+            this.ribbon.MaxItemId = 3;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -86,6 +88,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnRefreshFood);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnViewDetail);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Pet Food";
             // 
@@ -123,6 +126,7 @@
             this.gvFood.GridControl = this.gcFood;
             this.gvFood.Name = "gvFood";
             this.gvFood.OptionsBehavior.Editable = false;
+            this.gvFood.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gvFood_RowClick);
             // 
             // Root
             // 
@@ -142,6 +146,15 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(1086, 465);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // btnViewDetail
+            // 
+            this.btnViewDetail.Caption = "View detail";
+            this.btnViewDetail.Id = 2;
+            this.btnViewDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnViewDetail.ImageOptions.Image")));
+            this.btnViewDetail.Name = "btnViewDetail";
+            this.btnViewDetail.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnViewDetail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewDetail_ItemClick);
             // 
             // PetFoodStaff
             // 
@@ -183,5 +196,6 @@
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private System.Windows.Forms.BindingSource bindingSourceFood;
+        private DevExpress.XtraBars.BarButtonItem btnViewDetail;
     }
 }

@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommentStaff));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnDeleteCmt = new DevExpress.XtraBars.BarButtonItem();
             this.btnRestoreCmt = new DevExpress.XtraBars.BarButtonItem();
@@ -79,6 +87,9 @@
             this.btnDeleteCmt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDeleteCmt.ImageOptions.LargeImage")));
             this.btnDeleteCmt.LargeWidth = 60;
             this.btnDeleteCmt.Name = "btnDeleteCmt";
+            toolTipItem1.Text = "Delete comment of user";
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnDeleteCmt.SuperTip = superToolTip1;
             this.btnDeleteCmt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDeleteCmt_ItemClick);
             // 
             // btnRestoreCmt
@@ -89,6 +100,9 @@
             this.btnRestoreCmt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRestoreCmt.ImageOptions.LargeImage")));
             this.btnRestoreCmt.LargeWidth = 60;
             this.btnRestoreCmt.Name = "btnRestoreCmt";
+            toolTipItem2.Text = "Restore comment of user";
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnRestoreCmt.SuperTip = superToolTip2;
             this.btnRestoreCmt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRestoreCmt_ItemClick);
             // 
             // btnRefreshCmt
@@ -99,6 +113,9 @@
             this.btnRefreshCmt.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnRefreshCmt.ImageOptions.LargeImage")));
             this.btnRefreshCmt.LargeWidth = 70;
             this.btnRefreshCmt.Name = "btnRefreshCmt";
+            toolTipItem3.Text = "Refresh comment";
+            superToolTip3.Items.Add(toolTipItem3);
+            this.btnRefreshCmt.SuperTip = superToolTip3;
             this.btnRefreshCmt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefreshCmt_ItemClick);
             // 
             // btnViewCmtd
@@ -109,6 +126,9 @@
             this.btnViewCmtd.LargeWidth = 105;
             this.btnViewCmtd.Name = "btnViewCmtd";
             this.btnViewCmtd.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            toolTipItem4.Text = "Open comment reply list management ";
+            superToolTip4.Items.Add(toolTipItem4);
+            this.btnViewCmtd.SuperTip = superToolTip4;
             this.btnViewCmtd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewCmtd_ItemClick);
             // 
             // ribbonPage1
