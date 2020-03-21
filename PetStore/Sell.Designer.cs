@@ -28,22 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.rbbSale = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiAdd = new DevExpress.XtraBars.BarButtonItem();
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiPrint = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
             this.rbbiSale = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rbbpgTasks = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.tblLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblGuest = new System.Windows.Forms.Label();
+            this.txtGuest = new DevExpress.XtraEditors.TextEdit();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.lblGift = new System.Windows.Forms.Label();
+            this.cbbGift = new System.Windows.Forms.ComboBox();
+            this.petStoreDataSet1 = new PetStore.PetStoreDataSet1();
+            this.giftBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.giftTableAdapter = new PetStore.PetStoreDataSet1TableAdapters.GiftTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.rbbSale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.tblLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGuest.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rbbSale
@@ -54,9 +69,10 @@
             this.rbbSale.SearchEditItem,
             this.bbiAdd,
             this.bbiDelete,
-            this.bbiPrint});
+            this.bbiPrint,
+            this.bbiReset});
             this.rbbSale.Location = new System.Drawing.Point(0, 0);
-            this.rbbSale.MaxItemId = 4;
+            this.rbbSale.MaxItemId = 5;
             this.rbbSale.Name = "rbbSale";
             this.rbbSale.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rbbiSale});
@@ -78,6 +94,7 @@
             this.bbiDelete.Id = 2;
             this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
             this.bbiDelete.Name = "bbiDelete";
+            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
             // 
             // bbiPrint
             // 
@@ -85,6 +102,15 @@
             this.bbiPrint.Id = 3;
             this.bbiPrint.ImageOptions.ImageUri.Uri = "Preview";
             this.bbiPrint.Name = "bbiPrint";
+            this.bbiPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiPrint_ItemClick);
+            // 
+            // bbiReset
+            // 
+            this.bbiReset.Caption = "Reset";
+            this.bbiReset.Id = 4;
+            this.bbiReset.ImageOptions.ImageUri.Uri = "Refresh";
+            this.bbiReset.Name = "bbiReset";
+            this.bbiReset.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiReset_ItemClick);
             // 
             // rbbiSale
             // 
@@ -97,6 +123,7 @@
             // 
             this.rbbpgTasks.ItemLinks.Add(this.bbiAdd);
             this.rbbpgTasks.ItemLinks.Add(this.bbiDelete);
+            this.rbbpgTasks.ItemLinks.Add(this.bbiReset);
             this.rbbpgTasks.ItemLinks.Add(this.bbiPrint);
             this.rbbpgTasks.Name = "rbbpgTasks";
             this.rbbpgTasks.Text = "Tasks";
@@ -119,33 +146,45 @@
             // 
             // tblLayout
             // 
-            this.tblLayout.ColumnCount = 2;
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tblLayout.Controls.Add(this.label1, 0, 0);
+            this.tblLayout.ColumnCount = 5;
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.53846F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.46154F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 235F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 282F));
+            this.tblLayout.Controls.Add(this.lblTotalPrice, 0, 0);
+            this.tblLayout.Controls.Add(this.lblGuest, 1, 0);
+            this.tblLayout.Controls.Add(this.txtGuest, 2, 0);
+            this.tblLayout.Controls.Add(this.lblAddress, 3, 0);
+            this.tblLayout.Controls.Add(this.txtAddress, 4, 0);
+            this.tblLayout.Controls.Add(this.lblGift, 1, 1);
+            this.tblLayout.Controls.Add(this.cbbGift, 2, 1);
             this.tblLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblLayout.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tblLayout.Location = new System.Drawing.Point(2, 2);
             this.tblLayout.Name = "tblLayout";
-            this.tblLayout.RowCount = 1;
+            this.tblLayout.RowCount = 2;
             this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tblLayout.Size = new System.Drawing.Size(877, 90);
             this.tblLayout.TabIndex = 0;
             // 
-            // label1
+            // lblTotalPrice
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lblTotalPrice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPrice.Location = new System.Drawing.Point(3, 15);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(51, 19);
+            this.lblTotalPrice.TabIndex = 0;
+            this.lblTotalPrice.Text = "label1";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 143);
@@ -153,6 +192,87 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(881, 282);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // lblGuest
+            // 
+            this.lblGuest.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblGuest.AutoSize = true;
+            this.lblGuest.Location = new System.Drawing.Point(228, 15);
+            this.lblGuest.Name = "lblGuest";
+            this.lblGuest.Size = new System.Drawing.Size(49, 19);
+            this.lblGuest.TabIndex = 1;
+            this.lblGuest.Text = "Guest";
+            // 
+            // txtGuest
+            // 
+            this.txtGuest.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtGuest.Location = new System.Drawing.Point(283, 11);
+            this.txtGuest.MenuManager = this.rbbSale;
+            this.txtGuest.Name = "txtGuest";
+            this.txtGuest.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGuest.Properties.Appearance.Options.UseFont = true;
+            this.txtGuest.Properties.Mask.EditMask = "[a-zA-Z]+[a-zA-Z ]+";
+            this.txtGuest.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtGuest.Size = new System.Drawing.Size(223, 26);
+            this.txtGuest.TabIndex = 2;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(525, 15);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(66, 19);
+            this.lblAddress.TabIndex = 3;
+            this.lblAddress.Text = "Address";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddress.Location = new System.Drawing.Point(597, 11);
+            this.txtAddress.MenuManager = this.rbbSale;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Properties.Appearance.Options.UseFont = true;
+            this.txtAddress.Size = new System.Drawing.Size(270, 26);
+            this.txtAddress.TabIndex = 4;
+            // 
+            // lblGift
+            // 
+            this.lblGift.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblGift.AutoSize = true;
+            this.lblGift.Location = new System.Drawing.Point(243, 60);
+            this.lblGift.Name = "lblGift";
+            this.lblGift.Size = new System.Drawing.Size(34, 19);
+            this.lblGift.TabIndex = 5;
+            this.lblGift.Text = "Gift";
+            // 
+            // cbbGift
+            // 
+            this.cbbGift.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cbbGift.DataSource = this.giftBindingSource;
+            this.cbbGift.DisplayMember = "g_name";
+            this.cbbGift.FormattingEnabled = true;
+            this.cbbGift.Location = new System.Drawing.Point(283, 59);
+            this.cbbGift.Name = "cbbGift";
+            this.cbbGift.Size = new System.Drawing.Size(223, 27);
+            this.cbbGift.TabIndex = 6;
+            this.cbbGift.ValueMember = "g_id";
+            // 
+            // petStoreDataSet1
+            // 
+            this.petStoreDataSet1.DataSetName = "PetStoreDataSet1";
+            this.petStoreDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // giftBindingSource
+            // 
+            this.giftBindingSource.DataMember = "Gift";
+            this.giftBindingSource.DataSource = this.petStoreDataSet1;
+            // 
+            // giftTableAdapter
+            // 
+            this.giftTableAdapter.ClearBeforeFill = true;
             // 
             // rbbSell
             // 
@@ -168,12 +288,18 @@
             this.Ribbon = this.rbbSale;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Sell";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.rbbSell_FormClosing);
+            this.Load += new System.EventHandler(this.rbbSell_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rbbSale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.tblLayout.ResumeLayout(false);
             this.tblLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGuest.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petStoreDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,7 +316,17 @@
         private DevExpress.XtraBars.BarButtonItem bbiPrint;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.TableLayoutPanel tblLayout;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private DevExpress.XtraBars.BarButtonItem bbiReset;
+        private System.Windows.Forms.Label lblGuest;
+        private DevExpress.XtraEditors.TextEdit txtGuest;
+        private System.Windows.Forms.Label lblAddress;
+        private DevExpress.XtraEditors.TextEdit txtAddress;
+        private System.Windows.Forms.Label lblGift;
+        private System.Windows.Forms.ComboBox cbbGift;
+        private PetStoreDataSet1 petStoreDataSet1;
+        private System.Windows.Forms.BindingSource giftBindingSource;
+        private PetStoreDataSet1TableAdapters.GiftTableAdapter giftTableAdapter;
     }
 }

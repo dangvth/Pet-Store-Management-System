@@ -54,7 +54,6 @@ namespace PetStore
                     table.Columns.Add(new DataColumn("Remain", typeof(int)));
                     table.Columns.Add(new DataColumn("Picture", typeof(Image)));
                     var select = from s in db.PetToys where s.pt_status == "Active" && s.pt_amount > 0 select s;
-                    int d = 0;
                     foreach (var pt in select)
                     {
                         table.Rows.Add(pt.pt_id, pt.pt_name, pt.pt_salePrice, pt.pt_amount, pt.Picture);
@@ -77,7 +76,6 @@ namespace PetStore
                     table.Columns.Add(new DataColumn("Remain", typeof(int)));
                     table.Columns.Add(new DataColumn("Picture", typeof(Image)));
                     var select = from s in db.PetFoods where s.pf_status == "Active" && s.pf_amount > 0 select s;
-                    int d = 0;
                     foreach (var pf in select)
                     {
                         table.Rows.Add(pf.pf_id, pf.pf_name, pf.pf_salePrice, pf.pf_amount, pf.Picture);
@@ -99,7 +97,6 @@ namespace PetStore
                     table.Columns.Add(new DataColumn("Price", typeof(int)));
                     table.Columns.Add(new DataColumn("Remain", typeof(int)));
                     var select = from s in db.PetAccessories where s.pa_status == "Active" && s.pa_amount > 0 select s;
-                    int d = 0;
                     foreach (var pa in select)
                     {
                         table.Rows.Add(pa.pa_id, pa.pa_name, pa.pa_salePrice, pa.pa_amount);
@@ -122,7 +119,6 @@ namespace PetStore
                     table.Columns.Add(new DataColumn("Remain", typeof(int)));
                     table.Columns.Add(new DataColumn("Picture", typeof(Image)));
                     var select = from s in db.PetMedicines where s.pm_status == "Active" && s.pm_amount > 0 select s;
-                    int d = 0;
                     foreach (var pm in select)
                     {
                         table.Rows.Add(pm.pm_id, pm.pm_name, pm.pm_salePrice, pm.pm_amount, pm.Picture);
