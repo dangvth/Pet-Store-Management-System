@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -197,6 +199,23 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="EF\Account.cs" />
+    <Compile Include="EF\Bill.cs" />
+    <Compile Include="EF\BillDetail.cs" />
+    <Compile Include="EF\Cart.cs" />
+    <Compile Include="EF\Comment.cs" />
+    <Compile Include="EF\CommentDetail.cs" />
+    <Compile Include="EF\Gift.cs" />
+    <Compile Include="EF\Origin.cs" />
+    <Compile Include="EF\Pet.cs" />
+    <Compile Include="EF\PetAccessories.cs" />
+    <Compile Include="EF\PetFood.cs" />
+    <Compile Include="EF\PetMedicine.cs" />
+    <Compile Include="EF\PetStoreOnlineDbContext.cs" />
+    <Compile Include="EF\PetToys.cs" />
+    <Compile Include="EF\Role.cs" />
+    <Compile Include="EF\Type.cs" />
+    <Compile Include="EF\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -239,13 +258,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Accounts\Index.cshtml" />
