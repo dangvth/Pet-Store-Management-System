@@ -92,6 +92,7 @@
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
             this.p_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.p_imageTextEdit = new DevExpress.XtraEditors.ButtonEdit();
+            this.p_publishedDateEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForp_id = new DevExpress.XtraLayout.LayoutControlItem();
@@ -113,7 +114,7 @@
             this.CommentsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.opendialog = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.p_publishedDateEdit = new DevExpress.XtraEditors.TextEdit();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.p_idTextEdit.Properties)).BeginInit();
@@ -138,6 +139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CommentsBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_statusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_imageTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForp_id)).BeginInit();
@@ -157,7 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentsPopUpMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -176,21 +178,19 @@
             this.dataLayoutControl1.Controls.Add(this.p_publishedDateEdit);
             this.dataLayoutControl1.DataSource = this.petViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 145);
-            this.dataLayoutControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(1195, 800);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(1024, 652);
             this.dataLayoutControl1.TabIndex = 0;
             // 
             // p_idTextEdit
             // 
             this.p_idTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.p_idTextEdit.Location = new System.Drawing.Point(99, 12);
-            this.p_idTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_idTextEdit.Location = new System.Drawing.Point(85, 10);
             this.p_idTextEdit.MenuManager = this.mainRibbonControl;
             this.p_idTextEdit.Name = "p_idTextEdit";
-            this.p_idTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_idTextEdit.Size = new System.Drawing.Size(928, 20);
             this.p_idTextEdit.StyleController = this.dataLayoutControl1;
             this.p_idTextEdit.TabIndex = 4;
             // 
@@ -214,14 +214,13 @@
             this.bbiSaveLayout,
             this.bbiResetLayout});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mainRibbonControl.MaxItemId = 10;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
             this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.mainRibbonControl.Size = new System.Drawing.Size(1195, 145);
+            this.mainRibbonControl.Size = new System.Drawing.Size(1024, 116);
             this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // bbiCustomize
@@ -321,19 +320,17 @@
             // p_nameTextEdit
             // 
             this.p_nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_name", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.p_nameTextEdit.Location = new System.Drawing.Point(99, 38);
-            this.p_nameTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_nameTextEdit.Location = new System.Drawing.Point(85, 34);
             this.p_nameTextEdit.MenuManager = this.mainRibbonControl;
             this.p_nameTextEdit.Name = "p_nameTextEdit";
-            this.p_nameTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_nameTextEdit.Size = new System.Drawing.Size(928, 20);
             this.p_nameTextEdit.StyleController = this.dataLayoutControl1;
             this.p_nameTextEdit.TabIndex = 5;
             // 
             // p_pricesTextEdit
             // 
             this.p_pricesTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_prices", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.p_pricesTextEdit.Location = new System.Drawing.Point(99, 64);
-            this.p_pricesTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_pricesTextEdit.Location = new System.Drawing.Point(85, 58);
             this.p_pricesTextEdit.MenuManager = this.mainRibbonControl;
             this.p_pricesTextEdit.Name = "p_pricesTextEdit";
             this.p_pricesTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -341,15 +338,14 @@
             this.p_pricesTextEdit.Properties.Mask.EditMask = "N0";
             this.p_pricesTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.p_pricesTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.p_pricesTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_pricesTextEdit.Size = new System.Drawing.Size(928, 20);
             this.p_pricesTextEdit.StyleController = this.dataLayoutControl1;
             this.p_pricesTextEdit.TabIndex = 6;
             // 
             // p_salePriceTextEdit
             // 
             this.p_salePriceTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_salePrice", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.p_salePriceTextEdit.Location = new System.Drawing.Point(99, 90);
-            this.p_salePriceTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_salePriceTextEdit.Location = new System.Drawing.Point(85, 82);
             this.p_salePriceTextEdit.MenuManager = this.mainRibbonControl;
             this.p_salePriceTextEdit.Name = "p_salePriceTextEdit";
             this.p_salePriceTextEdit.Properties.Appearance.Options.UseTextOptions = true;
@@ -357,26 +353,24 @@
             this.p_salePriceTextEdit.Properties.Mask.EditMask = "N0";
             this.p_salePriceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.p_salePriceTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.p_salePriceTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_salePriceTextEdit.Size = new System.Drawing.Size(928, 20);
             this.p_salePriceTextEdit.StyleController = this.dataLayoutControl1;
             this.p_salePriceTextEdit.TabIndex = 7;
             // 
             // p_descriptionTextEdit
             // 
             this.p_descriptionTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_description", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.p_descriptionTextEdit.Location = new System.Drawing.Point(99, 142);
-            this.p_descriptionTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_descriptionTextEdit.Location = new System.Drawing.Point(85, 130);
             this.p_descriptionTextEdit.MenuManager = this.mainRibbonControl;
             this.p_descriptionTextEdit.Name = "p_descriptionTextEdit";
-            this.p_descriptionTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_descriptionTextEdit.Size = new System.Drawing.Size(928, 20);
             this.p_descriptionTextEdit.StyleController = this.dataLayoutControl1;
             this.p_descriptionTextEdit.TabIndex = 9;
             // 
             // TypeLookUpEdit
             // 
             this.TypeLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "t_id", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.TypeLookUpEdit.Location = new System.Drawing.Point(99, 220);
-            this.TypeLookUpEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TypeLookUpEdit.Location = new System.Drawing.Point(85, 202);
             this.TypeLookUpEdit.MenuManager = this.mainRibbonControl;
             this.TypeLookUpEdit.Name = "TypeLookUpEdit";
             this.TypeLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -385,7 +379,7 @@
             this.TypeLookUpEdit.Properties.DisplayMember = "t_name";
             this.TypeLookUpEdit.Properties.PopupView = this.TypeLookUpEditView;
             this.TypeLookUpEdit.Properties.ValueMember = "t_id";
-            this.TypeLookUpEdit.Size = new System.Drawing.Size(1084, 22);
+            this.TypeLookUpEdit.Size = new System.Drawing.Size(928, 20);
             this.TypeLookUpEdit.StyleController = this.dataLayoutControl1;
             this.TypeLookUpEdit.TabIndex = 12;
             // 
@@ -407,24 +401,21 @@
             this.BillDetailsXtraUserControl.Controls.Add(this.barDockControlRight);
             this.BillDetailsXtraUserControl.Controls.Add(this.barDockControlBottom);
             this.BillDetailsXtraUserControl.Controls.Add(this.barDockControlTop);
-            this.BillDetailsXtraUserControl.Location = new System.Drawing.Point(24, 285);
-            this.BillDetailsXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BillDetailsXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.BillDetailsXtraUserControl.Location = new System.Drawing.Point(22, 258);
+            this.BillDetailsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.BillDetailsXtraUserControl.Name = "BillDetailsXtraUserControl";
-            this.BillDetailsXtraUserControl.Size = new System.Drawing.Size(1146, 490);
+            this.BillDetailsXtraUserControl.Size = new System.Drawing.Size(980, 374);
             this.BillDetailsXtraUserControl.TabIndex = 13;
             // 
             // BillDetailsGridControl
             // 
             this.BillDetailsGridControl.DataSource = this.BillDetailsBindingSource;
             this.BillDetailsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BillDetailsGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BillDetailsGridControl.Location = new System.Drawing.Point(0, 30);
+            this.BillDetailsGridControl.Location = new System.Drawing.Point(0, 24);
             this.BillDetailsGridControl.MainView = this.BillDetailsGridView;
-            this.BillDetailsGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BillDetailsGridControl.MenuManager = this.mainRibbonControl;
             this.BillDetailsGridControl.Name = "BillDetailsGridControl";
-            this.BillDetailsGridControl.Size = new System.Drawing.Size(1146, 460);
+            this.BillDetailsGridControl.Size = new System.Drawing.Size(980, 350);
             this.BillDetailsGridControl.TabIndex = 0;
             this.BillDetailsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BillDetailsGridView});
@@ -449,7 +440,6 @@
             this.colPetMedicine,
             this.colPetToy,
             this.colPet});
-            this.BillDetailsGridView.DetailHeight = 431;
             this.BillDetailsGridView.GridControl = this.BillDetailsGridControl;
             this.BillDetailsGridView.Name = "BillDetailsGridView";
             this.BillDetailsGridView.OptionsBehavior.Editable = false;
@@ -458,116 +448,89 @@
             // colbd_id
             // 
             this.colbd_id.FieldName = "bd_id";
-            this.colbd_id.MinWidth = 23;
             this.colbd_id.Name = "colbd_id";
             this.colbd_id.Visible = true;
             this.colbd_id.VisibleIndex = 0;
-            this.colbd_id.Width = 87;
             // 
             // colb_id
             // 
             this.colb_id.FieldName = "b_id";
-            this.colb_id.MinWidth = 23;
             this.colb_id.Name = "colb_id";
             this.colb_id.Visible = true;
             this.colb_id.VisibleIndex = 1;
-            this.colb_id.Width = 87;
             // 
             // colp_id
             // 
             this.colp_id.FieldName = "p_id";
-            this.colp_id.MinWidth = 23;
             this.colp_id.Name = "colp_id";
             this.colp_id.Visible = true;
             this.colp_id.VisibleIndex = 2;
-            this.colp_id.Width = 87;
             // 
             // colpt_id
             // 
             this.colpt_id.FieldName = "pt_id";
-            this.colpt_id.MinWidth = 23;
             this.colpt_id.Name = "colpt_id";
             this.colpt_id.Visible = true;
             this.colpt_id.VisibleIndex = 3;
-            this.colpt_id.Width = 87;
             // 
             // colpf_id
             // 
             this.colpf_id.FieldName = "pf_id";
-            this.colpf_id.MinWidth = 23;
             this.colpf_id.Name = "colpf_id";
             this.colpf_id.Visible = true;
             this.colpf_id.VisibleIndex = 4;
-            this.colpf_id.Width = 87;
             // 
             // colpa_id
             // 
             this.colpa_id.FieldName = "pa_id";
-            this.colpa_id.MinWidth = 23;
             this.colpa_id.Name = "colpa_id";
             this.colpa_id.Visible = true;
             this.colpa_id.VisibleIndex = 5;
-            this.colpa_id.Width = 87;
             // 
             // colpm_id
             // 
             this.colpm_id.FieldName = "pm_id";
-            this.colpm_id.MinWidth = 23;
             this.colpm_id.Name = "colpm_id";
             this.colpm_id.Visible = true;
             this.colpm_id.VisibleIndex = 6;
-            this.colpm_id.Width = 87;
             // 
             // colBill
             // 
             this.colBill.FieldName = "Bill";
-            this.colBill.MinWidth = 23;
             this.colBill.Name = "colBill";
-            this.colBill.Width = 87;
             // 
             // colPetAccessory
             // 
             this.colPetAccessory.FieldName = "PetAccessory";
-            this.colPetAccessory.MinWidth = 23;
             this.colPetAccessory.Name = "colPetAccessory";
-            this.colPetAccessory.Width = 87;
             // 
             // colPetFood
             // 
             this.colPetFood.FieldName = "PetFood";
-            this.colPetFood.MinWidth = 23;
             this.colPetFood.Name = "colPetFood";
-            this.colPetFood.Width = 87;
             // 
             // colPetMedicine
             // 
             this.colPetMedicine.FieldName = "PetMedicine";
-            this.colPetMedicine.MinWidth = 23;
             this.colPetMedicine.Name = "colPetMedicine";
-            this.colPetMedicine.Width = 87;
             // 
             // colPetToy
             // 
             this.colPetToy.FieldName = "PetToy";
-            this.colPetToy.MinWidth = 23;
             this.colPetToy.Name = "colPetToy";
-            this.colPetToy.Width = 87;
             // 
             // colPet
             // 
             this.colPet.FieldName = "Pet";
-            this.colPet.MinWidth = 23;
             this.colPet.Name = "colPet";
-            this.colPet.Width = 87;
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.BillDetailsBarManager;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 460);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 350);
             // 
             // BillDetailsBarManager
             // 
@@ -610,26 +573,23 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.BillDetailsBarManager;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControlTop.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 490);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 374);
             this.barDockControlBottom.Manager = this.BillDetailsBarManager;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(980, 24);
             this.barDockControlRight.Manager = this.BillDetailsBarManager;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 460);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 350);
             // 
             // CommentsXtraUserControl
             // 
@@ -638,24 +598,21 @@
             this.CommentsXtraUserControl.Controls.Add(this.barDockControl4);
             this.CommentsXtraUserControl.Controls.Add(this.barDockControl2);
             this.CommentsXtraUserControl.Controls.Add(this.barDockControl1);
-            this.CommentsXtraUserControl.Location = new System.Drawing.Point(24, 285);
-            this.CommentsXtraUserControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CommentsXtraUserControl.MinimumSize = new System.Drawing.Size(117, 123);
+            this.CommentsXtraUserControl.Location = new System.Drawing.Point(22, 258);
+            this.CommentsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.CommentsXtraUserControl.Name = "CommentsXtraUserControl";
-            this.CommentsXtraUserControl.Size = new System.Drawing.Size(1146, 490);
+            this.CommentsXtraUserControl.Size = new System.Drawing.Size(980, 374);
             this.CommentsXtraUserControl.TabIndex = 14;
             // 
             // CommentsGridControl
             // 
             this.CommentsGridControl.DataSource = this.CommentsBindingSource;
             this.CommentsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CommentsGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CommentsGridControl.Location = new System.Drawing.Point(0, 30);
+            this.CommentsGridControl.Location = new System.Drawing.Point(0, 24);
             this.CommentsGridControl.MainView = this.CommentsGridView;
-            this.CommentsGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CommentsGridControl.MenuManager = this.mainRibbonControl;
             this.CommentsGridControl.Name = "CommentsGridControl";
-            this.CommentsGridControl.Size = new System.Drawing.Size(1146, 460);
+            this.CommentsGridControl.Size = new System.Drawing.Size(980, 350);
             this.CommentsGridControl.TabIndex = 0;
             this.CommentsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CommentsGridView});
@@ -676,7 +633,6 @@
             this.colPet1,
             this.colUser,
             this.colCommentDetails});
-            this.CommentsGridView.DetailHeight = 431;
             this.CommentsGridView.GridControl = this.CommentsGridControl;
             this.CommentsGridView.Name = "CommentsGridView";
             this.CommentsGridView.OptionsBehavior.Editable = false;
@@ -685,86 +641,67 @@
             // colcmt_id
             // 
             this.colcmt_id.FieldName = "cmt_id";
-            this.colcmt_id.MinWidth = 23;
             this.colcmt_id.Name = "colcmt_id";
             this.colcmt_id.Visible = true;
             this.colcmt_id.VisibleIndex = 0;
-            this.colcmt_id.Width = 87;
             // 
             // colcmt_content
             // 
             this.colcmt_content.FieldName = "cmt_content";
-            this.colcmt_content.MinWidth = 23;
             this.colcmt_content.Name = "colcmt_content";
             this.colcmt_content.Visible = true;
             this.colcmt_content.VisibleIndex = 1;
-            this.colcmt_content.Width = 87;
             // 
             // colcmt_published
             // 
             this.colcmt_published.FieldName = "cmt_published";
-            this.colcmt_published.MinWidth = 23;
             this.colcmt_published.Name = "colcmt_published";
             this.colcmt_published.Visible = true;
             this.colcmt_published.VisibleIndex = 2;
-            this.colcmt_published.Width = 87;
             // 
             // colcmt_status
             // 
             this.colcmt_status.FieldName = "cmt_status";
-            this.colcmt_status.MinWidth = 23;
             this.colcmt_status.Name = "colcmt_status";
             this.colcmt_status.Visible = true;
             this.colcmt_status.VisibleIndex = 3;
-            this.colcmt_status.Width = 87;
             // 
             // colp_id1
             // 
             this.colp_id1.FieldName = "p_id";
-            this.colp_id1.MinWidth = 23;
             this.colp_id1.Name = "colp_id1";
             this.colp_id1.Visible = true;
             this.colp_id1.VisibleIndex = 4;
-            this.colp_id1.Width = 87;
             // 
             // colu_id
             // 
             this.colu_id.FieldName = "u_id";
-            this.colu_id.MinWidth = 23;
             this.colu_id.Name = "colu_id";
             this.colu_id.Visible = true;
             this.colu_id.VisibleIndex = 5;
-            this.colu_id.Width = 87;
             // 
             // colPet1
             // 
             this.colPet1.FieldName = "Pet";
-            this.colPet1.MinWidth = 23;
             this.colPet1.Name = "colPet1";
-            this.colPet1.Width = 87;
             // 
             // colUser
             // 
             this.colUser.FieldName = "User";
-            this.colUser.MinWidth = 23;
             this.colUser.Name = "colUser";
-            this.colUser.Width = 87;
             // 
             // colCommentDetails
             // 
             this.colCommentDetails.FieldName = "CommentDetails";
-            this.colCommentDetails.MinWidth = 23;
             this.colCommentDetails.Name = "colCommentDetails";
-            this.colCommentDetails.Width = 87;
             // 
             // barDockControl3
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(0, 30);
+            this.barDockControl3.Location = new System.Drawing.Point(0, 24);
             this.barDockControl3.Manager = this.CommentsBarManager;
-            this.barDockControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl3.Size = new System.Drawing.Size(0, 460);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 350);
             // 
             // CommentsBarManager
             // 
@@ -807,32 +744,28 @@
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.CommentsBarManager;
-            this.barDockControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl1.Size = new System.Drawing.Size(1146, 30);
+            this.barDockControl1.Size = new System.Drawing.Size(980, 24);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 490);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 374);
             this.barDockControl2.Manager = this.CommentsBarManager;
-            this.barDockControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl2.Size = new System.Drawing.Size(1146, 0);
+            this.barDockControl2.Size = new System.Drawing.Size(980, 0);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(1146, 30);
+            this.barDockControl4.Location = new System.Drawing.Point(980, 24);
             this.barDockControl4.Manager = this.CommentsBarManager;
-            this.barDockControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl4.Size = new System.Drawing.Size(0, 460);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 350);
             // 
             // p_statusTextEdit
             // 
             this.p_statusTextEdit.EditValue = "Active";
-            this.p_statusTextEdit.Location = new System.Drawing.Point(99, 194);
-            this.p_statusTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_statusTextEdit.Location = new System.Drawing.Point(85, 178);
             this.p_statusTextEdit.MenuManager = this.mainRibbonControl;
             this.p_statusTextEdit.Name = "p_statusTextEdit";
             this.p_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -840,23 +773,39 @@
             this.p_statusTextEdit.Properties.Items.AddRange(new object[] {
             "Active",
             "Inactive"});
-            this.p_statusTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_statusTextEdit.Size = new System.Drawing.Size(928, 20);
             this.p_statusTextEdit.StyleController = this.dataLayoutControl1;
             this.p_statusTextEdit.TabIndex = 11;
             // 
             // p_imageTextEdit
             // 
-            this.p_imageTextEdit.Location = new System.Drawing.Point(99, 116);
-            this.p_imageTextEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.p_imageTextEdit.Location = new System.Drawing.Point(85, 106);
             this.p_imageTextEdit.MenuManager = this.mainRibbonControl;
             this.p_imageTextEdit.Name = "p_imageTextEdit";
             this.p_imageTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.p_imageTextEdit.Properties.ReadOnly = true;
-            this.p_imageTextEdit.Size = new System.Drawing.Size(1084, 22);
+            this.p_imageTextEdit.Size = new System.Drawing.Size(928, 20);
             this.p_imageTextEdit.StyleController = this.dataLayoutControl1;
             this.p_imageTextEdit.TabIndex = 8;
             this.p_imageTextEdit.Click += new System.EventHandler(this.p_imageTextEdit_Click);
+            // 
+            // p_publishedDateEdit
+            // 
+            this.p_publishedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_published", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.p_publishedDateEdit.Location = new System.Drawing.Point(85, 154);
+            this.p_publishedDateEdit.MenuManager = this.mainRibbonControl;
+            this.p_publishedDateEdit.Name = "p_publishedDateEdit";
+            this.p_publishedDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.p_publishedDateEdit.Properties.DisplayFormat.FormatString = "d";
+            this.p_publishedDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.p_publishedDateEdit.Properties.EditFormat.FormatString = "d";
+            this.p_publishedDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.p_publishedDateEdit.Properties.Mask.EditMask = "d";
+            this.p_publishedDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+            this.p_publishedDateEdit.Size = new System.Drawing.Size(928, 20);
+            this.p_publishedDateEdit.StyleController = this.dataLayoutControl1;
+            this.p_publishedDateEdit.TabIndex = 10;
             // 
             // layoutControlGroup1
             // 
@@ -865,7 +814,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1195, 800);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1024, 652);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -885,95 +834,95 @@
             this.tabbedControlGroup1});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1175, 780);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1006, 636);
             // 
             // ItemForp_id
             // 
             this.ItemForp_id.Control = this.p_idTextEdit;
             this.ItemForp_id.Location = new System.Drawing.Point(0, 0);
             this.ItemForp_id.Name = "ItemForp_id";
-            this.ItemForp_id.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_id.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_id.Text = "ID";
-            this.ItemForp_id.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_id.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForp_name
             // 
             this.ItemForp_name.Control = this.p_nameTextEdit;
-            this.ItemForp_name.Location = new System.Drawing.Point(0, 26);
+            this.ItemForp_name.Location = new System.Drawing.Point(0, 24);
             this.ItemForp_name.Name = "ItemForp_name";
-            this.ItemForp_name.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_name.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_name.Text = "Name";
-            this.ItemForp_name.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_name.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForp_prices
             // 
             this.ItemForp_prices.Control = this.p_pricesTextEdit;
-            this.ItemForp_prices.Location = new System.Drawing.Point(0, 52);
+            this.ItemForp_prices.Location = new System.Drawing.Point(0, 48);
             this.ItemForp_prices.Name = "ItemForp_prices";
-            this.ItemForp_prices.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_prices.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_prices.Text = "Price";
-            this.ItemForp_prices.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_prices.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForp_salePrice
             // 
             this.ItemForp_salePrice.Control = this.p_salePriceTextEdit;
-            this.ItemForp_salePrice.Location = new System.Drawing.Point(0, 78);
+            this.ItemForp_salePrice.Location = new System.Drawing.Point(0, 72);
             this.ItemForp_salePrice.Name = "ItemForp_salePrice";
-            this.ItemForp_salePrice.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_salePrice.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_salePrice.Text = "Sale Price";
-            this.ItemForp_salePrice.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_salePrice.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForp_image
             // 
             this.ItemForp_image.Control = this.p_imageTextEdit;
-            this.ItemForp_image.Location = new System.Drawing.Point(0, 104);
+            this.ItemForp_image.Location = new System.Drawing.Point(0, 96);
             this.ItemForp_image.Name = "ItemForp_image";
-            this.ItemForp_image.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_image.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_image.Text = "Image";
-            this.ItemForp_image.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_image.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForp_description
             // 
             this.ItemForp_description.Control = this.p_descriptionTextEdit;
-            this.ItemForp_description.Location = new System.Drawing.Point(0, 130);
+            this.ItemForp_description.Location = new System.Drawing.Point(0, 120);
             this.ItemForp_description.Name = "ItemForp_description";
-            this.ItemForp_description.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_description.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_description.Text = "Description";
-            this.ItemForp_description.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_description.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForp_published
             // 
             this.ItemForp_published.Control = this.p_publishedDateEdit;
-            this.ItemForp_published.Location = new System.Drawing.Point(0, 156);
+            this.ItemForp_published.Location = new System.Drawing.Point(0, 144);
             this.ItemForp_published.Name = "ItemForp_published";
-            this.ItemForp_published.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_published.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_published.Text = "Published Date";
-            this.ItemForp_published.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_published.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemForp_status
             // 
             this.ItemForp_status.Control = this.p_statusTextEdit;
-            this.ItemForp_status.Location = new System.Drawing.Point(0, 182);
+            this.ItemForp_status.Location = new System.Drawing.Point(0, 168);
             this.ItemForp_status.Name = "ItemForp_status";
-            this.ItemForp_status.Size = new System.Drawing.Size(1175, 26);
+            this.ItemForp_status.Size = new System.Drawing.Size(1006, 24);
             this.ItemForp_status.Text = "Status";
-            this.ItemForp_status.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemForp_status.TextSize = new System.Drawing.Size(71, 13);
             // 
             // ItemFort_id
             // 
             this.ItemFort_id.Control = this.TypeLookUpEdit;
-            this.ItemFort_id.Location = new System.Drawing.Point(0, 208);
+            this.ItemFort_id.Location = new System.Drawing.Point(0, 192);
             this.ItemFort_id.Name = "ItemFort_id";
-            this.ItemFort_id.Size = new System.Drawing.Size(1175, 26);
+            this.ItemFort_id.Size = new System.Drawing.Size(1006, 24);
             this.ItemFort_id.Text = "Type";
-            this.ItemFort_id.TextSize = new System.Drawing.Size(84, 16);
+            this.ItemFort_id.TextSize = new System.Drawing.Size(71, 13);
             // 
             // tabbedControlGroup1
             // 
-            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 234);
+            this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 216);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1175, 546);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1006, 420);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3,
             this.layoutControlGroup4});
@@ -985,7 +934,7 @@
             this.ItemForBillDetails});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForBillDetails";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1150, 494);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(984, 378);
             this.layoutControlGroup3.Text = "BillDetails";
             // 
             // ItemForBillDetails
@@ -993,7 +942,7 @@
             this.ItemForBillDetails.Control = this.BillDetailsXtraUserControl;
             this.ItemForBillDetails.Location = new System.Drawing.Point(0, 0);
             this.ItemForBillDetails.Name = "ItemForBillDetails";
-            this.ItemForBillDetails.Size = new System.Drawing.Size(1150, 494);
+            this.ItemForBillDetails.Size = new System.Drawing.Size(984, 378);
             this.ItemForBillDetails.StartNewLine = true;
             this.ItemForBillDetails.Text = "Bill Details";
             this.ItemForBillDetails.TextSize = new System.Drawing.Size(0, 0);
@@ -1005,7 +954,7 @@
             this.ItemForComments});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "autoGroupForComments";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(1150, 494);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(984, 378);
             this.layoutControlGroup4.Text = "Comments";
             // 
             // ItemForComments
@@ -1013,7 +962,7 @@
             this.ItemForComments.Control = this.CommentsXtraUserControl;
             this.ItemForComments.Location = new System.Drawing.Point(0, 0);
             this.ItemForComments.Name = "ItemForComments";
-            this.ItemForComments.Size = new System.Drawing.Size(1150, 494);
+            this.ItemForComments.Size = new System.Drawing.Size(984, 378);
             this.ItemForComments.StartNewLine = true;
             this.ItemForComments.Text = "Comments";
             this.ItemForComments.TextSize = new System.Drawing.Size(0, 0);
@@ -1057,34 +1006,15 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // p_publishedDateEdit
-            // 
-            this.p_publishedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petViewBindingSource, "p_published", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.p_publishedDateEdit.Location = new System.Drawing.Point(99, 168);
-            this.p_publishedDateEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.p_publishedDateEdit.MenuManager = this.mainRibbonControl;
-            this.p_publishedDateEdit.Name = "p_publishedDateEdit";
-            this.p_publishedDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.p_publishedDateEdit.Properties.DisplayFormat.FormatString = "d";
-            this.p_publishedDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.p_publishedDateEdit.Properties.EditFormat.FormatString = "d";
-            this.p_publishedDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.p_publishedDateEdit.Properties.Mask.EditMask = "d";
-            this.p_publishedDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.p_publishedDateEdit.Size = new System.Drawing.Size(1084, 22);
-            this.p_publishedDateEdit.StyleController = this.dataLayoutControl1;
-            this.p_publishedDateEdit.TabIndex = 10;
-            // 
             // PetView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.Controls.Add(this.dataLayoutControl1);
             this.Controls.Add(this.mainRibbonControl);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PetView";
-            this.Size = new System.Drawing.Size(1195, 945);
+            this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
             this.dataLayoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.p_idTextEdit.Properties)).EndInit();
@@ -1111,6 +1041,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CommentsBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_statusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.p_imageTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForp_id)).EndInit();
@@ -1130,7 +1061,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CommentsPopUpMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.p_publishedDateEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1229,5 +1160,6 @@
         private DevExpress.XtraEditors.XtraOpenFileDialog opendialog;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraEditors.TextEdit p_publishedDateEdit;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

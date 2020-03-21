@@ -63,5 +63,10 @@ namespace PetStore.Views.PetFoodView{
                 XtraMessageBox.Show("Please choose a image with (*.jpg)/(*.png) file !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void mainRibbonControl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

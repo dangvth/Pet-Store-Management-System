@@ -44,5 +44,10 @@ namespace PetStore.Views.PetFoodCollectionView{
                 }
             };
         }
+
+        private void ribbonControl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

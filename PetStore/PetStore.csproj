@@ -136,7 +136,9 @@
     <Compile Include="Common\EntitiesViewModel.cs" />
     <Compile Include="Common\ReadOnlyCollectionViewModel.cs" />
     <Compile Include="Common\SingleObjectViewModel.cs" />
+    <Compile Include="Model\PetAccessoriesModel.cs" />
     <Compile Include="Model\PetFoodModel.cs" />
+    <Compile Include="Model\PetMedicineModel.cs" />
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\Comment.cs" />
     <Compile Include="Object\CommentDetail.cs" />
@@ -420,6 +422,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
@@ -534,6 +537,9 @@
       <DependentUpon>PetStoreModel.edmx</DependentUpon>
       <LastGenOutput>PetStoreModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\delete-3d-button-vector-4177293.jpg" />
+    <None Include="Resources\images %289%29.jpg" />
+    <None Include="Resources\image.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
