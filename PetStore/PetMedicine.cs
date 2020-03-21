@@ -11,7 +11,10 @@ namespace PetStore
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Drawing;
+    using System.IO;
+
     public partial class PetMedicine
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,10 +23,25 @@ namespace PetStore
             this.BillDetails = new HashSet<BillDetail>();
             this.Carts = new HashSet<Cart>();
         }
-    
+        public static string path = @"..\..\img\";
         public string pm_id { get; set; }
         public string pm_name { get; set; }
         public string pm_image { get; set; }
+        [NotMapped]
+        public Image Picture
+        {
+            get
+            {
+                if (!string.IsNullOrEmpty(path + pm_image))
+                {
+                    if (File.Exists(path + pm_image))
+                    {
+                        return Image.FromFile(path + pm_image);
+                    }
+                }
+                return null;
+            }
+        }
         public Nullable<int> pm_prices { get; set; }
         public Nullable<int> pm_salePrice { get; set; }
         public Nullable<int> pm_amount { get; set; }
