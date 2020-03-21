@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors;
@@ -62,7 +63,8 @@ namespace PetStore.Views.PetCollectionView{
             //Automatically generate pet IDs based on the number of pets on the database
             petID = pm.SetPetID();
             //Pass Pet ID to PetViews form
-            trans(petID);
+            trans("01");
+            //MessageBox.Show("Hello");
         }
     }
 }

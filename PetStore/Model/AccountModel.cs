@@ -20,6 +20,10 @@ namespace PetStore.Model
             db = new PetStoreEntities();
         }
 
+        /// <summary>
+        /// Get all account in database 
+        /// </summary>
+        /// <returns></returns>
         public List<PetStore.Account> getAccount()
         {
             acList = new List<PetStore.Account>();
@@ -53,6 +57,11 @@ namespace PetStore.Model
             return false;
         }
 
+        /// <summary>
+        /// Change Password of account
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="newPWD"></param>
         public void ChangePassword(string userName, string newPWD)
         {
             Account ac = db.Accounts.Where(p => p.ac_userName == userName).SingleOrDefault();

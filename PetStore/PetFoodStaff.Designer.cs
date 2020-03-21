@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetFoodStaff));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnRefreshFood = new DevExpress.XtraBars.BarButtonItem();
+            this.btnViewDetail = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -41,7 +42,6 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bindingSourceFood = new System.Windows.Forms.BindingSource(this.components);
-            this.btnViewDetail = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -77,6 +77,15 @@
             this.btnRefreshFood.LargeWidth = 70;
             this.btnRefreshFood.Name = "btnRefreshFood";
             this.btnRefreshFood.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnRefreshFood_ItemClick);
+            // 
+            // btnViewDetail
+            // 
+            this.btnViewDetail.Caption = "View detail";
+            this.btnViewDetail.Id = 2;
+            this.btnViewDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnViewDetail.ImageOptions.Image")));
+            this.btnViewDetail.Name = "btnViewDetail";
+            this.btnViewDetail.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnViewDetail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewDetail_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -147,15 +156,6 @@
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // btnViewDetail
-            // 
-            this.btnViewDetail.Caption = "View detail";
-            this.btnViewDetail.Id = 2;
-            this.btnViewDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnViewDetail.ImageOptions.Image")));
-            this.btnViewDetail.Name = "btnViewDetail";
-            this.btnViewDetail.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnViewDetail.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewDetail_ItemClick);
-            // 
             // PetFoodStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -164,6 +164,7 @@
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "PetFoodStaff";
             this.Ribbon = this.ribbon;
