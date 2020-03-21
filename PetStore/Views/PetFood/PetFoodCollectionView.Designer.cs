@@ -112,7 +112,7 @@
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
-            this.gridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
+          //  this.gridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
             // 
             // gridColumn1
             // 
@@ -283,7 +283,7 @@
             toolTipItem3.Text = "Remove Pet\'s food in selected";
             superToolTip3.Items.Add(toolTipItem3);
             this.bbiDelete.SuperTip = superToolTip3;
-            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
+            //this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
             // 
             // bbiRestore
             // 

@@ -44,7 +44,6 @@
             this.pa_salePriceTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.pa_materialTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.pa_amountTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.pa_publishedDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.BillDetailsXtraUserControl = new DevExpress.XtraEditors.XtraUserControl();
             this.BillDetailsGridControl = new DevExpress.XtraGrid.GridControl();
             this.BillDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -71,6 +70,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.CartsGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.pa_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.ItemForpa_id = new DevExpress.XtraLayout.LayoutControlItem();
@@ -87,7 +87,9 @@
             this.ItemForCarts = new DevExpress.XtraLayout.LayoutControlItem();
             this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
             this.BillDetailsPopUpMenu = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.pa_statusTextEdit = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.pa_times = new System.Windows.Forms.Timer(this.components);
+            this.pa_publishedDateEdit = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pa_idTextEdit.Properties)).BeginInit();
@@ -98,8 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pa_salePriceTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pa_materialTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pa_amountTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pa_publishedDateEdit.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pa_publishedDateEdit.Properties)).BeginInit();
             this.BillDetailsXtraUserControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsBindingSource)).BeginInit();
@@ -107,6 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsBarManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CartsGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pa_statusTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForpa_id)).BeginInit();
@@ -123,7 +124,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pa_statusTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pa_publishedDateEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -135,10 +137,10 @@
             this.dataLayoutControl1.Controls.Add(this.pa_salePriceTextEdit);
             this.dataLayoutControl1.Controls.Add(this.pa_materialTextEdit);
             this.dataLayoutControl1.Controls.Add(this.pa_amountTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.pa_publishedDateEdit);
             this.dataLayoutControl1.Controls.Add(this.BillDetailsXtraUserControl);
             this.dataLayoutControl1.Controls.Add(this.CartsGridControl);
             this.dataLayoutControl1.Controls.Add(this.pa_statusTextEdit);
+            this.dataLayoutControl1.Controls.Add(this.pa_publishedDateEdit);
             this.dataLayoutControl1.DataSource = this.petAccessoryViewBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
@@ -157,6 +159,8 @@
             this.pa_idTextEdit.Size = new System.Drawing.Size(926, 20);
             this.pa_idTextEdit.StyleController = this.dataLayoutControl1;
             this.pa_idTextEdit.TabIndex = 4;
+            this.pa_idTextEdit.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.pa_idTextEdit_EditValueChanging);
+            this.pa_idTextEdit.Click += new System.EventHandler(this.pa_idTextEdit_Click);
             // 
             // petAccessoryViewBindingSource
             // 
@@ -228,6 +232,7 @@
             this.bbiDelete.Id = 6;
             this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
             this.bbiDelete.Name = "bbiDelete";
+            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
             // 
             // bbiClose
             // 
@@ -290,6 +295,7 @@
             this.pa_nameTextEdit.Size = new System.Drawing.Size(926, 20);
             this.pa_nameTextEdit.StyleController = this.dataLayoutControl1;
             this.pa_nameTextEdit.TabIndex = 5;
+            this.pa_nameTextEdit.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.pa_nameTextEdit_EditValueChanging);
             // 
             // pa_pricesTextEdit
             // 
@@ -347,22 +353,6 @@
             this.pa_amountTextEdit.StyleController = this.dataLayoutControl1;
             this.pa_amountTextEdit.TabIndex = 9;
             // 
-            // pa_publishedDateEdit
-            // 
-            this.pa_publishedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petAccessoryViewBindingSource, "pa_published", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pa_publishedDateEdit.EditValue = null;
-            this.pa_publishedDateEdit.Location = new System.Drawing.Point(86, 156);
-            this.pa_publishedDateEdit.MenuManager = this.mainRibbonControl;
-            this.pa_publishedDateEdit.Name = "pa_publishedDateEdit";
-            this.pa_publishedDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.pa_publishedDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.pa_publishedDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.pa_publishedDateEdit.Size = new System.Drawing.Size(926, 20);
-            this.pa_publishedDateEdit.StyleController = this.dataLayoutControl1;
-            this.pa_publishedDateEdit.TabIndex = 10;
-            // 
             // BillDetailsXtraUserControl
             // 
             this.BillDetailsXtraUserControl.Controls.Add(this.BillDetailsGridControl);
@@ -373,7 +363,7 @@
             this.BillDetailsXtraUserControl.Location = new System.Drawing.Point(24, 238);
             this.BillDetailsXtraUserControl.MinimumSize = new System.Drawing.Size(100, 100);
             this.BillDetailsXtraUserControl.Name = "BillDetailsXtraUserControl";
-            this.BillDetailsXtraUserControl.Size = new System.Drawing.Size(976, 170);
+            this.BillDetailsXtraUserControl.Size = new System.Drawing.Size(976, 289);
             this.BillDetailsXtraUserControl.TabIndex = 12;
             // 
             // BillDetailsGridControl
@@ -384,7 +374,7 @@
             this.BillDetailsGridControl.MainView = this.BillDetailsGridView;
             this.BillDetailsGridControl.MenuManager = this.mainRibbonControl;
             this.BillDetailsGridControl.Name = "BillDetailsGridControl";
-            this.BillDetailsGridControl.Size = new System.Drawing.Size(976, 146);
+            this.BillDetailsGridControl.Size = new System.Drawing.Size(976, 265);
             this.BillDetailsGridControl.TabIndex = 0;
             this.BillDetailsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BillDetailsGridView});
@@ -499,7 +489,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.BillDetailsBarManager;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 146);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 265);
             // 
             // BillDetailsBarManager
             // 
@@ -548,7 +538,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 170);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 289);
             this.barDockControlBottom.Manager = this.BillDetailsBarManager;
             this.barDockControlBottom.Size = new System.Drawing.Size(976, 0);
             // 
@@ -558,16 +548,16 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(976, 24);
             this.barDockControlRight.Manager = this.BillDetailsBarManager;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 146);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 265);
             // 
             // CartsGridControl
             // 
             this.CartsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.petAccessoryViewBindingSource, "Carts", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.CartsGridControl.Location = new System.Drawing.Point(12, 424);
+            this.CartsGridControl.Location = new System.Drawing.Point(12, 543);
             this.CartsGridControl.MainView = this.gridView1;
             this.CartsGridControl.MenuManager = this.mainRibbonControl;
             this.CartsGridControl.Name = "CartsGridControl";
-            this.CartsGridControl.Size = new System.Drawing.Size(1000, 216);
+            this.CartsGridControl.Size = new System.Drawing.Size(1000, 97);
             this.CartsGridControl.TabIndex = 13;
             this.CartsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -576,6 +566,22 @@
             // 
             this.gridView1.GridControl = this.CartsGridControl;
             this.gridView1.Name = "gridView1";
+            // 
+            // pa_statusTextEdit
+            // 
+            this.pa_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petAccessoryViewBindingSource, "pa_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pa_statusTextEdit.EditValue = "Active";
+            this.pa_statusTextEdit.Location = new System.Drawing.Point(86, 180);
+            this.pa_statusTextEdit.MenuManager = this.mainRibbonControl;
+            this.pa_statusTextEdit.Name = "pa_statusTextEdit";
+            this.pa_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.pa_statusTextEdit.Properties.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.pa_statusTextEdit.Size = new System.Drawing.Size(926, 20);
+            this.pa_statusTextEdit.StyleController = this.dataLayoutControl1;
+            this.pa_statusTextEdit.TabIndex = 11;
             // 
             // layoutControlGroup1
             // 
@@ -683,7 +689,7 @@
             this.tabbedControlGroup1.Location = new System.Drawing.Point(0, 192);
             this.tabbedControlGroup1.Name = "autoGroupForTabs";
             this.tabbedControlGroup1.SelectedTabPage = this.layoutControlGroup3;
-            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 220);
+            this.tabbedControlGroup1.Size = new System.Drawing.Size(1004, 339);
             this.tabbedControlGroup1.TabPages.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup3});
             this.tabbedControlGroup1.Text = "Tabs";
@@ -694,7 +700,7 @@
             this.ItemForBillDetails});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "autoGroupForBillDetails";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 174);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(980, 293);
             this.layoutControlGroup3.Text = "BillDetails";
             // 
             // ItemForBillDetails
@@ -702,7 +708,7 @@
             this.ItemForBillDetails.Control = this.BillDetailsXtraUserControl;
             this.ItemForBillDetails.Location = new System.Drawing.Point(0, 0);
             this.ItemForBillDetails.Name = "ItemForBillDetails";
-            this.ItemForBillDetails.Size = new System.Drawing.Size(980, 174);
+            this.ItemForBillDetails.Size = new System.Drawing.Size(980, 293);
             this.ItemForBillDetails.StartNewLine = true;
             this.ItemForBillDetails.Text = "Bill Details";
             this.ItemForBillDetails.TextSize = new System.Drawing.Size(0, 0);
@@ -711,9 +717,9 @@
             // ItemForCarts
             // 
             this.ItemForCarts.Control = this.CartsGridControl;
-            this.ItemForCarts.Location = new System.Drawing.Point(0, 412);
+            this.ItemForCarts.Location = new System.Drawing.Point(0, 531);
             this.ItemForCarts.Name = "ItemForCarts";
-            this.ItemForCarts.Size = new System.Drawing.Size(1004, 220);
+            this.ItemForCarts.Size = new System.Drawing.Size(1004, 101);
             this.ItemForCarts.StartNewLine = true;
             this.ItemForCarts.Text = "Carts";
             this.ItemForCarts.TextSize = new System.Drawing.Size(0, 0);
@@ -742,21 +748,26 @@
             this.BillDetailsPopUpMenu.Manager = this.BillDetailsBarManager;
             this.BillDetailsPopUpMenu.Name = "BillDetailsPopUpMenu";
             // 
-            // pa_statusTextEdit
+            // pa_times
             // 
-            this.pa_statusTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petAccessoryViewBindingSource, "pa_status", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.pa_statusTextEdit.EditValue = "Active";
-            this.pa_statusTextEdit.Location = new System.Drawing.Point(86, 180);
-            this.pa_statusTextEdit.MenuManager = this.mainRibbonControl;
-            this.pa_statusTextEdit.Name = "pa_statusTextEdit";
-            this.pa_statusTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.pa_statusTextEdit.Properties.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.pa_statusTextEdit.Size = new System.Drawing.Size(926, 20);
-            this.pa_statusTextEdit.StyleController = this.dataLayoutControl1;
-            this.pa_statusTextEdit.TabIndex = 11;
+            this.pa_times.Tick += new System.EventHandler(this.pa_times_Tick);
+            // 
+            // pa_publishedDateEdit
+            // 
+            this.pa_publishedDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.petAccessoryViewBindingSource, "pa_published", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.pa_publishedDateEdit.Location = new System.Drawing.Point(86, 156);
+            this.pa_publishedDateEdit.MenuManager = this.mainRibbonControl;
+            this.pa_publishedDateEdit.Name = "pa_publishedDateEdit";
+            this.pa_publishedDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.pa_publishedDateEdit.Properties.DisplayFormat.FormatString = "d";
+            this.pa_publishedDateEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.pa_publishedDateEdit.Properties.EditFormat.FormatString = "d";
+            this.pa_publishedDateEdit.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.pa_publishedDateEdit.Properties.Mask.EditMask = "d";
+            this.pa_publishedDateEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
+            this.pa_publishedDateEdit.Size = new System.Drawing.Size(926, 20);
+            this.pa_publishedDateEdit.StyleController = this.dataLayoutControl1;
+            this.pa_publishedDateEdit.TabIndex = 10;
             // 
             // PetAccessoryView
             // 
@@ -777,8 +788,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pa_salePriceTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pa_materialTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pa_amountTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pa_publishedDateEdit.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pa_publishedDateEdit.Properties)).EndInit();
             this.BillDetailsXtraUserControl.ResumeLayout(false);
             this.BillDetailsXtraUserControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsGridControl)).EndInit();
@@ -787,6 +796,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsBarManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CartsGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pa_statusTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForpa_id)).EndInit();
@@ -803,7 +813,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ItemForCarts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDetailsPopUpMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pa_statusTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pa_publishedDateEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -841,7 +852,6 @@
         private DevExpress.XtraEditors.TextEdit pa_salePriceTextEdit;
         private DevExpress.XtraEditors.TextEdit pa_materialTextEdit;
         private DevExpress.XtraEditors.TextEdit pa_amountTextEdit;
-        private DevExpress.XtraEditors.DateEdit pa_publishedDateEdit;
         private System.Windows.Forms.BindingSource BillDetailsBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colbd_id;
         private DevExpress.XtraGrid.Columns.GridColumn colb_id;
@@ -876,5 +886,8 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForBillDetails;
         private DevExpress.XtraLayout.LayoutControlItem ItemForCarts;
         private DevExpress.XtraEditors.ComboBoxEdit pa_statusTextEdit;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private System.Windows.Forms.Timer pa_times;
+        private DevExpress.XtraEditors.TextEdit pa_publishedDateEdit;
     }
 }

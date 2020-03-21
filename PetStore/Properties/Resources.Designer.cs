@@ -63,9 +63,29 @@ namespace PetStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap error_image {
+        internal static System.Drawing.Bitmap delete_3d_button_vector_4177293 {
             get {
-                object obj = ResourceManager.GetObject("error-image", resourceCulture);
+                object obj = ResourceManager.GetObject("delete-3d-button-vector-4177293", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image {
+            get {
+                object obj = ResourceManager.GetObject("image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images__9_ {
+            get {
+                object obj = ResourceManager.GetObject("images (9)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

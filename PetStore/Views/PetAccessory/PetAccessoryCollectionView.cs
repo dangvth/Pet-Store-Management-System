@@ -6,9 +6,13 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors;
 using DevExpress.Utils.MVVM.Services;
 using DevExpress.XtraBars;
+using PetStore.Model;
+using System.Windows.Forms;
+
 
 namespace PetStore.Views.PetAccessoryCollectionView{
     public partial class PetAccessoryCollectionView : XtraUserControl {
+        private string paId_selected = "";
         public PetAccessoryCollectionView() {
             InitializeComponent();
 			if(!mvvmContext.IsDesignMode)
@@ -44,5 +48,42 @@ namespace PetStore.Views.PetAccessoryCollectionView{
                 }
             };
         }
+
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            if (paId_selected != "")
+            {
+                PetAccessoriesModel pam = new PetAccessoriesModel();
+                pam.DeletePetAccessories(paId_selected);
+                XtraMessageBox.Show("Delete successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                XtraMessageBox.Show("Please choose a Accessories item to delete !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void gridView_RowClick(object sender, RowClickEventArgs e)
+        {
+            int idx = gridView.FocusedRowHandle;
+            paId_selected = gridView.GetRowCellValue(idx, "pa_id").ToString();
+        }
+
+        private void bbiRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (paId_selected != "")
+            {
+                PetAccessoriesModel pam = new PetAccessoriesModel();
+                pam.RestorePetAccessories(paId_selected);
+                XtraMessageBox.Show("Restore successful !!!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                XtraMessageBox.Show("Please choose a Accessories item to delete !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
     }
 }
