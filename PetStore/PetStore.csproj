@@ -165,6 +165,12 @@
     <Compile Include="EditPetFood.Designer.cs">
       <DependentUpon>EditPetFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enter Quantity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enter Quantity.Designer.cs">
+      <DependentUpon>Enter Quantity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\AccountModel.cs" />
     <Compile Include="Model\CommentDetailModel.cs" />
     <Compile Include="Model\CommentModel.cs" />
@@ -188,6 +194,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PetStoreDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SelectProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectProduct.Designer.cs">
+      <DependentUpon>SelectProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell.Designer.cs">
+      <DependentUpon>Sell.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Administrator.cs">
       <SubType>Form</SubType>
@@ -463,8 +481,17 @@
     <EmbeddedResource Include="EditPetFood.resx">
       <DependentUpon>EditPetFood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Enter Quantity.resx">
+      <DependentUpon>Enter Quantity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PetFoodStaff.resx">
       <DependentUpon>PetFoodStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectProduct.resx">
+      <DependentUpon>SelectProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell.resx">
+      <DependentUpon>Sell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Administrator.resx">
       <DependentUpon>Administrator.cs</DependentUpon>
@@ -605,6 +632,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\error-image.png" />
+    <Content Include="img\PET001.jpg" />
     <Content Include="PetStoreModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>PetStoreModel.Context.cs</LastGenOutput>
