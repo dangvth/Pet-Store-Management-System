@@ -351,7 +351,7 @@
             // 
             // ptbPetMedicines
             // 
-            this.ptbPetMedicines.Location = new System.Drawing.Point(674, 249);
+            this.ptbPetMedicines.Location = new System.Drawing.Point(863, 323);
             this.ptbPetMedicines.Name = "ptbPetMedicines";
             this.ptbPetMedicines.Size = new System.Drawing.Size(158, 113);
             this.ptbPetMedicines.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

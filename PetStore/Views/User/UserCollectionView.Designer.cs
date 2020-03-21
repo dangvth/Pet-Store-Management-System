@@ -25,6 +25,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserCollectionView));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.userCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -40,24 +41,23 @@
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
+            this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
             this.bbiNew = new DevExpress.XtraBars.BarButtonItem();
             this.bbiEdit = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRefresh = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.bbiPrintPreview = new DevExpress.XtraBars.BarButtonItem();
-            this.bsiRecordsCount = new DevExpress.XtraBars.BarStaticItem();
-            this.userCollectionViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.popupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
             this.bbiRestore = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.mvvmContext = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.popupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userCollectionViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userCollectionViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,10 @@
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
+            // 
+            // userCollectionViewBindingSource
+            // 
+            this.userCollectionViewBindingSource.DataSource = typeof(PetStore.User);
             // 
             // gridView
             // 
@@ -96,6 +100,7 @@
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
             this.gridView.OptionsBehavior.ReadOnly = true;
+            this.gridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView_RowClick);
             // 
             // gridColumn1
             // 
@@ -191,12 +196,12 @@
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
+            this.ribbonControl.SearchEditItem,
             this.bbiPrintPreview,
             this.bsiRecordsCount,
             this.bbiNew,
             this.bbiEdit,
             this.bbiRefresh,
-            this.ribbonControl.SearchEditItem,
             this.bbiDelete,
             this.bbiRestore});
             this.ribbonControl.Location = new System.Drawing.Point(0, 0);
@@ -209,6 +214,59 @@
             this.ribbonControl.Size = new System.Drawing.Size(1024, 116);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // bbiPrintPreview
+            // 
+            this.bbiPrintPreview.Caption = "Print Preview";
+            this.bbiPrintPreview.Id = 14;
+            this.bbiPrintPreview.ImageOptions.ImageUri.Uri = "Preview";
+            this.bbiPrintPreview.Name = "bbiPrintPreview";
+            // 
+            // bsiRecordsCount
+            // 
+            this.bsiRecordsCount.Caption = "RECORDS : 2";
+            this.bsiRecordsCount.Id = 15;
+            this.bsiRecordsCount.Name = "bsiRecordsCount";
+            // 
+            // bbiNew
+            // 
+            this.bbiNew.Caption = "New";
+            this.bbiNew.Id = 16;
+            this.bbiNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiNew.ImageOptions.LargeImage")));
+            this.bbiNew.Name = "bbiNew";
+            // 
+            // bbiEdit
+            // 
+            this.bbiEdit.Caption = "Edit";
+            this.bbiEdit.Id = 17;
+            this.bbiEdit.ImageOptions.ImageUri.Uri = "Edit";
+            this.bbiEdit.Name = "bbiEdit";
+            // 
+            // bbiRefresh
+            // 
+            this.bbiRefresh.Caption = "Refresh";
+            this.bbiRefresh.Id = 19;
+            this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
+            this.bbiRefresh.Name = "bbiRefresh";
+            this.bbiRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRefresh_ItemClick);
+            // 
+            // bbiDelete
+            // 
+            this.bbiDelete.Caption = "Delete";
+            this.bbiDelete.Enabled = false;
+            this.bbiDelete.Id = 20;
+            this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
+            this.bbiDelete.Name = "bbiDelete";
+            this.bbiDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiDelete_ItemClick);
+            // 
+            // bbiRestore
+            // 
+            this.bbiRestore.Caption = "Restore";
+            this.bbiRestore.Enabled = false;
+            this.bbiRestore.Id = 21;
+            this.bbiRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiRestore.ImageOptions.LargeImage")));
+            this.bbiRestore.Name = "bbiRestore";
+            this.bbiRestore.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiRestore_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -231,27 +289,6 @@
             this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "User Tasks";
             // 
-            // bbiNew
-            // 
-            this.bbiNew.Caption = "New";
-            this.bbiNew.Id = 16;
-            this.bbiNew.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiNew.ImageOptions.LargeImage")));
-            this.bbiNew.Name = "bbiNew";
-            // 
-            // bbiEdit
-            // 
-            this.bbiEdit.Caption = "Edit";
-            this.bbiEdit.Id = 17;
-            this.bbiEdit.ImageOptions.ImageUri.Uri = "Edit";
-            this.bbiEdit.Name = "bbiEdit";
-            // 
-            // bbiRefresh
-            // 
-            this.bbiRefresh.Caption = "Refresh";
-            this.bbiRefresh.Id = 19;
-            this.bbiRefresh.ImageOptions.ImageUri.Uri = "Refresh";
-            this.bbiRefresh.Name = "bbiRefresh";
-            // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.AllowTextClipping = false;
@@ -260,22 +297,13 @@
             this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Print and Export";
             // 
-            // bbiPrintPreview
+            // ribbonStatusBar
             // 
-            this.bbiPrintPreview.Caption = "Print Preview";
-            this.bbiPrintPreview.Id = 14;
-            this.bbiPrintPreview.ImageOptions.ImageUri.Uri = "Preview";
-            this.bbiPrintPreview.Name = "bbiPrintPreview";
-            // 
-            // bsiRecordsCount
-            // 
-            this.bsiRecordsCount.Caption = "RECORDS : 2";
-            this.bsiRecordsCount.Id = 15;
-            this.bsiRecordsCount.Name = "bsiRecordsCount";
-            // 
-            // userCollectionViewBindingSource
-            // 
-            this.userCollectionViewBindingSource.DataSource = typeof(PetStore.User);
+            this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 741);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbonControl;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1024, 27);
             // 
             // mvvmContext
             // 
@@ -289,14 +317,6 @@
             DevExpress.Utils.MVVM.RegistrationExpression.RegisterWindowedDocumentManagerService(null, false, this, DevExpress.Utils.MVVM.Services.DefaultWindowedDocumentManagerServiceType.XtraForm, null)});
             this.mvvmContext.ViewModelType = typeof(PetStore.ViewModels.UserCollectionViewModel);
             // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.ItemLinks.Add(this.bsiRecordsCount);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 741);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1024, 27);
-            // 
             // popupMenu
             // 
             this.popupMenu.ItemLinks.Add(this.bbiNew);
@@ -304,20 +324,6 @@
             this.popupMenu.ItemLinks.Add(this.bbiRefresh);
             this.popupMenu.Name = "popupMenu";
             this.popupMenu.Ribbon = this.ribbonControl;
-            // 
-            // bbiDelete
-            // 
-            this.bbiDelete.Caption = "Delete";
-            this.bbiDelete.Id = 20;
-            this.bbiDelete.ImageOptions.ImageUri.Uri = "Delete";
-            this.bbiDelete.Name = "bbiDelete";
-            // 
-            // bbiRestore
-            // 
-            this.bbiRestore.Caption = "Restore";
-            this.bbiRestore.Id = 21;
-            this.bbiRestore.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.bbiRestore.Name = "bbiRestore";
             // 
             // UserCollectionView
             // 
@@ -329,9 +335,9 @@
             this.Name = "UserCollectionView";
             this.Size = new System.Drawing.Size(1024, 768);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userCollectionViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userCollectionViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu)).EndInit();
             this.ResumeLayout(false);

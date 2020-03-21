@@ -80,7 +80,7 @@ namespace PetStore.Views.PetMedicineCollectionView{
             int idx = gridView.FocusedRowHandle;
             pmId_selected = gridView.GetRowCellValue(idx, "pm_id").ToString();
            
-             ptbPetMedicines.Image = Image.FromFile(GetImage.);
+            // ptbPetMedicines.Image = Image.FromFile(GetImage.);
         }
        
         private void bbiRestore_ItemClick(object sender, ItemClickEventArgs e)

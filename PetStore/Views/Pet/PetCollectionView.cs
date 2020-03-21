@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors;
@@ -9,6 +10,17 @@ using DevExpress.XtraBars;
 
 namespace PetStore.Views.PetCollectionView{
     public partial class PetCollectionView : XtraUserControl {
+        //declare Model using 
+        Model.PetModel pm = new Model.PetModel();
+
+        //declare variables
+        string petID = "";
+        
+        //Init a delegate to pass data
+        public delegate void delPassData(string text);
+        public delPassData trans;
+
+        #region Generate Component and Code
         public PetCollectionView() {
             InitializeComponent();
 			if(!mvvmContext.IsDesignMode)
@@ -44,15 +56,15 @@ namespace PetStore.Views.PetCollectionView{
                 }
             };
         }
+        #endregion
 
-        private void ribbonControl_Click(object sender, EventArgs e)
+        private void bbiNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-
-        }
-
-        private void gridControl_Load(object sender, EventArgs e)
-        {
-            
+            //Automatically generate pet IDs based on the number of pets on the database
+            petID = pm.SetPetID();
+            //Pass Pet ID to PetViews form
+            trans("01");
+            //MessageBox.Show("Hello");
         }
     }
 }

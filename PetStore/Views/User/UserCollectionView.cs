@@ -44,5 +44,52 @@ namespace PetStore.Views.UserCollectionView{
                 }
             };
         }
+
+        private void gridView_RowClick(object sender, RowClickEventArgs e)
+        {
+            int index = gridView.FocusedRowHandle;
+            string status = gridView.GetRowCellValue(index, "u_status").ToString();
+            if (status.Equals("Active"))
+            {
+                bbiDelete.Enabled = true;
+                bbiRestore.Enabled = false;
+            }
+            else
+            {
+                bbiDelete.Enabled = false;
+                bbiRestore.Enabled = true;
+            }
+        }
+
+        private void bbiDelete_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = gridView.FocusedRowHandle;
+            int id = int.Parse(gridView.GetRowCellValue(index, "u_id").ToString());
+            using (var db = new PetStoreEntities())
+            {
+                var update = (from u in db.Users where u.u_id == id select u).Single();
+                update.u_status = "Inactive";
+                db.SaveChanges();
+            }
+            bbiDelete.Enabled = false;
+            
+        }
+
+        private void bbiRestore_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            int index = gridView.FocusedRowHandle;
+            int id = int.Parse(gridView.GetRowCellValue(index, "u_id").ToString());
+            using (var db = new PetStoreEntities())
+            {
+                var update = (from u in db.Users where u.u_id == id select u).Single();
+                update.u_status = "Active";
+                db.SaveChanges();
+            }
+            bbiRestore.Enabled = false;
+        }
+
+        private void bbiRefresh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+        }
     }
 }

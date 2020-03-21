@@ -260,7 +260,7 @@
             // 
             this.barButtonItem1.Caption = "Image";
             this.barButtonItem1.Id = 22;
-            this.barButtonItem1.ImageOptions.Image = global::PetStore.Properties.Resources.images__9_;
+        //    this.barButtonItem1.ImageOptions.Image = global::PetStore.Properties.Resources.images__9_;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 

@@ -9,13 +9,13 @@ namespace PetStore.Object
     class CommentDetail
     {
         private int cmtd_id;
-        private int cmt_id;
+        private String cmt_Content;
         private String cmtd_content;
         private String cmtd_published;
         private String cmtd_status;
-        private int cmtd_uID;
+        private String uName;
 
-        public int Cmtd_id
+        public int ID
         {
             get
             {
@@ -28,20 +28,7 @@ namespace PetStore.Object
             }
         }
 
-        public int Cmt_id
-        {
-            get
-            {
-                return cmt_id;
-            }
-
-            set
-            {
-                cmt_id = value;
-            }
-        }
-
-        public string Cmtd_content
+        public string ReplyContent
         {
             get
             {
@@ -54,7 +41,7 @@ namespace PetStore.Object
             }
         }
 
-        public string Cmtd_published
+        public string Published
         {
             get
             {
@@ -67,7 +54,33 @@ namespace PetStore.Object
             }
         }
 
-        public String Cmtd_status
+        public string NameOfUser
+        {
+            get
+            {
+                return uName;
+            }
+
+            set
+            {
+                uName = value;
+            }
+        }
+
+        public string Comment
+        {
+            get
+            {
+                return cmt_Content;
+            }
+
+            set
+            {
+                cmt_Content = value;
+            }
+        }
+
+        public String Status
         {
             get
             {
@@ -80,28 +93,15 @@ namespace PetStore.Object
             }
         }
 
-        public int Cmtd_uID
+        public CommentDetail(int cmtdID, String cmtContent, String cmtdContent,
+                                  String cmtdPublished, String userName, String cmtdStatus)
         {
-            get
-            {
-                return cmtd_uID;
-            }
-
-            set
-            {
-                cmtd_uID = value;
-            }
-        }
-
-        public CommentDetail(int cmtdID, int cmtID, String cmtdContent,
-                                  String cmtdPublished, String cmtdStatus, int cmtdUID)
-        {
-            this.Cmtd_id = cmtdID;
-            this.Cmt_id = cmtID;
-            this.Cmtd_content = cmtdContent;
-            this.Cmtd_published = cmtdPublished;
-            this.Cmtd_status = cmtdStatus;
-            this.Cmtd_uID = cmtdUID;
+            this.cmtd_id = cmtdID;
+            this.uName = userName;
+            this.cmtd_content = cmtdContent;
+            this.cmtd_published = cmtdPublished;
+            this.cmtd_status = cmtdStatus;
+            this.cmt_Content = cmtContent;
         }
 
     }
