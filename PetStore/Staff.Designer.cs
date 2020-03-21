@@ -94,7 +94,7 @@
             this.rbpProduct,
             this.rbpComment,
             this.rbAccount});
-            this.ribbon.Size = new System.Drawing.Size(1125, 176);
+            this.ribbon.Size = new System.Drawing.Size(1125, 141);
             // 
             // barButtonItem1
             // 
@@ -119,6 +119,7 @@
             this.btnSellProduct.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSellProduct.ImageOptions.Image")));
             this.btnSellProduct.Name = "btnSellProduct";
             this.btnSellProduct.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSellProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSellProduct_ItemClick);
             // 
             // btnPet
             // 
@@ -299,9 +300,9 @@
             // Staff
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 933);
+            this.ClientSize = new System.Drawing.Size(1125, 756);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
